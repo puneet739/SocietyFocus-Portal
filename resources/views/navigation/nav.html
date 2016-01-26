@@ -1,0 +1,58 @@
+<!-- end: SEARCH FORM -->
+<!-- start: MAIN NAVIGATION MENU -->
+<div class="navbar-title">
+	<span translate="sidebar.heading.NAVIGATION">Main Navigation</span>
+</div>
+<ul class="main-navigation-menu">
+	<li ui-sref-active="active">
+		<a ui-sref="app.dashboard">
+			<div class="item-content">
+				<div class="item-media">
+					<i class="ti-home"></i>
+				</div>
+				<div class="item-inner">
+					<span class="title" translate="sidebar.nav.dashboard.MAIN"> Home </span>
+				</div>
+			</div>
+		</a>
+	</li>
+
+	<li ng-class="{'active open':$state.includes('app.ui')}">
+		<a href="javascript:void(0)">
+			<div class="item-content">
+				<div class="item-media">
+					<i class="ti-settings"></i>
+				</div>
+				<div class="item-inner">
+					<span class="title" translate="sidebar.nav.element.ADMINISTATION"> UserAdministartion </span><i class="icon-arrow"></i>
+				</div>
+			</div>
+		</a>
+		<ul class="sub-menu">
+			<li ui-sref-active="active">
+				<a ui-sref="app.ui.elements">
+					<span class="title" translate="sidebar.nav.user.VIEW"> View all </span>
+				</a>
+			</li>
+
+			<li ui-sref-active="active">
+				<a ui-sref="app.ui.elements">
+					<span class="title" translate="sidebar.nav.user.VIEW_SINGLE"> View one </span>
+				</a>
+			</li>
+
+			<li ui-sref-active="active">
+				<a ui-sref="app.ui.elements">
+					<span class="title" translate="sidebar.nav.user.REGISTER"> Register </span>
+				</a>
+			</li>
+
+			<li ui-sref-active="active">
+				<a ui-sref="app.ui.elements">
+					<span class="title" translate="sidebar.nav.user.REGISTER_BULK"> View one </span>
+				</a>
+			</li>
+		</ul>
+
+	</li>
+</ul>

@@ -1,0 +1,61 @@
+<!-- start: LOGIN -->
+<div class="row">
+    <div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
+        <div class="logo">
+            <img ng-src="{{app.layout.logo}}" alt="{{app.name}}" />
+        </div>
+        <!-- start: LOGIN BOX -->
+        <div class="box-login" ng-controller="LoginController">
+            <form class="form-login" ng-submit="authenticate()">
+                <fieldset>
+                    <legend>
+                        Sign in to your account
+                    </legend>
+                    <p>
+                        Please enter your name and password to log in. {{credentials.username}}
+                    </p>
+                    <div class="form-group">
+                        <span class="input-icon">
+                            <input type="text" class="form-control" ng-model="credentials.username" name="username" placeholder="Username">
+                            <i class="fa fa-user"></i> </span>
+                    </div>
+                    <div class="form-group form-actions">
+                        <span class="input-icon">
+                            <input type="password" class="form-control password" ng-model="credentials.password" name="password" placeholder="Password">
+                            <i class="fa fa-lock"></i>
+                            </span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="form-field-select-1">
+                            Society
+                        </label>
+                        <select class="cs-select cs-skin-slide" ng-options="item.value as item.displayname for item in society" ng-model="credentials.society">
+                            <option value="" disabled="">Select Your Society</option>
+                        </select>
+                    </div>
+
+                    <div class="alert alert-danger fade-in-up" ng-if="login_error">
+                        <button data-ct-dismiss="alert" class="close">
+                            &times;
+                        </button>
+                        <strong>Oh snap!</strong>
+                        <a class="alert-link" href="#"> Change a few things up </a> and try submitting again.
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary pull-right">
+                            Login <i class="fa fa-arrow-circle-right"></i>
+                        </button>
+                    </div>
+                </fieldset>
+            </form>
+            <!-- start: COPYRIGHT -->
+            <div class="copyright">
+                {{app.year}} &copy; {{ app.name }} by {{ app.author }}.
+            </div>
+            <!-- end: COPYRIGHT -->
+        </div>
+        <!-- end: LOGIN BOX -->
+    </div>
+</div>
+<!-- end: LOGIN -->

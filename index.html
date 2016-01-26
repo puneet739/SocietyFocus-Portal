@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="clipApp">
+<html lang="en" data-ng-app="zirconApp">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -9,7 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
 		<meta name="HandheldFriendly" content="true" /> 
 		<meta name="apple-touch-fullscreen" content="yes" />
-		<title data-ng-bind="pageTitle()">Clip-Two - Angular Bootstrap Admin Template</title>
+		<title data-ng-bind="pageTitle()">Test Page Title</title>
 		<!-- Google fonts -->
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<!-- Bootstrap -->
@@ -26,7 +26,7 @@
 		<link rel="stylesheet" href="resources/css/styles.css">
 		<link rel="stylesheet" href="resources/css/plugins.css">
 		<!-- Clip-Two Theme -->
-		<link rel="stylesheet" data-ng-href="resources/css/themes/{{ app.layout.theme }}.css" />
+		<link rel="stylesheet" data-ng-href="resources/css/themes/{{ app.theme }}.css" />
 	</head>
 	<body ng-controller="AppCtrl">
 		<div ui-view id="app" ng-class="{'app-mobile' : app.isMobile, 'app-navbar-fixed' : app.layout.isNavbarFixed, 'app-sidebar-fixed' : app.layout.isSidebarFixed, 'app-sidebar-closed':app.layout.isSidebarClosed, 'app-footer-fixed':app.layout.isFooterFixed}"></div>
@@ -36,7 +36,7 @@
 		<!-- Fastclick -->
 		<script src="external/fastclick/lib/fastclick.js"></script>
 		<!-- Angular -->
-		<script src="external/angular/angular.min.js"></script>
+		<script src="external/angular/angular.js"></script>
 		<script src="external/angular-cookies/angular-cookies.min.js"></script>
 		<script src="external/angular-animate/angular-animate.min.js"></script>		
 		<script src="external/angular-touch/angular-touch.min.js"></script>
@@ -62,13 +62,69 @@
 		<script src="external/angular-scroll/angular-scroll.min.js"></script>
 
 
+		<!-- Clip-Two Directives -->
+		<!--
+		
+		<script src="resources/js/directives/empty-links.js"></script>
+		<script src="resources/js/directives/sidebars.js"></script>
+		<script src="resources/js/directives/off-click.js"></script>
+		<script src="resources/js/directives/full-height.js"></script>
+		<script src="resources/js/directives/panel-tools.js"></script>
+		<script src="resources/js/directives/char-limit.js"></script>
+		<script src="resources/js/directives/dismiss.js"></script>
+		<script src="resources/js/directives/compare-to.js"></script>
+		<script src="resources/js/directives/select.js"></script>
+		<script src="resources/js/directives/messages.js"></script>
+		<script src="resources/js/directives/chat.js"></script>
+		<script src="resources/js/directives/sparkline.js"></script>
+		<script src="resources/js/directives/touchspin.js"></script>
+		<script src="resources/js/directives/file-upload.js"></script>-->
+
+		
+
+		<!-- Clip-Two Controllers -->				
+		<!-- <script src="resources/js/controllers/mainCtrl.js"></script>
+		// <script src="resources/js/controllers/inboxCtrl.js"></script>
+		// <script src="resources/js/controllers/bootstrapCtrl.js"></script> -->
+		<!-- Google Apis -->
+		<script src="//maps.googleapis.com/maps/api/js?v=3.exp&libraries=weather,visualization"></script>
+
+
+		<!-- Custom application Scipt-->
+
+		<!-- authentication and authorisation scripts - starts -->
+		<script src="resources/js/jcs.js"></script>
+		<script src="resources/js/modules/core/module.core.js"></script>
+		<script src="resources/js/modules/core/services/eventbus.js"></script>
+		
+		<script src="resources/js/modules/auth/module.auth.js"></script>
+		<script src="resources/js/modules/auth/module.auth.routes.js"></script>
+		<script src="resources/js/modules/auth/services/authentication.js"></script>
+		<script src="resources/js/modules/auth/services/authorization.js"></script>
+		<script src="resources/js/modules/auth/controllers/loginCtrl.js"></script>
+		<script src="resources/js/modules/auth/directives/access.js"></script>
+		<script src="resources/js/modules/auth/module.auth.run.js"></script>
+		
+		<script src="resources/js/modules/admin/module.admin.js"></script>
+		<script src="resources/js/modules/admin/module.admin.routes.js"></script>
+		<script src="resources/js/modules/admin/controllers/userListCtrl.js"></script>
+		
+		<script src="resources/js/modules/pages/module.pages.js"></script>
+		<script src="resources/js/modules/pages/module.pages.routes.js"></script>
+		<script src="resources/js/modules/pages/controllers/defaultCtrl.js"></script>
+		<!-- authentication and authorisation scripts - ends -->
+
 
 		<!-- Clip-Two Scripts -->
 		<script src="resources/js/app.js"></script>
 		<script src="resources/js/main.js"></script>
 		<script src="resources/js/config.constant.js"></script>
 		<script src="resources/js/config.router.js"></script>
-		<!-- Clip-Two Directives -->
+
+		<!--Controller Script-->
+		<script src="resources/js/controller/mainCtrl.js"></script>
+
+				<!-- Clip-Two Directives -->
 		<script src="resources/js/directives/toggle.js"></script>
 		<script src="resources/js/directives/perfect-scrollbar.js"></script>
 		<script src="resources/js/directives/empty-links.js"></script>
@@ -85,11 +141,8 @@
 		<script src="resources/js/directives/sparkline.js"></script>
 		<script src="resources/js/directives/touchspin.js"></script>
 		<script src="resources/js/directives/file-upload.js"></script>
-		<!-- Clip-Two Controllers -->				
-		<script src="resources/js/controllers/mainCtrl.js"></script>
-		<script src="resources/js/controllers/inboxCtrl.js"></script>
-		<script src="resources/js/controllers/bootstrapCtrl.js"></script>
-		<!-- Google Apis -->
-		<script src="//maps.googleapis.com/maps/api/js?v=3.exp&libraries=weather,visualization"></script>
+
+		<!--Custom JS Scripts-->
+		<!-- <<script src="resources/js/controller/auth/loginController.js"></script> -->
 	</body>
 </html>
