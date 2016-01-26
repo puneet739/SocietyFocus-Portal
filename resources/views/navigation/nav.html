@@ -24,7 +24,7 @@
 					<i class="ti-settings"></i>
 				</div>
 				<div class="item-inner">
-					<span class="title" translate="sidebar.nav.element.ADMINISTATION"> UserAdministartion </span><i class="icon-arrow"></i>
+					<span class="title" translate="sidebar.nav.element.USER_ADMINISTATION"> UserAdministartion </span><i class="icon-arrow"></i>
 				</div>
 			</div>
 		</a>
@@ -58,8 +58,37 @@
 					<span class="title" translate="sidebar.nav.user.RESET_PASSWORD"> Reset Password </span>
 				</a>
 			</li>
+		</ul>
+	</li>
+
+
+	<li ng-class="{'active open':$state.includes('app.ui')}">
+		<a href="javascript:void(0)">
+			<div class="item-content">
+				<div class="item-media">
+					<i class="ti-settings"></i>
+				</div>
+				<div class="item-inner">
+					<span class="title" translate="sidebar.nav.element.ASSET_ADMINISTATION"> UserAdministartion </span><i class="icon-arrow"></i>
+				</div>
+			</div>
+		</a>
+		<ul class="sub-menu">
+
+			<li ui-sref-active="active">
+				<a ui-sref="app.asset.view">
+					<span class="title" translate="sidebar.nav.asset.VIEW"> View all </span>
+				</a>
+			</li>
+		
+			<li ui-sref-active="active">
+				<a ui-sref="app.asset.register">
+					<span class="title" translate="sidebar.nav.asset.REGISTER"> Register </span>
+				</a>
+			</li>
 
 		</ul>
-
 	</li>
+
+
 </ul>

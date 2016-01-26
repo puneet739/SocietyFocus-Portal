@@ -59,7 +59,8 @@
       "element": {
       	"MAIN": "UI Elements",
         "ELEMENTS": "Elements",
-        "ADMINISTATION":"User Administation",
+        "USER_ADMINISTATION":"User Administation",
+        "ASSET_ADMINISTATION":"Asset Administation",
         "BUTTONS": "Buttons",
         "LINKS": "Link Effects",
         "FONTAWESOME" : "Font Awesome Icons",

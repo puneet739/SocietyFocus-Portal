@@ -72,6 +72,26 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         }
     })
 
+
+    //Asset Routes here
+    .state('app.asset', {
+        url: '/asset',
+        template: '<div ui-view class="fade-in-up"></div>',
+        title: 'Asset',
+        resolve: loadSequence('ngTable'),
+        ncyBreadcrumb: {
+            label: 'Asset'
+        }
+    }).state('app.asset.register', {
+        url: '/register',
+        templateUrl: 'resources/views/asset/register.html',
+        resolve: loadSequence('assetController'),
+        title: 'Register',
+        ncyBreadcrumb: {
+            label: 'Register'
+        }
+    })
+
     //Login Routese here
     .state('login', {
         url: '/login',

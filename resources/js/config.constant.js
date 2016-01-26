@@ -60,7 +60,8 @@ app.constant('JS_REQUIRES', {
 
         //Custom Contoller for the application
         'loginController' : 'resources/js/controller/auth/loginController.js',
-        'usercontroller':'resources/views/user/userController.js'
+        'usercontroller':'resources/views/user/userController.js',
+        'assetController' : 'resources/views/asset/assetController.js'
     },
     //*** angularJS Modules
     modules: [{

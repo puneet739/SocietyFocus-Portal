@@ -1,0 +1,70 @@
+<!-- start: PAGE TITLE -->
+<section id="page-title">
+    <div class="row">
+        <div class="col-sm-8">
+            <h1 class="mainTitle">Register Asset</h1>
+            <span class="mainDescription">Register Assets for Society</span>
+        </div>
+        <div ncy-breadcrumb></div>
+    </div>
+</section>
+
+
+<!-- Asset registration form -->
+<div class="container-fluid container-fullw bg-white">
+    <div class="row" access="master_admin,society_admin" access-permission-type="AtLeastOne">
+        <div class="col-md-12">
+            <div class="col-lg-6 col-md-12">
+                <div class="panel panel-white">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">Asset Registration Form</h5>
+                    </div>
+                    <div class="panel-body" ng-controller="userController">
+                        <form class="form-login" ng-submit="registerAsset()">
+                            <div class="form-group">
+                                <label>
+                                    Description
+                                </label>
+                                <input type="text" ng-model="asset.description" class="form-control" placeholder="Asset Description">
+                            </div>
+                            <div class="form-group">
+                                Contact No
+                                <input type="text" ng-model="asset.contactno" class="form-control" placeholder="Contact No">
+                            </div>
+                            <div class="form-group">
+                                Email
+                                <input type="text" ng-model="asset.email" class="form-control" placeholder="Email of Asset">
+                            </div>
+                            <div class="form-group">
+                                Duration
+                                <input type="text" ng-model="asset.duration" class="form-control" placeholder="Duration of service in hour">
+                            </div>
+
+                            <div class="form-group">
+                                Charges
+                                <input type="text" ng-model="asset.charges" class="form-control" placeholder="Charges per unit">
+                            </div>
+
+                            <div class="form-group">
+                                Category
+                                <select class="cs-select cs-skin-slide" ng-options="item.value as item.	displayname for item in asset_category" ng-model="asset.category">
+                            		<option value="" disabled="">Select Asset Category</option>
+                        		</select>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-control list-group-item list-group-item-success" ng-if="register_success">
+                                    Asset registered successfully
+                                </div>
+                            </div>
+                            <button type="submit" class="form-group btn btn-o btn-primary">
+                                Submit
+                            </button>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
