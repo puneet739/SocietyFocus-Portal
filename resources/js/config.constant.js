@@ -59,7 +59,8 @@ app.constant('JS_REQUIRES', {
         'htmlToPlaintext': 'resources/js/controller/HtmlToPlaintext.js',
 
         //Custom Contoller for the application
-        'loginController' : 'resources/js/controller/auth/loginController.js'
+        'loginController' : 'resources/js/controller/auth/loginController.js',
+        'usercontroller':'resources/views/user/userController.js'
     },
     //*** angularJS Modules
     modules: [{

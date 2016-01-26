@@ -1,0 +1,55 @@
+<!-- start: PAGE TITLE -->
+<section id="page-title">
+    <div class="row">
+        <div class="col-sm-8">
+            <h1 class="mainTitle" translate="sidebar.nav.forms.ELEMENTS">Register User</h1>
+            <span class="mainDescription">Register new Users</span>
+        </div>
+        <div ncy-breadcrumb></div>
+    </div>
+</section>
+<!-- User registration form -->
+<div class="container-fluid container-fullw bg-white">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-lg-6 col-md-12">
+                <div class="panel panel-white">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">User Registration Form</h5>
+                    </div>
+                    <div class="panel-body" ng-controller="userController">
+                        <form class="form-login" ng-submit="registeruser()">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">
+                                    Email address
+                                </label>
+                                <input type="email" ng-model="newuser.email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                First Name
+                                <input type="text" ng-model="newuser.firstname" class="form-control" placeholder="Enter First Name">
+                            </div>
+                            <div class="form-group">
+                                Contact No
+                                <input type="text" ng-model="newuser.contact_no" class="form-control" placeholder="Enter Contact No">
+                            </div>
+                            <div class="form-group">
+                                Password
+                                <input type="password" ng-model="newuser.description" class="form-control" placeholder="Enter Description">
+                            </div>
+                            <div class="form-group">
+                                <div class="form-control list-group-item list-group-item-success" ng-if="register_success">
+                                    User registered successfully
+                                </div>
+                            </div>
+                            <button type="submit" class="form-group btn btn-o btn-primary">
+                                Submit
+                            </button>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

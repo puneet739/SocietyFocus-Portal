@@ -60,10 +60,11 @@
                     var createdUser = createUser(ourUser.name, ourUser.userRoles);
                     //defer.resolve(createdUser);
                     $rootScope.logedinuser.name = createdUser.name;
-                    eventbus.broadcast(jcs.modules.auth.events.userLoggedIn, createdUser);
+                    $cookieStore.put('authenticated',true);
                     $cookieStore.put('X-Auth-Token',ourUser.token);
                     $localStorage.loggedInUser=createdUser;
                     $location.path("/app/dashboard/");
+                    eventbus.broadcast(jcs.modules.auth.events.userLoggedIn, createdUser);
                 },
                 logout = function() {
                     // we should only remove the current user.
@@ -73,7 +74,8 @@
                     currentUser = undefined;
                     $localStorage.loggedInUser=null;
                     $location.path("/login/signin");
-                    $cookieStore.put('X-Auth-Token', null);
+                    $cookieStore.remove('authenticated');
+                    $cookieStore.remove('X-Auth-Token');
                     eventbus.broadcast(jcs.modules.auth.events.userLoggedOut);
                 },
                 getCurrentLoginUser = function() {

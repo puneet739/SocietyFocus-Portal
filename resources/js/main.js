@@ -105,10 +105,10 @@ app.factory('httpErrorResponseInterceptor', ['$q', '$location', '$window', '$roo
             responseError: function error(response) {
                 switch (response.status) {
                     case 403:
-                        $location.path = "/403";
+                        $location.path("/403");
                         break;
                     case 401:
-                        $location.path = "/login/signin";
+                        $location.path("/login/signin");
                         break;
 
                 }
@@ -123,7 +123,7 @@ app.factory('httpRequestInterceptor', ['$rootScope', '$cookieStore', //may cause
         return {
             'request': function(config) {
                 if ($cookieStore.get('authenticated')) {
-                    config.headers['X-Auth-Token'] = $cookieStore.get('accessToken');
+                    config.headers['X-Auth-Token'] = $cookieStore.get('X-Auth-Token');
                 }
                 return config;
             }

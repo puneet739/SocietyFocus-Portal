@@ -31,7 +31,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
     $stateProvider.state('app', {
         url: "/app",
         templateUrl: "resources/views/app.html",
-        resolve: loadSequence('modernizr', 'moment', 'angularMoment', 'uiSwitch', 'perfect-scrollbar-plugin', 'toaster', 'ngAside', 'vAccordion', 'sweet-alert', 'chartjs', 'tc.chartjs', 'oitozero.ngSweetAlert', 'truncate', 'htmlToPlaintext', 'angular-notification-icons'),
+        resolve: loadSequence('modernizr', 'moment', 'angularMoment', 'uiSwitch', 'perfect-scrollbar-plugin', 'toaster', 'ngAside', 'vAccordion', 'sweet-alert', 'chartjs', 'tc.chartjs', 'oitozero.ngSweetAlert', 'truncate', 'htmlToPlaintext', 'angular-notification-icons','loginController'),
         abstract: true,
         data: {
             requireLogin: true
@@ -39,10 +39,36 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
     }).state('app.dashboard', {
         url: "/dashboard",
         templateUrl: "resources/views/dashboard/dashboard.html",
-        resolve: loadSequence('jquery-sparkline','loginController'),
         title: 'Dashboard',
         ncyBreadcrumb: {
             label: 'Dashboard'
+        }
+    })
+
+    //User Routes here
+    .state('app.user', {
+        url: '/user',
+        template: '<div ui-view class="fade-in-up"></div>',
+        title: 'User',
+        resolve: loadSequence('ngTable'),
+        ncyBreadcrumb: {
+            label: 'User'
+        }
+    }).state('app.user.view', {
+        url: "/view",
+        templateUrl: "resources/views/user/view.html",
+        resolve: loadSequence('usercontroller'),
+        title: 'View Registerd Users',
+        ncyBreadcrumb: {
+            label: 'View Registerd Users'
+        }
+    }).state('app.user.register', {
+        url: "/register",
+        templateUrl: "resources/views/user/register.html",
+        resolve: loadSequence('usercontroller'),
+        title: 'Register New User',
+        ncyBreadcrumb: {
+            label: 'Register New User'
         }
     })
 

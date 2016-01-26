@@ -1,0 +1,54 @@
+<!-- start: PAGE TITLE -->
+<section id="page-title">
+	<div class="row">
+		<div class="col-sm-8">
+			<h1 class="mainTitle" translate="sidebar.nav.tables.DATA">NGTABLE</h1>
+			<span class="mainDescription">This directive allow to liven your tables. It support sorting, filtering and pagination. Header row with titles and filters automatic generated on compilation step.</span>
+		</div>
+		<div ncy-breadcrumb></div>
+	</div>
+</section>
+
+
+<!-- end: CELL AND ROW TEMPLATE -->
+<!-- start: INLINE EDIT EXAMPLE -->
+<div class="container-fluid container-fullw">
+	<div class="row">
+		<div class="col-md-12">
+			<h5 class="over-title margin-bottom-15">All Users of Society <span class="text-bold">edit example</span></h5>
+			<!-- /// controller:  'ngTableCtrl6' -  localtion: assets/js/controllers/ngTableCtrl.js /// -->
+			<div ng-controller="userController" ng-init="getAllUsers()">
+				<div class="row margin-bottom-10">
+					<div class="col-md-12">
+						<button ng-click="tableParams.sorting({})" class="btn btn-default pull-right">
+							Clear sorting
+						</button>
+					</div>
+				</div>
+				<strong>Sorting:</strong> {{tableParams.sorting()|json}}
+				<div class="table-responsive">
+					<table ng-table="tableParams" class="table">
+						<tbody ng-repeat="p in $data">
+							<tr id="tr{{p.userid}}" ng-class-odd="'odd'" ng-class-even="'even'">
+								<td class="rowTd" data-title="'ID'"          sortable="'userid'">{{p.userid}}</td>
+								<td class="rowTd" data-title="'Firstname'"   sortable="'firstname'">{{p.firstname}}</td>
+								<td class="rowTd" data-title="'Lastname'"    sortable="'lastname'">{{p.lastname}}</td>
+								<td class="rowTd" data-title="'Description'" sortable="'dc'">{{p.description}}</td>
+								<td class="rowTd" data-title="'ContactNo'" sortable="'contact_no'">{{p.contact_no}}</td>
+								<td class="rowTd" data-title="'Email'"       sortable="'em'">{{p.email}}</td>
+								<td class="rowTd" >
+								<div class="pull-right margin-right-10">
+									<input type=button class="btn btn-primary btn-o btn-sm" id="editRowBtn{{p.userid}}" value="edit"
+									ng-click="setEditId(p.userid)">
+								</div></td>
+							</tr>
+							<tr ng-show="editId===p.userid" ng-if="editId===p.userid">
+								<td colspan="7" ng-include src="'resources/views/user/editRow.html'"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
