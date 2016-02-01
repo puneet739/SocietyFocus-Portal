@@ -90,6 +90,14 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         ncyBreadcrumb: {
             label: 'Register'
         }
+    }).state('app.asset.view', {
+        url: '/view',
+        templateUrl: 'resources/views/asset/view.html',
+        resolve: loadSequence('assetController'),
+        title: 'View Assets',
+        ncyBreadcrumb: {
+            label: 'View Assets'
+        }
     })
 
     //Login Routese here

@@ -1,0 +1,46 @@
+<table class="table no-bg">
+    <tr>
+        <td rowspan="3">ID: {{p.id}}
+            <input type="hidden" name="id" value="{{p.id}}">
+        </td>
+        <td>Description:</td>
+        <td>
+            <input class="form-control" type="text" name="description" class="w100" ng-model="p.description">
+        </td>
+        <td>Email: </td>
+        <td>
+            <input class="form-control" type="text" name="email" class="w180" ng-model="p.email">
+        </td>
+    </tr>
+    <tr>
+        <td>Category:</td>
+        <td>
+            <input class="form-control" type="text" name="category" class="w100" ng-model="p.category">
+        </td>
+        <td>Status: </td>
+        <td>
+            <input class="form-control" type="text" name="status" class="w180" ng-model="p.status">
+        </td>
+        <td>Duration in Hours</td>
+        <td>
+            <input class="form-control" type="text" name="duration" class="w180" ng-model="p.duration">
+        </td>
+    </tr>
+    <tr>
+        <td>Charges:</td>
+        <td>
+            <input class="form-control" type="text" name="charges" class="w100" ng-model="p.charges">
+        </td>
+        <td>Phone: </td>
+        <td>
+            <input class="form-control" type="text" name="contactno" class="w120" ng-model="p.contactno">
+        </td>
+        <td colspan="3">
+            <div class="pull-right">
+                <input type="button" class="btn btn-primary btn-sm margin-right-15" value=" save " ng-click="modifyAsset(p)">
+                <input type="button" class="btn btn-primary btn-sm" value=" cancel" ng-click="setEditId(-1)">
+            </div>
+        </td>
+    </tr>
+</table>
+<!--  class="editRowTd" -->

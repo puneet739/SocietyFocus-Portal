@@ -1,0 +1,56 @@
+<!-- start: PAGE TITLE -->
+<section id="page-title">
+	<div class="row">
+		<div class="col-sm-8">
+			<h1 class="mainTitle">View/Edit Assets</h1>
+			<span class="mainDescription">You can edit/view all Assets which are associated in the your society</span>
+		</div>
+		<div ncy-breadcrumb></div>
+	</div>
+</section>
+
+
+<!-- end: CELL AND ROW TEMPLATE -->
+<!-- start: INLINE EDIT EXAMPLE -->
+<div class="container-fluid container-fullw">
+	<div class="row">
+		<div class="col-md-12">
+			<h5 class="over-title margin-bottom-15">All Assets of Society </h5>
+			<!-- /// controller:  'ngTableCtrl6' -  localtion: assets/js/controllers/ngTableCtrl.js /// -->
+			<div ng-controller="assetController" ng-init="getAllAssets()">
+				<div class="row margin-bottom-10">
+					<div class="col-md-12">
+						<button ng-click="tableParams.sorting({})" class="btn btn-default pull-right">
+							Clear sorting
+						</button>
+					</div>
+				</div>
+				<strong>Sorting:</strong> {{tableParams.sorting()|json}}
+				<div class="table-responsive">
+					<table ng-table="tableParams" class="table">
+						<tbody ng-repeat="p in $data">
+							<tr id="tr{{p.userid}}" ng-class-odd="'odd'" ng-class-even="'even'">
+								<td class="rowTd" data-title="'ID'"          sortable="'id'">{{p.id}}</td>
+								<td class="rowTd" data-title="'Description'"   sortable="'description'">{{p.description}}</td>
+								<td class="rowTd" data-title="'Contact No'"    sortable="'contactno'">{{p.contactno}}</td>
+								<td class="rowTd" data-title="'Email'" sortable="'email'">{{p.email}}</td>
+								<td class="rowTd" data-title="'Charges'" sortable="'charges'">{{p.charges}}</td>
+								<td class="rowTd" data-title="'Category'"       sortable="'category'">{{p.category}}</td>
+								<td class="rowTd" data-title="'Status'"       sortable="'status'">{{p.status}}</td>
+								<td class="rowTd" data-title="'Duration'"       sortable="'duration'">{{p.duration}}</td>
+								<td class="rowTd" >
+								<div class="pull-right margin-right-10">
+									<input type=button class="btn btn-primary btn-o btn-sm" id="editRowBtn{{p.id}}" value="edit"
+									ng-click="setEditId(p.id)">
+								</div></td>
+							</tr>
+							<tr ng-show="editId===p.id" ng-if="editId===p.id">
+								<td colspan="7" ng-include src="'resources/views/asset/edit.html'"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

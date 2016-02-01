@@ -1,4 +1,4 @@
-app.controller("userController", function($scope, $http, $filter, $q, $location, $rootScope, ngTableParams) {
+app.controller("assetController", function($scope, $http, $filter, $q, $location, $rootScope, ngTableParams) {
 
 	$scope.register_success=false;
     $scope.asset_category = [{
@@ -38,4 +38,49 @@ app.controller("userController", function($scope, $http, $filter, $q, $location,
     }
 
 
+    $scope.getAllAssets = function() {
+        console.log('Now trying to fetch all Assets of society');
+        var req = {
+            method: 'GET',
+            url: $rootScope.constant.SERVICE_URL + '/society/asset/getall',
+        }
+
+        $http(req).then(function successCallback(response) {
+            console.log('users are loaded successfully');
+            var allUsers = response.data.body;
+
+            $scope.tableParams = new ngTableParams({
+                page: 1,
+                count: 10
+            }, {
+                total: allUsers.length,
+                getData: function($defer, params) {
+                    var orderedData = params.sorting() ? $filter('orderBy')(allUsers, params.orderBy()) : allUsers;
+                    $defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
+                }
+            });
+
+        }, function errorCallback(error) {
+            debugger;
+            console.log('Error because of connection');
+        })
+    }
+
+    $scope.modifyAsset = function(asset) {
+        var assetString = JSON.stringify(asset, null, "\t");
+        var req = {
+            method: 'POST',
+            url: $rootScope.constant.SERVICE_URL + '/society/asset/modify',
+            data: assetString,
+        }
+        $http(req).then(function successCallback(response) {
+            console.log('user modified successfully');
+            var allAssets = response.data.body;
+            alert('User modified successfully');
+        });
+    };
+
+     $scope.setEditId = function(pid) {
+        $scope.editId = pid;
+    };
 });
