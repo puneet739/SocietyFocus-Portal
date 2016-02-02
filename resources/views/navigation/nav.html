@@ -69,7 +69,7 @@
 					<i class="ti-settings"></i>
 				</div>
 				<div class="item-inner">
-					<span class="title" translate="sidebar.nav.element.ASSET_ADMINISTATION"> UserAdministartion </span><i class="icon-arrow"></i>
+					<span class="title" translate="sidebar.nav.element.ASSET_ADMINISTATION"> Asset Administration </span><i class="icon-arrow"></i>
 				</div>
 			</div>
 		</a>
@@ -90,5 +90,53 @@
 		</ul>
 	</li>
 
+
+	<li ng-class="{'active open':$state.includes('app.ui')}">
+		<a href="javascript:void(0)">
+			<div class="item-content">
+				<div class="item-media">
+					<i class="ti-settings"></i>
+				</div>
+				<div class="item-inner">
+					<span class="title"> Asset Bookings </span><i class="icon-arrow"></i>
+				</div>
+			</div>
+		</a>
+		<ul class="sub-menu">
+			<li ui-sref-active="active">
+				<a ui-sref="app.asset.booking.view">
+					<span class="title" > View all Booking </span>
+				</a>
+			</li>
+		
+			<li ui-sref-active="active">
+				<a ui-sref="app.asset.booking.id">
+					<span class="title"> View booking By ID </span>
+				</a>
+			</li>
+
+		</ul>
+	</li>
+
+
+	<li ng-class="{'active open':$state.includes('app.ui')}">
+		<a href="javascript:void(0)">
+			<div class="item-content">
+				<div class="item-media">
+					<i class="ti-settings"></i>
+				</div>
+				<div class="item-inner">
+					<span class="title"> Bulk Feature </span><i class="icon-arrow"></i>
+				</div>
+			</div>
+		</a>
+		<ul class="sub-menu">
+			<li ui-sref-active="active">
+				<a ui-sref="app.bulk.user">
+					<span class="title" > Register User </span>
+				</a>
+			</li>
+		</ul>
+	</li>
 
 </ul>

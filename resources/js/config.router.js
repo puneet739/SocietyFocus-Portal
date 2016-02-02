@@ -78,14 +78,13 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         url: '/asset',
         template: '<div ui-view class="fade-in-up"></div>',
         title: 'Asset',
-        resolve: loadSequence('ngTable'),
+        resolve: loadSequence('ngTable','assetController'),
         ncyBreadcrumb: {
             label: 'Asset'
         }
     }).state('app.asset.register', {
         url: '/register',
         templateUrl: 'resources/views/asset/register.html',
-        resolve: loadSequence('assetController'),
         title: 'Register',
         ncyBreadcrumb: {
             label: 'Register'
@@ -93,10 +92,45 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
     }).state('app.asset.view', {
         url: '/view',
         templateUrl: 'resources/views/asset/view.html',
-        resolve: loadSequence('assetController'),
         title: 'View Assets',
         ncyBreadcrumb: {
             label: 'View Assets'
+        }
+    })
+    
+    //Asset Bookings
+    .state('app.asset.booking', {
+        url: '/booking',
+        template: '<div ui-view class="fade-in-up"></div>',
+        title: 'Asset',
+        resolve: loadSequence('ngTable','assetBookingController'),
+        ncyBreadcrumb: {
+            label: 'Asset'
+        }
+    }).state('app.asset.booking.view', {
+        url: '/view',
+        templateUrl: 'resources/views/assetbooking/view.html',
+        title: 'Register',
+        ncyBreadcrumb: {
+            label: 'Register'
+        }
+    })
+
+    //Bulk Features
+    .state('app.bulk', {
+        url: '/bulk',
+        template: '<div ui-view class="fade-in-up"></div>',
+        title: 'Bulk',
+        resolve: loadSequence('bulkController'),
+        ncyBreadcrumb: {
+            label: 'BulkController'
+        }
+    }).state('app.bulk.user', {
+        url: '/user',
+        templateUrl: 'resources/views/bulk/register_user.html',
+        title: 'Register User',
+        ncyBreadcrumb: {
+            label: 'Register User'
         }
     })
 
