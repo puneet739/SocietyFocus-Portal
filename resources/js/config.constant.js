@@ -29,6 +29,7 @@ app.constant('JS_REQUIRES', {
 
         //*** Controllers
         'AppCtrl':'resources/js/controller/mainCtrl.js',
+        'elastic':'external/angular-elastic/elastic.js',
         // 'dashboardCtrl': 'assets/js/controllers/dashboardCtrl.js',
         // 'iconsCtrl': 'assets/js/controllers/iconsCtrl.js',
         // 'vAccordionCtrl': 'assets/js/controllers/vAccordionCtrl.js',
@@ -63,6 +64,7 @@ app.constant('JS_REQUIRES', {
         'usercontroller':'resources/views/user/userController.js',
         'assetBookingController':'resources/views/assetbooking/assetbookingController.js',
         'assetController' : 'resources/views/asset/assetController.js',
+        'complaintController' : 'resources/views/complaint/complaintController.js',
         'bulkController' : 'resources/views/bulk/bulkController.js'
     },
     //*** angularJS Modules

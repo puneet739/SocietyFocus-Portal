@@ -139,4 +139,39 @@
 		</ul>
 	</li>
 
+	<li ng-class="{'active open':$state.includes('app.ui')}">
+		<a href="javascript:void(0)">
+			<div class="item-content">
+				<div class="item-media">
+					<i class="ti-settings"></i>
+				</div>
+				<div class="item-inner">
+					<span class="title"> Complaints </span><i class="icon-arrow"></i>
+				</div>
+			</div>
+		</a>
+		<ul class="sub-menu">
+			<li ui-sref-active="active">
+				<a ui-sref="app.complaint.register">
+					<span class="title" > Register Complaint </span>
+				</a>
+			</li>
+
+			<li ui-sref-active="active">
+				<a ui-sref="app.complaint.viewall">
+					<span class="title" > View All Complaints </span>
+				</a>
+			</li>
+			<li ui-sref-active="active">
+				<a ui-sref="app.complaint.my">
+					<span class="title" > View My Complaints </span>
+				</a>
+			</li>
+			<li ui-sref-active="active">
+				<a ui-sref="app.complaint.id">
+					<span class="title"> View Complaint By ID </span>
+				</a>
+			</li>
+		</ul>
+	</li>
 </ul>

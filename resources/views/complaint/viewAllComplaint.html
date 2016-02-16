@@ -1,0 +1,44 @@
+<!-- start: PAGE TITLE -->
+<section id="page-title">
+    <div class="row">
+        <div class="col-sm-8">
+            <h1 class="mainTitle">View All Complaints</h1>
+            <span class="mainDescription">View All Complaints</span>
+        </div>
+        <div ncy-breadcrumb></div>
+    </div>
+</section>
+<div class="container-fluid container-fullw bg-white" ng-controller="complaintController" ng-init="viewallComplaint()">
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                	<th>ID </th>
+                    <th>Title </th>
+                    <th>Desciption </th>
+                    <th>Registered Number</th>
+                    <th>Registered Email</th>
+                    <th>User Name </th>
+                    <th>User Contact No </th>
+                    <th>User Email No </th>
+                    <th>Created Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="allcomplaint in allcomplaints">
+                	<td>{{allcomplaint.complaintid}} </td>
+                    <td>{{allcomplaint.title}} </td>
+                    <td>{{allcomplaint.description}} </td>
+                    <td>{{allcomplaint.phoneNo}} </td>
+                    <td>{{allcomplaint.email}} </td>
+                    <td>{{allcomplaint.user.firstname}} </td>
+                    <td>{{allcomplaint.user.contact_no}} </td>
+                    <td>{{allcomplaint.user.email}} </td>
+                    <td>{{allcomplaint.createdDate}} </td>
+                    <td>{{allcomplaint.status}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
