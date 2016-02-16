@@ -10,6 +10,10 @@
 </section>
 
 <div ng-controller="bulkController">
-    <input type="file" file-model="myFile" />
-    <button ng-click="uploadFile()">upload me</button>
+    <input id="uploadFile" placeholder="Choose File" disabled="disabled" class="input-sm" />
+<div class="fileUpload btn btn-primary">
+    <span>Browse</span>
+    <input id="uploadBtn" type="file" class="upload" onchange="fileName(this.value);"/>
+</div>
+    <button ng-click="uploadFile()" class="btn btn-primary">upload me</button>
 </div>
