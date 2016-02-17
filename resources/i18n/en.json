@@ -19,6 +19,7 @@
       "CALENDAR" : "My Calendar",
       "MESSAGES" : "My Messages",
       "LOCKSCREEN" : "Lock Screen",
+      "SETTINGS" : "Settings",
       "LOGOUT" : "Log Out"
     }
   },

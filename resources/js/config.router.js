@@ -70,6 +70,10 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         ncyBreadcrumb: {
             label: 'Register New User'
         }
+    }).state('app.user.settings', {
+        url:'/settings',
+        templateUrl:"resources/views/user/settings.html",
+        resolve: loadSequence('updatecontroller')
     })
 
 
@@ -182,7 +186,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
     }).state('login.signin', {
         url: '/signin',
         templateUrl: "resources/views/login/signin.html",
-        resolve: loadSequence('loginController')
+        resolve: loadSequence('loginController','ui.select')
     }).state('login.forgot', {
         url: '/forgot',
         templateUrl: "assets/views/login_forgot.html"

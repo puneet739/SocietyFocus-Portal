@@ -1,5 +1,4 @@
 app.controller("LoginController", function($scope, $http,$q , $location, authentication, $rootScope,eventbus) {
-
 	$scope.login_error=false;
 
     $scope.society=[
@@ -15,7 +14,7 @@ app.controller("LoginController", function($scope, $http,$q , $location, authent
     
     $scope.authenticate = function() {
         console.log($scope.credentials.username + " pass:" + $scope.credentials.password + "_ " + authentication);
-        login($scope.credentials.username, $scope.credentials.password,$scope.credentials.society);
+        login($scope.credentials.username, $scope.credentials.password,$scope.credentials.society.value);
     }
 
     function login(user, pass,society) {
@@ -43,7 +42,8 @@ app.controller("LoginController", function($scope, $http,$q , $location, authent
                 $rootScope.logedinuser={
                     "name": firstname,
                     "userRoles": userRole,
-                    "token":accessToken
+                    "token":accessToken,
+                    "userID" : userObject.userid
                 }
                 console.log('user have logged in successfully');
                 authentication.login();

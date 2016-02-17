@@ -26,9 +26,10 @@
             // }
 
             var currentUser,
-                createUser = function(name, permissions) {
+                createUser = function(name, userid,permissions) {
                     return {
                         name: name,
+                        userid: userid,
                         permissions: permissions
                     };
                 },
@@ -57,7 +58,7 @@
                         console.log($location.path());
                         return;
                     }
-                    var createdUser = createUser(ourUser.name, ourUser.userRoles);
+                    var createdUser = createUser(ourUser.name,ourUser.userID, ourUser.userRoles);
                     //defer.resolve(createdUser);
                     $rootScope.logedinuser.name = createdUser.name;
                     $cookieStore.put('authenticated',true);
