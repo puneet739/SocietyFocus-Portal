@@ -72,7 +72,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         }
     }).state('app.user.settings', {
         url:'/settings',
-        templateUrl:"resources/views/asset/settings.html",
+        templateUrl:"resources/views/user/settings.html",
         resolve: loadSequence('updatecontroller')
     })
 

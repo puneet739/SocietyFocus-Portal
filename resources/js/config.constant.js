@@ -65,7 +65,7 @@ app.constant('JS_REQUIRES', {
         'assetBookingController':'resources/views/assetbooking/assetbookingController.js',
         'assetController' : 'resources/views/asset/assetController.js',
         'bulkController' : 'resources/views/bulk/bulkController.js',
-        'updatecontroller' : 'resources/views/asset/updateController.js'
+        'updatecontroller' : 'resources/views/user/updateController.js',
         'complaintController' : 'resources/views/complaint/complaintController.js',
         'bulkController' : 'resources/views/bulk/bulkController.js'
     },
