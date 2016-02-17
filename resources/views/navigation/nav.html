@@ -31,31 +31,32 @@
 		<ul class="sub-menu">
 			<li ui-sref-active="active">
 				<a ui-sref="app.user.view">
-					<span class="title" translate="sidebar.nav.user.VIEW"> View all </span>
+					<span class="title"> View All Users </span>
 				</a>
 			</li>
 
 			<li ui-sref-active="active">
 				<a ui-sref="app.comingsoon">
-					<span class="title" translate="sidebar.nav.user.VIEW_SINGLE"> View one </span>
+					<span class="title" translate="sidebar.nav.user.SEARCH_USER"> SEARCH_USER </span>
 				</a>
 			</li>
 
-			<li ui-sref-active="active">
+			<li ui-sref-active="active" access="society_admin" access-permission-type="AtLeastOne">
+				<a ui-sref="app.comingsoon">
+					<span class="title" > Edit User </span>
+				</a>
+			</li>
+
+			<li ui-sref-active="active" access="society_admin" access-permission-type="AtLeastOne">
 				<a ui-sref="app.user.register">
 					<span class="title" translate="sidebar.nav.user.REGISTER"> Register </span>
 				</a>
 			</li>
 
-			<li ui-sref-active="active">
-				<a ui-sref="app.comingsoon">
-					<span class="title" translate="sidebar.nav.user.REGISTER_BULK"> View one </span>
-				</a>
-			</li>
 
-			<li ui-sref-active="active">
-				<a ui-sref="app.user.view">
-					<span class="title" translate="sidebar.nav.user.RESET_PASSWORD"> Reset Password </span>
+			<li ui-sref-active="active" access="society_admin" access-permission-type="AtLeastOne">
+				<a ui-sref="app.user.reset_password">
+					<span class="title"> Reset Password </span>
 				</a>
 			</li>
 		</ul>
@@ -77,13 +78,13 @@
 
 			<li ui-sref-active="active">
 				<a ui-sref="app.asset.view">
-					<span class="title" translate="sidebar.nav.asset.VIEW"> View all </span>
+					<span class="title"> View all </span>
 				</a>
 			</li>
 		
-			<li ui-sref-active="active">
+			<li ui-sref-active="active" access="society_admin" access-permission-type="AtLeastOne">
 				<a ui-sref="app.asset.register">
-					<span class="title" translate="sidebar.nav.asset.REGISTER"> Register </span>
+					<span class="title"> Register New Asset</span>
 				</a>
 			</li>
 
@@ -103,15 +104,27 @@
 			</div>
 		</a>
 		<ul class="sub-menu">
-			<li ui-sref-active="active">
+			<li ui-sref-active="active" access="society_admin" access-permission-type="AtLeastOne">
 				<a ui-sref="app.asset.booking.view">
 					<span class="title" > View all Booking </span>
 				</a>
 			</li>
-		
+
 			<li ui-sref-active="active">
+				<a ui-sref="app.comingsoon">
+					<span class="title" > View My Bookings </span>
+				</a>
+			</li>
+
+			<li ui-sref-active="active">
+				<a ui-sref="app.comingsoon">
+					<span class="title" > Book Asset </span>
+				</a>
+			</li>
+		
+			<li ui-sref-active="active" access="society_admin" access-permission-type="AtLeastOne">
 				<a ui-sref="app.asset.booking.id">
-					<span class="title"> View booking By ID </span>
+					<span class="title"> Search booking By ID </span>
 				</a>
 			</li>
 
@@ -119,7 +132,7 @@
 	</li>
 
 
-	<li ng-class="{'active open':$state.includes('app.ui')}">
+	<li ng-class="{'active open':$state.includes('app.ui')}" access="society_admin" access-permission-type="AtLeastOne">
 		<a href="javascript:void(0)">
 			<div class="item-content">
 				<div class="item-media">
@@ -157,7 +170,7 @@
 				</a>
 			</li>
 
-			<li ui-sref-active="active">
+			<li ui-sref-active="active" access="society_admin" access-permission-type="AtLeastOne">
 				<a ui-sref="app.complaint.viewall">
 					<span class="title" > View All Complaints </span>
 				</a>
@@ -167,7 +180,7 @@
 					<span class="title" > View My Complaints </span>
 				</a>
 			</li>
-			<li ui-sref-active="active">
+			<li ui-sref-active="active" access="society_admin" access-permission-type="AtLeastOne">
 				<a ui-sref="app.complaint.id">
 					<span class="title"> View Complaint By ID </span>
 				</a>

@@ -36,7 +36,7 @@
 								<td class="rowTd" data-title="'Description'" sortable="'dc'">{{p.description}}</td>
 								<td class="rowTd" data-title="'ContactNo'" sortable="'contact_no'">{{p.contact_no}}</td>
 								<td class="rowTd" data-title="'Email'"       sortable="'em'">{{p.email}}</td>
-								<td class="rowTd" >
+								<td class="rowTd" access="society_admin" access-permission-type="AtLeastOne">
 								<div class="pull-right margin-right-10">
 									<input type=button class="btn btn-primary btn-o btn-sm" id="editRowBtn{{p.userid}}" value="edit"
 									ng-click="setEditId(p.userid)">
