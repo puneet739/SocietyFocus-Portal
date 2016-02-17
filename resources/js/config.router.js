@@ -31,7 +31,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
     $stateProvider.state('app', {
         url: "/app",
         templateUrl: "resources/views/app.html",
-        resolve: loadSequence('modernizr', 'moment', 'angularMoment', 'uiSwitch', 'perfect-scrollbar-plugin', 'toaster', 'ngAside', 'vAccordion', 'sweet-alert', 'chartjs', 'tc.chartjs', 'oitozero.ngSweetAlert', 'truncate', 'htmlToPlaintext', 'angular-notification-icons','loginController'),
+        resolve: loadSequence('modernizr', 'moment', 'angularMoment', 'uiSwitch', 'perfect-scrollbar-plugin', 'toaster', 'ngAside', 'vAccordion', 'sweet-alert', 'chartjs', 'tc.chartjs', 'oitozero.ngSweetAlert', 'truncate', 'htmlToPlaintext', 'angular-notification-icons','loginController','elastic'),
         abstract: true,
         data: {
             requireLogin: true
@@ -117,6 +117,46 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         title: 'Register',
         ncyBreadcrumb: {
             label: 'Register'
+        }
+    })
+
+
+    //Complaints Features
+    .state('app.complaint', {
+        url: '/complaint',
+        template: '<div ui-view class="fade-in-up"></div>',
+        title: 'Complaints',
+        resolve: loadSequence('complaintController'),
+        ncyBreadcrumb: {
+            label: 'Complaints'
+        }
+    }).state('app.complaint.register', {
+        url: '/register',
+        templateUrl: 'resources/views/complaint/registerComplaint.html',
+        title: 'Register Complaints',
+        ncyBreadcrumb: {
+            label: 'Register Complaints'
+        }
+    }).state('app.complaint.viewall', {
+        url: '/viewall',
+        templateUrl: 'resources/views/complaint/viewAllComplaint.html',
+        title: 'View All Complaints',
+        ncyBreadcrumb: {
+            label: 'View All Complaints'
+        }
+    }).state('app.complaint.my', {
+        url: '/viewmy',
+        templateUrl: 'resources/views/complaint/viewMyComplaint.html',
+        title: 'View My Complaints',
+        ncyBreadcrumb: {
+            label: 'View My Complaints'
+        }
+    }).state('app.complaint.id', {
+        url: '/viewbyid/{id}',
+        templateUrl: 'resources/views/complaint/viewComplaintById.html',
+        title: 'View Complaint',
+        ncyBreadcrumb: {
+            label: 'View Complaint'
         }
     })
 

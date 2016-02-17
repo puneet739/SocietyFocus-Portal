@@ -2,7 +2,8 @@ app.run(['$rootScope', '$state', '$stateParams', '$window', 'authentication', '$
     function($rootScope, $state, $stateParams, $window, authentication, $cookieStore) {
 
         $rootScope.constant={
-            SERVICE_URL:"http://zircon.com/zservice"
+            // SERVICE_URL:"http://zircon.com//localservice"
+            SERVICE_URL:"http://societyfocus.com/service"
         }
         // Attach Fastclick for eliminating the 300ms delay between a physical tap and the firing of a click event on mobile browsers
         FastClick.attach(document.body);

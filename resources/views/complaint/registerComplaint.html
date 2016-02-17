@@ -1,0 +1,50 @@
+<!-- start: PAGE TITLE -->
+<section id="page-title">
+    <div class="row">
+        <div class="col-sm-8">
+            <h1 class="mainTitle">Register Complaints</h1>
+            <span class="mainDescription">You can register all Complaint and they will be rectified by us in defined time</span>
+        </div>
+        <div ncy-breadcrumb></div>
+    </div>
+</section>
+<!-- Register Complaint Form-->
+<div class="container-fluid container-fullw bg-white">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-lg-6 col-md-12">
+                <div class="panel panel-white">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">Complaint Registration Form</h5>
+                    </div>
+                    <div class="panel-body" ng-controller="complaintController">
+                        <form class="form-login">
+                            <div class="form-group">
+                                Subject<span class="symbol required">
+                                <textarea maxLength="150" id="form-field-23" required="required" class="form-control limited" ng-model="complaint.title"></textarea>
+                                <div id="characters">
+                                    <span>Characters left: {{150 - complaint.title.length}}</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                Description<span class="symbol required">
+                                <textarea class="form-control autosize area-animated msd-elastic: \n;"  required="required" data-ng-model="complaint.description"></textarea>
+                            </div>
+                            <div class="form-group">
+                                Contact No
+                                <input type="text" ng-model="complaint.contactno" class="form-control" placeholder="Contact No">
+                            </div>
+                            <div class="form-group">
+                                Email
+                                <input type="text" ng-model="complaint.email" class="form-control" placeholder="User Email">
+                            </div>
+                            <button type="submit" ng-click="registerComplaint()" class="form-group btn btn-o btn-primary">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
