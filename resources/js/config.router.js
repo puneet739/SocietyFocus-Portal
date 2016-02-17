@@ -165,7 +165,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         url: '/bulk',
         template: '<div ui-view class="fade-in-up"></div>',
         title: 'Bulk',
-        resolve: loadSequence('bulkController'),
+        resolve: loadSequence('bulkController','angularFileUpload'),
         ncyBreadcrumb: {
             label: 'BulkController'
         }

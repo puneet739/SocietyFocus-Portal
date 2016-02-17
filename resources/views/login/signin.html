@@ -35,7 +35,7 @@
                             </ui-select-match>
                             <ui-select-choices repeat="item in society | filter: $select.search">
                                 <img ng-if="item.societypic" height="25" width="25" ng-src="{{item.societypic}}"/>
-                                <div ng-bind-html="item.displayname | highlight: $select.search">
+                                <div ng-bind-html="item.displayname | highlight: $select.search" class="optionsDiv">
                                 </div>
                             </ui-select-choices>
                         </ui-select>
