@@ -21,7 +21,8 @@ app.run(['$rootScope', '$state', '$stateParams', '$window', 'authentication', '$
             name: 'Society Focus', // name of your project
             author: 'Society Focus', // author's name or company name
             description: 'Society Focus', // brief description
-            version: '2.0', // current version
+            contact: '9711616135',
+            version: '1.0', // current version
             year: ((new Date()).getFullYear()), // automatic current year (for copyright information)
             isMobile: (function() { // true if the browser is a mobile device
                 var check = false;
