@@ -80,7 +80,7 @@
       "user":{
           "VIEW":"View all Users",
           "REGISTER":"Register User",
-          "VIEW_SINGLE": "Search User",
+          "SEARCH_USER": "Search User",
           "REGISTER_BULK" : "Register Bulk Users"
         },
       "tables": {

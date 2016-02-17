@@ -2,7 +2,7 @@ app.run(['$rootScope', '$state', '$stateParams', '$window', 'authentication', '$
     function($rootScope, $state, $stateParams, $window, authentication, $cookieStore) {
 
         $rootScope.constant={
-            // SERVICE_URL:"http://zircon.com//localservice"
+            // SERVICE_URL:"http://zircon.com/localservice"
             SERVICE_URL:"http://societyfocus.com/service"
         }
         // Attach Fastclick for eliminating the 300ms delay between a physical tap and the firing of a click event on mobile browsers
@@ -18,9 +18,9 @@ app.run(['$rootScope', '$state', '$stateParams', '$window', 'authentication', '$
         // GLOBAL APP SCOPE
         // set below basic information
         $rootScope.app = {
-            name: 'Test', // name of your project
-            author: 'Puneet739@gmail.com', // author's name or company name
-            description: 'Test app', // brief description
+            name: 'Society Focus', // name of your project
+            author: 'Society Focus', // author's name or company name
+            description: 'Society Focus', // brief description
             version: '2.0', // current version
             year: ((new Date()).getFullYear()), // automatic current year (for copyright information)
             isMobile: (function() { // true if the browser is a mobile device
