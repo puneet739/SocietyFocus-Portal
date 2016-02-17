@@ -25,16 +25,19 @@
                             <i class="fa fa-lock"></i>
                             </span>
                     </div>
-                    
                     <div class="form-group">
-                        <label for="form-field-select-1">
-                            Society
+                        <label>
+                            Default
                         </label>
-                        <select class="cs-select cs-skin-slide" ng-options="item.value as item.displayname for item in society" ng-model="credentials.society">
-                            <option value="" disabled="">Select Your Society</option>
-                        </select>
+                        <ui-select ng-model="credentials.society" theme="bootstrap">
+                            <ui-select-match placeholder="Select in the list...">
+                                {{$select.selected.displayname}}
+                            </ui-select-match>
+                            <ui-select-choices repeat="item in society | filter: $select.search">
+                                <div ng-bind-html="item.displayname | highlight: $select.search"></div>
+                            </ui-select-choices>
+                        </ui-select>
                     </div>
-
                     <div class="alert alert-danger fade-in-up" ng-if="login_error">
                         <button data-ct-dismiss="alert" class="close">
                             &times;
@@ -58,4 +61,4 @@
         <!-- end: LOGIN BOX -->
     </div>
 </div>
-<!-- end: LOGIN -->
+<!-- end: LOGIN

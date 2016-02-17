@@ -46,7 +46,7 @@ app.constant('JS_REQUIRES', {
         // 'nestableCtrl': 'assets/js/controllers/nestableCtrl.js',
         // 'validationCtrl': ['assets/js/controllers/validationCtrl.js'],
         // 'userCtrl': ['assets/js/controllers/userCtrl.js'],
-        'selectCtrl': 'assets/js/controllers/selectCtrl.js',
+        // 'selectCtrl': 'assets/js/controllers/selectCtrl.js',
         // 'wizardCtrl': 'assets/js/controllers/wizardCtrl.js',
         // 'uploadCtrl': 'assets/js/controllers/uploadCtrl.js',
         // 'treeCtrl': 'assets/js/controllers/treeCtrl.js',
