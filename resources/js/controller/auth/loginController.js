@@ -23,7 +23,8 @@ app.controller("LoginController", function($scope, $http,$q , $location, authent
             for (i = 0; i < socities.length; i++) {
                 var society = {
                     "displayname": socities[i].name,
-                    "value": socities[i].societyId
+                    "value": socities[i].societyId,
+                    "societypic":socities[i].societypic
                 };
                 societyList[i] = society;
             }
