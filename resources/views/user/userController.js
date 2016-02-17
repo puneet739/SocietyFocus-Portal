@@ -1,4 +1,4 @@
-app.controller("userController", function($scope, $http, $filter, $q, $location, authentication, $rootScope, eventbus, ngTableParams) {
+app.controller("userController", function($scope,toaster, $http, $filter, $q, $location, authentication, $rootScope, eventbus, ngTableParams) {
 
     $scope.editId = -1;
     $scope.register_success=false;
@@ -45,7 +45,9 @@ app.controller("userController", function($scope, $http, $filter, $q, $location,
         $http(req).then(function successCallback(response) {
             console.log('user modified successfully');
             var allUsers = response.data.body;
-            alert('User modified successfully');
+            var title = 'User modified successfully';
+            toaster.pop('success', title, title);
+             $scope.setEditId(-1);
         });
         console.log('Its time to save the user' + user);
     };

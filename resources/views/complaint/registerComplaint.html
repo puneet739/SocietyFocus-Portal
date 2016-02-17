@@ -24,10 +24,10 @@
                                 <textarea maxLength="150" id="form-field-23" required="required" class="form-control limited" ng-model="complaint.title"></textarea>
                                 <div id="characters">
                                     <span>Characters left: {{150 - complaint.title.length}}</span>
-                                </div>
                             </div>
-                            <div class="form-group">
-                                Description<span class="symbol required">
+                    </div>
+                    <div class="form-group">
+                        Description<span class="symbol required">
                                 <textarea class="form-control autosize area-animated msd-elastic: \n;"  required="required" data-ng-model="complaint.description"></textarea>
                             </div>
                             <div class="form-group">
@@ -41,6 +41,13 @@
                             <button type="submit" ng-click="registerComplaint()" class="form-group btn btn-o btn-primary">
                                 Submit
                             </button>
+
+                            <div class="form-group alert alert-success fade-in-up" ng-if="complaintSuccess">
+                                <button data-ct-dismiss="alert" class="close">
+                                    &times;
+                                </button>
+                                <a class="alert-link" href="#"> Your complaint is registered successfully</a>
+                            </div>
                         </form>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-app.controller("assetController", function($scope, $http, $filter, $q, $location, $rootScope, ngTableParams) {
+app.controller("assetController", function($scope, $http, toaster, $filter, $q, $location, $rootScope, ngTableParams) {
 
 	$scope.register_success=false;
     $scope.asset_category = [{
@@ -74,9 +74,10 @@ app.controller("assetController", function($scope, $http, $filter, $q, $location
             data: assetString,
         }
         $http(req).then(function successCallback(response) {
-            console.log('user modified successfully');
             var allAssets = response.data.body;
-            alert('User modified successfully');
+            var title = 'Asset modified successfully';
+            toaster.pop('success', title, title);
+            $scope.setEditId(-1);
         });
     };
 

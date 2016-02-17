@@ -30,6 +30,8 @@ app.controller("complaintController", function($scope, $http, $filter, $q, $loca
                 title: 'Complaint Registered Successfully',
                 text: 'Complaint Registered Successfully'
             };
+            $scope.complaint=[];
+            $scope.complaintSuccess=1;
             toaster.pop($scope.toaster.type, $scope.toaster.title, $scope.toaster.text);
         }, function errorCallback(error) {
             console.log('Error because of connection');
