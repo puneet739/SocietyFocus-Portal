@@ -60,6 +60,9 @@ start: TOP NAVBAR -->
                 <li >
                     <a ui-sref="login.lockscreen" translate="topbar.user.LOCKSCREEN"> Lock Screen </a>
                 </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="app.user.settings" translate="topbar.user.SETTINGS"> Settings </a>
+                </li>
                 <li ng-controller="LoginController">
                     <a translate="topbar.user.LOGOUT" ng-click="logout()">Log Out2</a>
                     <!-- <a translate="topbar.user.LOGOUT" ng-click="logout()"> Log Out </a> -->

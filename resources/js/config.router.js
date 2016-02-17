@@ -70,6 +70,10 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         ncyBreadcrumb: {
             label: 'Register New User'
         }
+    }).state('app.user.settings', {
+        url:'/settings',
+        templateUrl:"resources/views/asset/settings.html",
+        resolve: loadSequence('updatecontroller')
     })
 
 

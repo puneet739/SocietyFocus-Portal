@@ -45,7 +45,7 @@ app.constant('JS_REQUIRES', {
         // 'nestableCtrl': 'assets/js/controllers/nestableCtrl.js',
         // 'validationCtrl': ['assets/js/controllers/validationCtrl.js'],
         // 'userCtrl': ['assets/js/controllers/userCtrl.js'],
-        // 'selectCtrl': 'assets/js/controllers/selectCtrl.js',
+        'selectCtrl': 'assets/js/controllers/selectCtrl.js',
         // 'wizardCtrl': 'assets/js/controllers/wizardCtrl.js',
         // 'uploadCtrl': 'assets/js/controllers/uploadCtrl.js',
         // 'treeCtrl': 'assets/js/controllers/treeCtrl.js',
@@ -63,7 +63,8 @@ app.constant('JS_REQUIRES', {
         'usercontroller':'resources/views/user/userController.js',
         'assetBookingController':'resources/views/assetbooking/assetbookingController.js',
         'assetController' : 'resources/views/asset/assetController.js',
-        'bulkController' : 'resources/views/bulk/bulkController.js'
+        'bulkController' : 'resources/views/bulk/bulkController.js',
+        'updatecontroller' : 'resources/views/asset/updateController.js'
     },
     //*** angularJS Modules
     modules: [{
