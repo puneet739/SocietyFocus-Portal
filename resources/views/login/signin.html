@@ -5,7 +5,7 @@
             <img ng-src="{{app.layout.logo}}" alt="{{app.name}}" />
         </div>
         <!-- start: LOGIN BOX -->
-        <div class="box-login" ng-controller="LoginController">
+        <div class="box-login" ng-controller="LoginController" ng-init="getSociety()">
             <form class="form-login" ng-submit="authenticate()">
                 <fieldset>
                     <legend>
