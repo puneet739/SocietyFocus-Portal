@@ -12,6 +12,27 @@ app.controller("LoginController", function($scope, $http,$q , $location, authent
         }
     ];
     
+    $scope.getSociety = function() {
+        var req = {
+            method: 'GET',
+            url: $rootScope.constant.SERVICE_URL + '/society',
+        }
+        $http(req).then(function successCallback(response) {
+            socities = response.data.body;
+            var societyList = [];
+            for (i = 0; i < socities.length; i++) {
+                var society = {
+                    "displayname": socities[i].name,
+                    "value": socities[i].societyId
+                };
+                societyList[i] = society;
+            }
+            $scope.society = societyList;
+            $scope.societyList = societyList;
+            console.log($scope.society);
+        });
+    }    
+
     $scope.authenticate = function() {
         console.log($scope.credentials.username + " pass:" + $scope.credentials.password + "_ " + authentication);
         login($scope.credentials.username, $scope.credentials.password,$scope.credentials.society.value);
