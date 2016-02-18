@@ -158,6 +158,13 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         ncyBreadcrumb: {
             label: 'View Complaint'
         }
+    }).state('app.complaint.search', {
+        url: '/viewbyid',
+        templateUrl: 'resources/views/complaint/searchAll.html',
+        title: 'View Complaint',
+        ncyBreadcrumb: {
+            label: 'View Complaint'
+        }
     })
 
     //Bulk Features
