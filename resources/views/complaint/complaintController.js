@@ -1,6 +1,8 @@
 app.controller("complaintController", function($scope, $http, $filter, $q, $location,$stateParams ,$rootScope, toaster) {
 
-
+    $scope.callViewByID = function(id){
+         $location.path('app/complaint/viewbyid/'+id);
+    }
     $scope.complaint_status = [{
         "displayname": "New",
         "value": 1
