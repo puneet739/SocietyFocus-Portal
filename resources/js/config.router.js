@@ -160,7 +160,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         }
     }).state('app.complaint.search', {
         url: '/viewbyid',
-        templateUrl: 'resources/views/complaint/searchAll.html',
+        templateUrl: 'resources/views/complaint/viewComplaintById.html',
         title: 'View Complaint',
         ncyBreadcrumb: {
             label: 'View Complaint'
