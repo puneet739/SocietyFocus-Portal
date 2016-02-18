@@ -1,4 +1,4 @@
-app.controller("complaintController", function($scope, $http, $filter, $q, $location,$stateParams ,$rootScope, toaster) {
+app.controller("complaintController", function($scope, $http, $filter, $q, $location, $stateParams, $rootScope, toaster) {
 
 
     $scope.complaint_status = [{
@@ -17,7 +17,7 @@ app.controller("complaintController", function($scope, $http, $filter, $q, $loca
 
     $scope.registerComplaint = function() {
         var complaintString = JSON.stringify($scope.complaint, null, "\t");
-        
+
         var req = {
             method: 'POST',
             url: $rootScope.constant.SERVICE_URL + '/v1/complaint/save',
@@ -30,8 +30,8 @@ app.controller("complaintController", function($scope, $http, $filter, $q, $loca
                 title: 'Complaint Registered Successfully',
                 text: 'Complaint Registered Successfully'
             };
-            $scope.complaint=[];
-            $scope.complaintSuccess=1;
+            $scope.complaint = [];
+            $scope.complaintSuccess = 1;
             toaster.pop($scope.toaster.type, $scope.toaster.title, $scope.toaster.text);
         }, function errorCallback(error) {
             console.log('Error because of connection');
@@ -40,7 +40,7 @@ app.controller("complaintController", function($scope, $http, $filter, $q, $loca
 
 
 
-    $scope.viewallComplaint = function(){
+    $scope.viewallComplaint = function() {
         var req = {
             method: 'GET',
             url: $rootScope.constant.SERVICE_URL + '/v1/complaint/getall',
@@ -53,7 +53,7 @@ app.controller("complaintController", function($scope, $http, $filter, $q, $loca
 
     }
 
-    $scope.viewUserComplaint = function(){
+    $scope.viewUserComplaint = function() {
         var req = {
             method: 'GET',
             url: $rootScope.constant.SERVICE_URL + '/v1/complaint/getusercomplaint',
@@ -65,21 +65,54 @@ app.controller("complaintController", function($scope, $http, $filter, $q, $loca
         });
     }
 
-
-    $scope.viewComplaintByID = function(){
-        console.log('Complaint ID which need to be fetched:'+$stateParams.id);
+    $scope.searchBarShow = true;
+    $scope.viewComplaintByID = function() {
+        console.log('Complaint ID which need to be fetched:' + $stateParams.id);
+        if (isEmpty($stateParams.id)) return;
         var req = {
             method: 'GET',
-            url: $rootScope.constant.SERVICE_URL + '/v1/complaint/get/'+$stateParams.id,
+            url: $rootScope.constant.SERVICE_URL + '/v1/complaint/get/' + $stateParams.id,
         };
         $http(req).then(function successCallback(response) {
             $scope.complaint = response.data.body.complaint;
             $scope.user = response.data.body.complaint.user;
             $scope.comments = response.data.body.comments;
+            $scope.searchBarShow = false;
         }, function errorCallback(error) {
             console.log('Error because of connection');
         });
     }
 
+    function isEmpty(str) {
+        return (!str || 0 === str.length);
+    }
 
+    $scope.addComment = function() {
+        console.log('Adding Comment:' + $stateParams.id);
+
+        var req = {
+            method: 'GET',
+            url: $rootScope.constant.SERVICE_URL + '/v1/comment/add/complaint_' + $scope.complaint.complaintid + '/' + $scope.newcomment,
+        };
+        $http(req).then(function successCallback(response) {
+            console.log('Comment Added Successfully');
+            toaster.pop("success", "Comment Posted Successfully", "Comment Added Successfully");
+            var comment = response.data.body;
+            $scope.comments.push(comment);
+            $scope.newcomment = null;
+        }, function errorCallback(error) {
+            console.log('Error because of connection');
+        });
+    }
+
+    $scope.searchId = function() {
+        console.log('Search for ID'+$scope.complaintid);
+        $stateParams.id = $scope.complaintid;
+        $scope.viewComplaintByID();
+    }
+
+    $scope.isadmin = false;
+    $scope.isAdmin = function() {
+        $scope.isadmin = true;
+    }
 });
