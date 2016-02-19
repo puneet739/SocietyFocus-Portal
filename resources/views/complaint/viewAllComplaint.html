@@ -10,7 +10,7 @@
 </section>
 <div class="container-fluid container-fullw bg-white" ng-controller="complaintController" ng-init="viewallComplaint()">
     <div class="col-md-12">
-        <table class="table">
+        <table class="table table-striped">
             <thead>
                 <tr>
                 	<th>ID </th>
@@ -26,7 +26,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="allcomplaint in allcomplaints" style="cursor: pointer;" ng-click="callViewByID({{allcomplaint.complaintid}})" >
+                <tr ng-repeat="allcomplaint in allcomplaints" style="cursor: pointer;" ng-click="callViewByID({{allcomplaint.complaintid}})" ng-class-odd="'odd'" ng-class-even="'even'" >
                 	<td>{{allcomplaint.complaintid}} </td>
                     <td>{{allcomplaint.title}} </td>
                     <td>{{allcomplaint.description}} </td>

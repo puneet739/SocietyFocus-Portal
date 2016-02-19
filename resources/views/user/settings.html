@@ -17,30 +17,38 @@
                     <div class="panel-heading">
                         <h5 class="panel-title">Update Details Form</h5>
                     </div>
-                    <div class="panel-body" ng-controller="updateController">
-                        <form class="form-login" ng-submit="updateUser()">
+                    <div class="panel-body" ng-controller="updateController" ng-init="getCurrentUser()">
+                        <form class="form-login">
                             <div class="form-group">
                                 First Name
-                                <input type="text" ng-model="logedinuser.firstname" class="form-control" placeholder="Enter First Name">
+                                <input type="text" ng-model="currentUser.firstname" class="form-control" placeholder="Enter First Name">
                             </div>
                              <div class="form-group">
                                 Last Name
-                                <input type="text" ng-model="logedinuser.lastname" class="form-control" placeholder="Enter Last Name">
+                                <input type="text" ng-model="currentUser.lastname" class="form-control" placeholder="Enter Last Name">
                             </div>
                             <div class="form-group">
                                 Contact No
-                                <input type="text" ng-model="logedinuser.contact_no" class="form-control" placeholder="Enter Contact No">
+                                <input type="text" ng-model="currentUser.contact_no" class="form-control" placeholder="Enter Contact No">
                             </div>
 							<div class="form-group">
                                 Address
-                                <input type="text" ng-model="logedinuser.address" class="form-control" placeholder="Enter Full Address">
+                                <input type="text" ng-model="currentUser.address" class="form-control" placeholder="Enter Full Address">
+                            </div>
+                            <div class="form-group">
+                                Occupation
+                                <input type="text" ng-model="currentUser.occupation" class="form-control" placeholder="Enter Occupation">
+                            </div>
+                            <div class="form-group">
+                                Descirption
+                                <input type="text" ng-model="currentUser.description" class="form-control" placeholder="Enter Descirption">
                             </div>
                             <div class="form-group">
                                 <div class="form-control list-group-item list-group-item-success" ng-if="register_success">
                                     User registered successfully
                                 </div>
                             </div>
-                            <button type="submit" class="form-group btn btn-o btn-primary">
+                            <button type="submit" class="form-group btn btn-o btn-primary" ng-click="updateUser()">
                                 Submit
                             </button>
                             
