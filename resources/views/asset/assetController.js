@@ -47,15 +47,15 @@ app.controller("assetController", function($scope, $http, toaster, $filter, $q, 
 
         $http(req).then(function successCallback(response) {
             console.log('users are loaded successfully');
-            var allUsers = response.data.body;
-
+            var allassets = response.data.body;
+            $scope.allassets=allassets;
             $scope.tableParams = new ngTableParams({
                 page: 1,
                 count: 10
             }, {
-                total: allUsers.length,
+                total: allassets.length,
                 getData: function($defer, params) {
-                    var orderedData = params.sorting() ? $filter('orderBy')(allUsers, params.orderBy()) : allUsers;
+                    var orderedData = params.sorting() ? $filter('orderBy')(allassets, params.orderBy()) : allassets;
                     $defer.resolve(orderedData.slice((params.page() - 1) * params.count(), params.page() * params.count()));
                 }
             });
