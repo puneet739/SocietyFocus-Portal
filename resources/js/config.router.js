@@ -130,6 +130,13 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         ncyBreadcrumb: {
             label: 'Register'
         }
+    }).state('app.asset.book', {
+        url: '/book',
+        templateUrl: 'resources/views/assetbooking/bookAsset.html',
+        title: 'Register',
+        ncyBreadcrumb: {
+            label: 'Register'
+        }
     })
 
 
