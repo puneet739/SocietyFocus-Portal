@@ -37,7 +37,7 @@ app.run(['$rootScope', '$state', '$stateParams', '$window', 'authentication', '$
                 isSidebarFixed: true, // true if you want to initialize the template with fixed sidebar
                 isSidebarClosed: true, // true if you want to initialize the template with closed sidebar
                 isFooterFixed: true, // true if you want to initialize the template with fixed footer
-                logo: 'assets/images/logo.png', // relative path of the project logo
+                logo: 'resources/images/logo_black.png', // relative path of the project logo
             }
         };
         $rootScope.user = {

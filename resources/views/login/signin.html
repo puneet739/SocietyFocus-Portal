@@ -1,11 +1,11 @@
 <!-- start: LOGIN -->
 <div class="row">
     <div class="main-login col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
-        <div class="logo">
-            <img ng-src="{{app.layout.logo}}" alt="{{app.name}}" />
-        </div>
         <!-- start: LOGIN BOX -->
         <div class="box-login" ng-controller="LoginController" ng-init="getSociety()">
+            <div class="logo">
+                <img ng-src="{{app.layout.logo}}" alt="{{app.name}}" height="80" width="80" /> {{app.name}}
+            </div>
             <form class="form-login" ng-submit="authenticate()">
                 <fieldset>
                     <legend>
@@ -34,7 +34,7 @@
                                 {{$select.selected.displayname}}
                             </ui-select-match>
                             <ui-select-choices repeat="item in society | filter: $select.search">
-                                <img ng-if="item.societypic" height="25" width="25" ng-src="{{item.societypic}}"/>
+                                <img ng-if="item.societypic" height="25" width="25" ng-src="{{item.societypic}}" />
                                 <div ng-bind-html="item.displayname | highlight: $select.search" class="optionsDiv">
                                 </div>
                             </ui-select-choices>
