@@ -97,7 +97,7 @@ body.bg_style_5 {
   text-shadow: none;
   color: #ffffff;
 }
-
+ul{list-style: none;}
 a, a:focus, a:hover, a:active {
   outline: 0 !important;
   text-decoration: none !important;
@@ -11290,4 +11290,8 @@ td.small-width {
 .search-form{
   width:50%;
   margin-top: 20px;
+}
+.assetImage{
+      width: 67%;
+    height: 173px;
 }
