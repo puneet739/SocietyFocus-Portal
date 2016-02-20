@@ -70,10 +70,22 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         ncyBreadcrumb: {
             label: 'Register New User'
         }
+    }).state('app.user.search', {
+        url: "/search",
+        templateUrl: "resources/views/user/searchUser.html",
+        resolve: loadSequence('usercontroller'),
+        title: 'Search User',
+        ncyBreadcrumb: {
+            label: 'Search User'
+        }
     }).state('app.user.settings', {
         url:'/settings',
         templateUrl:"resources/views/user/settings.html",
-        resolve: loadSequence('updatecontroller')
+        resolve: loadSequence('updatecontroller'),
+        title: 'User Settings',
+        ncyBreadcrumb: {
+            label: 'User Settings'
+        }
     })
 
 
