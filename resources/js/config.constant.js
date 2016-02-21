@@ -62,6 +62,7 @@ app.constant('JS_REQUIRES', {
         //Custom Contoller for the application
         'loginController' : 'resources/js/controller/auth/loginController.js',
         'usercontroller':'resources/views/user/userController.js',
+        'dashboardController':'resources/views/dashboard/dashboardController.js',
         'assetBookingController':'resources/views/assetbooking/assetbookingController.js',
         'assetController' : 'resources/views/asset/assetController.js',
         'bulkController' : 'resources/views/bulk/bulkController.js',

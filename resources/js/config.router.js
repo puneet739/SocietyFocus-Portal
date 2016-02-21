@@ -40,6 +40,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         url: "/dashboard",
         templateUrl: "resources/views/dashboard/dashboard.html",
         title: 'Dashboard',
+        resolve: loadSequence('dashboardController'),
         ncyBreadcrumb: {
             label: 'Dashboard'
         }
