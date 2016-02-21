@@ -32,12 +32,12 @@ app.run(['$rootScope', '$state', '$stateParams', '$window', 'authentication', '$
                 return check;
             })(),
             theme: 'theme-3',
+            logo: 'resources/images/logo_black.png', // relative path of the project logo
             layout: {
                 isNavbarFixed: false, //true if you want to initialize the template with fixed header
                 isSidebarFixed: true, // true if you want to initialize the template with fixed sidebar
                 isSidebarClosed: true, // true if you want to initialize the template with closed sidebar
                 isFooterFixed: true, // true if you want to initialize the template with fixed footer
-                logo: 'resources/images/logo_black.png', // relative path of the project logo
             }
         };
         $rootScope.user = {
