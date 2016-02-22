@@ -1,4 +1,4 @@
-app.controller("LoginController", function($scope, $http,$q , $location, authentication, $rootScope,eventbus) {
+app.controller("LoginController", function($scope, $http,$q,$sessionStorage , $location, authentication, $rootScope,eventbus) {
 	$scope.login_error=false;
 
     $scope.society=[
@@ -67,6 +67,7 @@ app.controller("LoginController", function($scope, $http,$q , $location, authent
                     "token":accessToken,
                     "userID" : userObject.userid
                 }
+                $sessionStorage.society=response.data.body.society;
                 console.log('user have logged in successfully');
                 authentication.login();
                 deferred.resolve(userInfo);

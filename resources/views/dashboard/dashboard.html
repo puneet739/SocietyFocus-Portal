@@ -2,8 +2,17 @@
 <section id="page-title" class="padding-top-15 padding-bottom-15">
     <div class="row">
         <div class="col-sm-7">
-            <h1 class="mainTitle" translate="dashboard.WELCOME" translate-values="{ appName: app.name }">WELCOME TO CLIP-TWO</h1>
-            <span class="mainDescription">overview {{app.layout.theme}} stats </span>
+            <h1 class="mainTitle" translate="dashboard.WELCOME" translate-values="{ appName: app.name }"></h1>
+            <span class="mainDescription">overview </span>
         </div>
     </div>
 </section>
+
+<div class="container-fluid container-fullw bg-white col-md-12" ng-controller="dashboardController" ng-init="init()">
+	<div class="row">
+		<h5 class="over-title margin-bottom-15">Welcome to  <span class="text-bold">{{currentSociety.name}}</span></h5>
+		<div class="col-md-10">
+			<img class="img-rounded img-responsive" ng-src="{{currentSociety.societypic}}"/>
+		</div>
+	</div>
+</div>
