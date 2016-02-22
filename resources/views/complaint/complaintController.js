@@ -17,6 +17,26 @@ app.controller("complaintController", function($scope, $http, $filter, $q, $loca
         "value": 4
     }];
 
+    $scope.modifyComplaint = function() {
+        var complaintString = JSON.stringify($scope.complaint, null, "\t");
+
+        var req = {
+            method: 'POST',
+            url: $rootScope.constant.SERVICE_URL + '/v1/complaint/modify',
+            data: complaintString,
+        };
+
+        $http(req).then(function successCallback(response) {
+            $scope.toaster = {
+                type: 'success',
+                title: 'Complaint Updated Successfully',
+                text: 'Complaint Updated Successfully'
+            };
+            toaster.pop($scope.toaster.type, $scope.toaster.title, $scope.toaster.text);
+        }, function errorCallback(error) {
+            console.log('Error because of connection');
+        });
+    }
     $scope.registerComplaint = function() {
         var complaintString = JSON.stringify($scope.complaint, null, "\t");
 
