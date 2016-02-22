@@ -87,6 +87,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
     }).state('app.user.settings', {
         url:'/settings',
         templateUrl:"resources/views/user/settings.html",
+        resolve: loadSequence('angularFileUpload'),
         title: 'User Settings',
         ncyBreadcrumb: {
             label: 'User Settings'
@@ -133,14 +134,21 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         templateUrl: 'resources/views/assetbooking/view.html',
         title: 'Register',
         ncyBreadcrumb: {
-            label: 'Register'
+            label: 'View Asset'
         }
-    }).state('app.asset.book', {
-        url: '/book',
-        templateUrl: 'resources/views/assetbooking/bookAsset.html',
+    }).state('app.asset.booking.asset', {
+        url: '/asset',
+        templateUrl: 'resources/views/assetbooking/listAsset.html',
         title: 'Register',
         ncyBreadcrumb: {
-            label: 'Register'
+            label: 'List Asset'
+        }
+    }).state('app.asset.booking.id', {
+        url: '/asset/{id}',
+        templateUrl: 'resources/views/assetbooking/listAsset.html',
+        title: 'Book Asset',
+        ncyBreadcrumb: {
+            label: 'Book Asset'
         }
     })
 
