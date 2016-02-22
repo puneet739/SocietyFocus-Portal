@@ -134,7 +134,7 @@ app.controller("assetController", function($scope, $http, toaster, $filter,$stat
         $scope.opened = !$scope.opened;
     };
     $scope.confirmAsset = function(){
-        $scope.asset.startTime = JSON.stringify($scope.dt);
+        $scope.asset.startTime = moment.utc($scope.dt).format('YYYY-MM-DDThh:mm:ss') +'Z';
         console.log($scope.asset);
         var req = {
             method: 'POST',
