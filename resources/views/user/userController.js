@@ -67,4 +67,17 @@ app.controller("userController", function($scope,toaster, $http, $filter, $q, $l
             $scope.newuser=null;
         });
     }
+
+    $scope.searchBarShow=true;
+    $scope.searchByEmail = function() {
+
+        var req = {
+            method: 'GET',
+            url: $rootScope.constant.SERVICE_URL + '/user/search/byemail/'+$scope.useremail,
+        }
+
+        $http(req).then(function successCallback(response) {
+            $scope.userList = response.data.body;
+        });
+    }
 });

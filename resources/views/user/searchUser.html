@@ -1,13 +1,13 @@
 <section id="page-title">
     <div class="row">
         <div class="col-sm-8">
-            <h1 class="mainTitle">View Complaint</h1>
-            <span class="mainDescription">View Complaint</span>
+            <h1 class="mainTitle">Search User</h1>
+            <span class="mainDescription">Search User</span>
         </div>
         <div ncy-breadcrumb></div>
     </div>
 </section>
-<div ng-controller="complaintController" class="col-md-12 container-fluid container-fullw bg-white">
+<div ng-controller="userController" class="col-md-12 container-fluid container-fullw bg-white">
     <div ng-show="searchBarShow">
         <div id="searchBar" class="container-fluid container-fullw bg-white col-md-6">
             <fieldset>
@@ -16,13 +16,13 @@
                 </legend>
                 <div class="form-group">
                     <label>
-                        User Email By Name <span class="symbol required"></span>
+                        User User By Email <span class="symbol required"></span>
                     </label>
                     <div class="form-group">
-                        <input type="text" placeholder="Use Name" id="form-field-13" class="form-control underline input-sm" ng-model="complaintid" />
+                        <input type="text" placeholder="User Email" id="form-field-13" class="form-control underline input-sm" ng-model="useremail" />
                     </div>
                     <div class="form-group pull-right">
-                        <button type="submit" ng-click="searchId()" class="form-group btn btn-o btn-primary">
+                        <button type="submit" ng-click="searchByEmail()" class="form-group btn btn-o btn-primary">
                             Search
                         </button>
                     </div>
@@ -30,51 +30,37 @@
             </fieldset>
         </div>
     </div>
-    
-    <div class="container-fluid container-fullw fade-in-up bg-white" ng-init="viewComplaintByID()" ng-show="complaint.complaintid">
+    <div class="container-fluid container-fullw fade-in-up bg-white" ng-init="searchByEmail()">
         <div class="row">
             <div class="col-md-12">
-                <div class="col-lg-8 col-md-12">
+                <div class="col-lg-12 col-md-12">
                     <fieldset>
                         <legend>
                             User Detail
                         </legend>
                         <div class="panel-body" ng-disabled="true">
-                            <form class="form-login">
-                                <div class="form-group">
-                                    Subject
-                                    <input type="text" ng-model="complaint.title" class="input-sm form-control" placeholder="Subject">
-                                </div>
-                                <div class="form-group">
-                                    Name
-                                    <input type="text" ng-model="complaint.description" class="input-sm form-control" placeholder="Description" readonly>
-                                </div>
-                                <div class="form-group">
-                                    Contact No
-                                    <input type="text" ng-model="user.contact_no" class="input-sm form-control" placeholder="Contact No">
-                                </div>
-                                <div class="form-group">
-                                    Email
-                                    <input type="text" ng-model="user.email" class="input-sm form-control" placeholder="User Email">
-                                </div>
-                                <div class="form-group">
-                                    Address
-                                    <input type="text" ng-model="user.email" class="input-sm form-control" placeholder="User Email">
-                                </div>
-                                <div class="form-group">
-                                    Occupation
-                                    <input type="text" ng-model="user.email" class="input-sm form-control" placeholder="User Email">
-                                </div>
-                                <div class="form-group">
-                                    Date Of Birth
-                                    <input type="text" ng-model="user.email" class="input-sm form-control" placeholder="User Email">
-                                </div>
-                                <div class="form-group">
-                                    <button type="submit" ng-click="registerComplaint()" class="form-group btn btn-o btn-primary">
-                                        Submit
-                                    </button>
-                                </div>
-                            </form>
+                            <div class="table-responsive table-bordered">
+                                <table class="table table-hover table-striped">
+                                    <thead bgcolor="#d9edf7">
+                                        <th>FirstName</th>
+                                        <th>LastName</th>
+                                        <th>Occupation</th>
+                                        <th>Email</th>
+                                        <th>Address</th>
+                                        <th>PhoneNo</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="user in userList">
+                                            <td>{{user.firstname}}</td>
+                                            <td>{{user.lastname}}</td>
+                                            <td>{{user.occupation}}</td>
+                                            <td>{{user.email}}</td>
+                                            <td>{{user.address}}</td>
+                                            <td>{{user.contact_no}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </fieldset>
                 </div>
