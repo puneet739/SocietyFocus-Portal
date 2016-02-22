@@ -70,7 +70,7 @@ app.controller("assetController", function($scope, $http, toaster, $filter,$stat
         console.log('Asset ID which need to be fetched:' + $stateParams.id);
         if ($stateParams.id === undefined) return;
 
-        var req = {
+        /*var req = {
             method: 'GET',
             url: $rootScope.constant.SERVICE_URL + '/society/asset/get/' + $stateParams.id,
         };
@@ -85,10 +85,14 @@ app.controller("assetController", function($scope, $http, toaster, $filter,$stat
             console.log(response);
         }, function errorCallback(error) {
             console.log('Error because of connection');
-        });
+        });*/
     }
-    $scope.viewAsset = function(id) {
-        $location.path('app/asset/booking/asset/'+id);
+    $scope.viewAsset = function(asset) {
+        $stateParams.id=asset.id;
+        $scope.asset=asset;
+        $scope.showAll=false;
+        //$scope.viewAssetByID();
+        //$location.path('app/asset/booking/asset/'+id);
     }
     $scope.modifyAsset = function(asset) {
         var assetString = JSON.stringify(asset, null, "\t");
@@ -133,9 +137,13 @@ app.controller("assetController", function($scope, $http, toaster, $filter,$stat
 
         $scope.opened = !$scope.opened;
     };
-    $scope.confirmAsset = function(){
+    $scope.confirmAssetBooking = function(){
         $scope.asset.startTime = moment.utc($scope.dt).format('YYYY-MM-DDThh:mm:ss') +'Z';
         console.log($scope.asset);
+        var asset = [];
+        asset=$scope.asset;
+        asset.description=$scope.asset.details;
+        asset.assetid=asset.id;
         var req = {
             method: 'POST',
             url: $rootScope.constant.SERVICE_URL + '/society/asset/book',
@@ -143,10 +151,14 @@ app.controller("assetController", function($scope, $http, toaster, $filter,$stat
         };
         $http(req).then(function successCallback(response) {
             console.log('Done');
+            $scope.assetbookingid=response.data.body.id;
+            var title = 'Asset Booking Registered successfully';
+            toaster.pop('success', title, title);
         }, function errorCallback(error) {
             console.log('Error because of connection');
         });
     }
+
     $scope.dateOptions = {
         formatYear: 'yy',
         startingDay: 1
