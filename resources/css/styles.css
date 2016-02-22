@@ -11295,3 +11295,6 @@ td.small-width {
     width: 173px;
     height: 173px;
 }
+.assetList{
+  cursor: pointer;
+}
