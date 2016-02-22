@@ -51,14 +51,13 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         url: '/user',
         template: '<div ui-view class="fade-in-up"></div>',
         title: 'User',
-        resolve: loadSequence('ngTable'),
+        resolve: loadSequence('ngTable','usercontroller'),
         ncyBreadcrumb: {
             label: 'User'
         }
     }).state('app.user.view', {
         url: "/view",
         templateUrl: "resources/views/user/view.html",
-        resolve: loadSequence('usercontroller'),
         title: 'View Registerd Users',
         ncyBreadcrumb: {
             label: 'View Registerd Users'
@@ -66,15 +65,21 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
     }).state('app.user.register', {
         url: "/register",
         templateUrl: "resources/views/user/register.html",
-        resolve: loadSequence('usercontroller'),
         title: 'Register New User',
         ncyBreadcrumb: {
             label: 'Register New User'
         }
+    }).state('app.user.edit', {
+        url: "/edit",
+        templateUrl: "resources/views/user/view.html",
+       
+        title: 'Search User',
+        ncyBreadcrumb: {
+            label: 'Search User'
+        }
     }).state('app.user.search', {
         url: "/search",
         templateUrl: "resources/views/user/searchUser.html",
-        resolve: loadSequence('usercontroller'),
         title: 'Search User',
         ncyBreadcrumb: {
             label: 'Search User'
@@ -82,7 +87,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
     }).state('app.user.settings', {
         url:'/settings',
         templateUrl:"resources/views/user/settings.html",
-        resolve: loadSequence('updatecontroller','angularFileUpload'),
+        resolve: loadSequence('angularFileUpload'),
         title: 'User Settings',
         ncyBreadcrumb: {
             label: 'User Settings'
