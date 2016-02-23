@@ -87,7 +87,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
     }).state('app.user.settings', {
         url:'/settings',
         templateUrl:"resources/views/user/settings.html",
-        resolve: loadSequence('angularFileUpload'),
+        resolve: loadSequence('angularFileUpload','updatecontroller'),
         title: 'User Settings',
         ncyBreadcrumb: {
             label: 'User Settings'
