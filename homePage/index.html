@@ -9,7 +9,8 @@
     <title>Society Focus</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- <link href="css/font-awesome.min.css" rel="stylesheet"> -->
     <link href="css/lightbox.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link id="css-preset" href="css/presets/preset1.css" rel="stylesheet">
@@ -103,51 +104,6 @@
                                 <h3>{{service.title}}</h3>
                                 <p>{{service.description}}</p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="450ms">
-                        <div class="service-icon">
-                            <i class="fa fa-umbrella"></i>
-                        </div>
-                        <div class="service-info">
-                            <h3>Creative Idea</h3>
-                            <p>{{app.service.creative_desc}}</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="550ms">
-                        <div class="service-icon">
-                            <i class="fa fa-cloud"></i>
-                        </div>
-                        <div class="service-info">
-                            <h3>Awesome Support</h3>
-                            <p>{{app.service.support_desc}}</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="650ms">
-                        <div class="service-icon">
-                            <i class="fa fa-coffee"></i>
-                        </div>
-                        <div class="service-info">
-                            <h3>Professional Design</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="750ms">
-                        <div class="service-icon">
-                            <i class="fa fa-bitbucket"></i>
-                        </div>
-                        <div class="service-info">
-                            <h3>App Development</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="850ms">
-                        <div class="service-icon">
-                            <i class="fa fa-gift"></i>
-                        </div>
-                        <div class="service-info">
-                            <h3>Clean Code</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
                         </div>
                     </div>
                 </div>
@@ -250,7 +206,7 @@
                     <div class="col-sm-3" ng-repeat="user in app.team.users">
                         <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
                             <div class="member-image">
-                                <img class="img-responsive" src="{{user.img_url}}" height="263px" width="287px" alt="">
+                                <img class="img-responsive" src="{{user.img_url}}" style="height:263px"  alt="">
                             </div>
                             <div class="member-info">
                                 <h3>{{user.name}}</h3>
@@ -323,21 +279,6 @@
                                 <li>{{price.line4}}</li>
                             </ul>
                             <a href="#contact" class="btn btn-lg btn-primary">Sign up</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="1100ms">
-                            <h3>Professional</h3>
-                            <div class="price">
-                                $49<span>/Month</span>
-                            </div>
-                            <ul>
-                                <li>Free Setup</li>
-                                <li>10GB Storage</li>
-                                <li>100GB Bandwith</li>
-                                <li>5 Products</li>
-                            </ul>
-                            <a href="#" class="btn btn-lg btn-primary">Sign up</a>
                         </div>
                     </div>
                 </div>
