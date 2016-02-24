@@ -127,7 +127,7 @@ angular.module("myapp", [])
                     img_url:'https://scontent.xx.fbcdn.net/hphotos-prn2/v/t1.0-0/p206x206/1009831_10201613654883305_43799050_n.jpg?oh=b00b28b9dd884a99de23df2eecbf364d&oe=57642FA2',
                     linkendn:'',
                 },{
-                    name:'Jyotishman',
+                    name:'Raj Darai',
                     designation:'Creative Head',
                     description:'Complete application design in charge',
                     fb_link:'',
