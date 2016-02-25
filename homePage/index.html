@@ -303,23 +303,26 @@
                                 <div class="row  wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" name="name" class="form-control" placeholder="Name" required="required">
+                                            <input type="text" name="name" class="form-control" ng-model="feedback.name" placeholder="Name" required="required">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input type="email" name="email" class="form-control" placeholder="Email Address" required="required">
+                                            <input type="email" name="email" class="form-control" ng-model="feedback.email" placeholder="Email Address" required="required">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="subject" class="form-control" placeholder="Subject" required="required">
+                                    <input type="text" name="Phone No" class="form-control" ng-model="feedback.contactno" placeholder="Phone No" required="required">
                                 </div>
                                 <div class="form-group">
-                                    <textarea name="message" id="message" class="form-control" rows="4" placeholder="Enter your message" required="required"></textarea>
+                                    <input type="text" name="subject" class="form-control" ng-model="feedback.subject" placeholder="Subject" required="required">
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn-submit">Send Now</button>
+                                    <textarea name="message" id="message" class="form-control" ng-model="feedback.message" rows="4" placeholder="Enter your message" required="required"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn-submit" ng-click="submitFeedback(feedback)">Send Now</button>
                                 </div>
                             </form>
                         </div>
