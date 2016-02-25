@@ -1,8 +1,7 @@
-app.run(['$rootScope', '$state', '$stateParams', '$window', 'authentication', '$cookieStore',
-    function($rootScope, $state, $stateParams, $window, authentication, $cookieStore) {
+app.run(['$rootScope', '$state', '$stateParams', '$window', 'authentication', '$cookieStore', 'Analytics',
+    function($rootScope, $state, $stateParams, $window, authentication, $cookieStore, Analytics) {
 
         $rootScope.constant={
-            // SERVICE_URL:"http://zircon.com/localservice"
             SERVICE_URL:"http://societyfocus.com/service"
         }
         // Attach Fastclick for eliminating the 300ms delay between a physical tap and the firing of a click event on mobile browsers
@@ -140,7 +139,14 @@ app.config(['$httpProvider',
         $httpProvider.interceptors.push('httpRequestInterceptor');
     }
 ]);
-
+app.config(['AnalyticsProvider',
+    function(AnalyticsProvider) {
+        AnalyticsProvider.setAccount([
+           { tracker: 'UA-74141978-1', name: "tracker1" }
+        ]);
+        AnalyticsProvider.trackPages(true);
+    }
+]);
 
 // app.factory('authenticationSVC', ['$http', '$q', '$window', '$rootScope', '$location', '$cookieStore',
 //     function($http, $q, $window, $rootScope, $location, $cookieStore) {
