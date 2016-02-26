@@ -367,16 +367,18 @@ section {
 **************************/
 
 #portfolio .container-fluid, 
+#screenshot .container-fluid,
+#screenshot .col-sm-3 ,
 #portfolio .col-sm-3  {
   overflow: hidden;
   padding: 0;
 }
 
-#portfolio .folio-item {
+#portfolio .folio-item,#screenshot .folio-item  {
   position: relative;
 }
 
-#portfolio .overlay {
+#portfolio .overlay,#screenshot .overlay {
   background-color: #000;
   color: #fff; 
   left: 0;
@@ -441,7 +443,7 @@ section {
   transition: all 0.8s ease-in-out;
 }
 
-#portfolio .folio-item:hover .folio-image {
+#portfolio .folio-item:hover .folio-image,#screenshot .folio-item:hover .folio-image {
   -webkit-transform: scale(1.5) rotate(-15deg);
   transform: scale(1.5) rotate(-15deg);
 }
@@ -450,18 +452,19 @@ section {
   width: 100%;
 }
 
-#portfolio .folio-item:hover .overlay {
+#portfolio .folio-item:hover .overlay,#screenshot .folio-item:hover .overlay {
   opacity: 0.8;
   bottom: 0;
   height: 100%;
 }
 
-#portfolio .folio-item:hover .folio-overview .folio-expand {
+#portfolio .folio-item:hover .folio-overview .folio-expand,#screenshot .folio-item:hover .folio-overview .folio-expand  {
   margin-top: 0;
   margin-left:0;
 }
 
-#portfolio .folio-item:hover .overlay .folio-info {
+#portfolio .folio-item:hover .overlay .folio-info ,
+#screenshot .folio-item:hover .overlay .folio-info{
   opacity: 1;  
   margin-bottom:0;
   margin-top:0;

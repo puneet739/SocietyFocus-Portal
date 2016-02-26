@@ -119,6 +119,7 @@
 	.team-members .col-sm-3, 
 	.pricing-table .col-sm-3, 
 	#portfolio .col-sm-3, 
+	#screenshot .col-sm-3,
 	.blog-posts .col-sm-4  {
 		width: 50%;
 		float: left;
@@ -221,6 +222,7 @@
 	.team-members .col-sm-3, 
 	.pricing-table .col-sm-3, 
 	#portfolio .col-sm-3, 
+	#screenshot .col-sm-3,
 	.blog-posts .col-sm-4 {
 		width:100%;
 		float: none;
