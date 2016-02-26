@@ -71,6 +71,16 @@ angular.module("myapp", [])
                     description: '24/7 Support',
                 }],
             },
+            screenshot:{
+                title:'ScreenShots of Our application',
+                tags:[{
+                    title:'Application HomePage',
+                    img:'images/snapshot/homepage.png',
+                },{
+                    title:'HomePage2',
+                    img:'images/snapshot/homepage.png',
+                },]
+            },
             aboutus: 'Society Focus is an application that makes connection within society members and society members with RWA. \n Society Focus portal is quite simple for managing the day to day running issues of society members and RWA at a very reasonable cost. The application(android/web) is fast and our experience in setting up the database for our society is very smooth and easy.',
             portfolio: {
                 title: '',
