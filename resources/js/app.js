@@ -15,6 +15,7 @@ angular.module("ziron-module", [
 	'ncy-angular-breadcrumb',
 	'duScroll',
 	'pascalprecht.translate',
+	'angular-google-analytics'
 ]);
 
 var app = angular.module(jcs.modules.app.name, ['ziron-module',jcs.modules.core.name,

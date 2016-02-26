@@ -108,7 +108,15 @@ app.controller("assetController", function($scope, $http, toaster, $filter,$stat
             $scope.setEditId(-1);
         });
     };
-
+    $scope.viewMyAsset = function(){
+        var req = {
+            method: 'POST',
+            url: $rootScope.constant.SERVICE_URL + '/society/asset/getassetbyuser'
+        }
+        $http(req).then(function successCallback(response) {
+           $scope.allassets = response.data.body;
+        });
+    }
      $scope.setEditId = function(pid) {
         $scope.editId = pid;
     };

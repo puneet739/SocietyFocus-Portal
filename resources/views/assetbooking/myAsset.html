@@ -1,0 +1,34 @@
+<!-- start: PAGE TITLE -->
+<section id="page-title">
+    <div class="row">
+        <div class="col-sm-8">
+            <h1 class="mainTitle">View My Assets</h1>
+            <span class="mainDescription">View My Assets</span>
+        </div>
+        <div ncy-breadcrumb></div>
+    </div>
+</section>
+<div class="container-fluid container-fullw bg-white" ng-controller="assetController" ng-init="viewMyAsset()">
+    <div class="col-md-12">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                	<th>ID </th>
+                    <th>Desciption </th>
+                    <th>Prepaid</th>
+                    <th>Creationdate</th>
+                    <th>Start Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="allasset in allassets" style="cursor: pointer;" > 
+                	<td>{{allasset.assetid}} </td>
+                    <td>{{allasset.description}} </td>
+                    <td>{{allasset.prepaid}} </td>
+                    <td>{{allasset.creationdate}} </td>
+                    <td>{{allasset.startTime}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
