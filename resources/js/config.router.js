@@ -87,7 +87,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
     }).state('app.user.settings', {
         url:'/settings',
         templateUrl:"resources/views/user/settings.html",
-        resolve: loadSequence('angularFileUpload','updatecontroller'),
+        resolve: loadSequence('angularFileUpload','updatecontroller','ngImgCrop'),
         title: 'User Settings',
         ncyBreadcrumb: {
             label: 'User Settings'
@@ -150,7 +150,15 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         ncyBreadcrumb: {
             label: 'Book Asset'
         }
+    }).state('app.asset.booking.my', {
+        url: '/viewMy',
+        templateUrl: 'resources/views/assetbooking/myAsset.html',
+        title: 'My Asset',
+        ncyBreadcrumb: {
+            label: 'My Asset'
+        }
     })
+
 
 
     //Complaints Features

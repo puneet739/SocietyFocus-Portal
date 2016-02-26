@@ -12,7 +12,7 @@
 <div class="container-fluid container-fullw bg-white">
     <div class="row">
         <div class="col-md-12">
-            <div class="col-lg-6 col-md-12">
+            <div class="col-lg-9 col-md-12">
                 <div class="panel panel-white">
                     <div class="panel-heading">
                         <h5 class="panel-title">Update Details Form</h5>
@@ -43,6 +43,31 @@
                                 Descirption
                                 <input type="text" ng-model="currentUser.description" class="form-control" placeholder="Enter Descirption">
                             </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-12 margin-bottom-30">
+                                        <span class="btn btn-primary btn-file"> Select an image file
+                                            <input type="file" id="fileInput"/>
+                                        </span>
+                                    </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="cropBox">
+                                        <div class="cropArea">
+                                            <img-crop image="myImage" result-image="myCroppedImage" area-type="square"></img-crop>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="cropBox croppedBox">
+                                        <div>
+                                            <img ng-src="{{myCroppedImage}}" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                             <div class="form-group">
                                 <div class="form-control list-group-item list-group-item-success" ng-if="register_success">
                                     User registered successfully

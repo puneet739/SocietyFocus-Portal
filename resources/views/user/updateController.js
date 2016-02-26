@@ -22,5 +22,36 @@ app.controller("updateController", function($scope,$rootScope,$http) {
 	            var allUsers = response.data.body;
 	            alert('User modified successfully, Kindly LogOut and Login to see new details');
 	        });
+	        // var reqImage = {
+	        //     method: 'POST',
+	        //     headers: {'Content-Type': 'multipart/form-data'},	 
+	        //     url: $rootScope.constant.SERVICE_URL + '/upload/image',
+	        //     file:  $scope.myImage
+	        // }
+	        // $http(reqImage).then(function successCallback(response) {
+	        //     console.log('user modified successfully');
+	        //     // var allUsers = response.data.body;
+	        //     // alert('User modified successfully, Kindly LogOut and Login to see new details');
+	        // });
+	        $http(req).then(function successCallback(response) {
+	            console.log('user modified successfully');
+	            // var allUsers = response.data.body;
+	            // alert('User modified successfully, Kindly LogOut and Login to see new details');
+	        });
 	    };
+	$scope.myImage = '';
+    $scope.myCroppedImage = '';
+    $scope.cropType = "square";
+
+    var handleFileSelect = function (evt) {
+        var file = evt.currentTarget.files[0];
+        var reader = new FileReader();
+        reader.onload = function (evt) {
+            $scope.$apply(function ($scope) {
+                $scope.myImage = evt.target.result;
+            });
+        };
+        reader.readAsDataURL(file);
+    };
+    angular.element(document.querySelector('#fileInput')).on('change', handleFileSelect);
 });
