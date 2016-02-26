@@ -153,7 +153,7 @@ angular.module("myapp", [])
             feedback.description=feedback.subject+':::'+feedback.message;
             var req = {
                 method: 'POST',
-                url: 'societyfocus.com/service/v1/feedback/save',
+                url: 'http://societyfocus.com/service/v1/feedback/save',
                 data: feedback,
             }
             $http(req).then(function successCallback(response) {
