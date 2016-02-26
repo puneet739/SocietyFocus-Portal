@@ -119,6 +119,7 @@
 	.team-members .col-sm-3, 
 	.pricing-table .col-sm-3, 
 	#portfolio .col-sm-3, 
+	#screenshot .col-sm-3,
 	.blog-posts .col-sm-4  {
 		width: 50%;
 		float: left;
@@ -146,10 +147,10 @@
 		margin-top: 25px;
 	}
 	.price {
-		font-size: 18px;
+		font-size: 53px;
 		height: 110px;
-		line-height: 35px;
-		width: 130px;
+		/*line-height: 35px;
+		width: 130px;*/
 	}
 	.single-table ul {
 		margin-top: 22px;
@@ -221,6 +222,7 @@
 	.team-members .col-sm-3, 
 	.pricing-table .col-sm-3, 
 	#portfolio .col-sm-3, 
+	#screenshot .col-sm-3,
 	.blog-posts .col-sm-4 {
 		width:100%;
 		float: none;
