@@ -75,7 +75,7 @@
                         <li class="scroll"><a href="#team">Team</a></li>
                         <li class="scroll"><a href="#pricing">Pricing</a></li>
                         <li class="scroll"><a href="#contact">Contact</a></li>
-                        <li class="scroll"><a href="http://societyfocus.com/portal">Login</a></li>
+                        <li ><a href="http://societyfocus.com/portal">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -192,6 +192,50 @@
         </div>
         <!-- /#portfolio-single-wrap -->
     </section>
+
+    <!-- Our ScreenShots-->
+    <section id="screenshot">
+        <div class="container">
+            <div class="row">
+                <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <h2>ScreenShot</h2>
+                    <p>{{app.screenshot.title}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3" ng-repeat="tag in app.screenshot.tags">
+                    <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
+                        <div class="folio-image">
+                            <img class="img-responsive" ng-src="{{tag.img}}" alt="{{tag.img}}">
+                        </div>
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <div class="overlay-text">
+                                    <div class="folio-info">
+                                        <h3>{{tag.title}}</h3>
+                                        <p>{{tag.title}}</p>
+                                    </div>
+                                    <div class="folio-overview">
+                                        <span class="folio-link"><a class="folio-read-more" ><i class="fa fa-link"></i></a></span>
+                                        <span class="folio-expand"><a href="#contact" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="portfolio-single-wrap">
+            <div id="portfolio-single">
+            </div>
+        </div>
+        <!-- /#portfolio-single-wrap -->
+    </section>
+    <!--Our ScreenShots-->
+
     <!--/#portfolio-->
     <section id="team">
         <div class="container">
@@ -287,7 +331,7 @@
     </section>
     <!--/#pricing-->
     <section id="contact">
-        <div id="google-map" class="wow fadeIn" data-latitude="28.478161" data-longitude="77.304633" data-wow-duration="1000ms" data-wow-delay="400ms"></div>
+        <!-- <div id="google-map" class="wow fadeIn" data-latitude="28.478161" data-longitude="77.304633" data-wow-duration="1000ms" data-wow-delay="400ms"></div> -->
         <div id="contact-us" class="parallax">
             <div class="container">
                 <div class="row">
@@ -303,23 +347,26 @@
                                 <div class="row  wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" name="name" class="form-control" placeholder="Name" required="required">
+                                            <input type="text" name="name" class="form-control" ng-model="feedback.name" placeholder="Name" required="required">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input type="email" name="email" class="form-control" placeholder="Email Address" required="required">
+                                            <input type="email" name="email" class="form-control" ng-model="feedback.email" placeholder="Email Address" required="required">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="subject" class="form-control" placeholder="Subject" required="required">
+                                    <input type="text" name="Phone No" class="form-control" ng-model="feedback.contactno" placeholder="Phone No" required="required">
                                 </div>
                                 <div class="form-group">
-                                    <textarea name="message" id="message" class="form-control" rows="4" placeholder="Enter your message" required="required"></textarea>
+                                    <input type="text" name="subject" class="form-control" ng-model="feedback.subject" placeholder="Subject" required="required">
                                 </div>
                                 <div class="form-group">
-                                    <button type="submit" class="btn-submit">Send Now</button>
+                                    <textarea name="message" id="message" class="form-control" ng-model="feedback.message" rows="4" placeholder="Enter your message" required="required"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn-submit" ng-click="submitFeedback(feedback)">Send Now</button>
                                 </div>
                             </form>
                         </div>
@@ -368,6 +415,16 @@
             </div>
         </div>
     </footer>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-74141978-1', 'auto');
+  ga('send', 'pageview');
+    </script>
+
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
