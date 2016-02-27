@@ -4,6 +4,8 @@ angular.module("myapp", [])
         $scope.app = {
             name: 'Society Focus',
             description: 'Society Focus',
+            aboutus: 'Solve all your  Society Related Issues with a single touch:Hall Booking,Security,Complain,User Management.Call for free demo. SocietyFocus.com :: 9711616135',
+            logo:'images/logo_black.png',
             theme1: {
                 name: 'Society Focus',
                 desciprtion: 'Resident Welfare application wherein Members of the society and residents are interconnected',
@@ -97,7 +99,7 @@ angular.module("myapp", [])
                     img:'images/snapshot/mobile-useroptions.png',
                 },]
             },
-            aboutus: 'Society Focus is an application that makes connection within society members and society members with RWA. \n Society Focus portal is quite simple for managing the day to day running issues of society members and RWA at a very reasonable cost. The application(android/web) is fast and our experience in setting up the database for our society is very smooth and easy.',
+            
             portfolio: {
                 title: '',
                 clients: [{
