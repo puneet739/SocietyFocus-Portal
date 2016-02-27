@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content="{{app.description}}" />
     <meta property="og:title" content="{{app.name}}" />
-    <meta property="og:description" itemprop="description" content="{{app.aboutus}}" />
+    <meta property="og:description" itemprop="description" content="{{app.aboutus_social}}" />
     <meta property="og:image" itemprop="image" content="{{app.logo}}"/>
     <meta property="og:site_name" content="{{app.name}}" />
     <meta property="article:publisher" content="{{app.contactus.facebook}}" />
@@ -127,7 +127,7 @@
                 <div class="col-sm-6">
                     <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                         <h2>About us</h2>
-                        <p class="">{{app.aboutus}}.</p>
+                        <p class="">{{app.aboutus_general}}.</p>
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -404,12 +404,12 @@
                 </div>
                 <div class="social-icons">
                     <ul>
-                        <li><a class="envelope" href="#"><i class="fa fa-envelope"></i></a></li>
-                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <!-- <li><a class="envelope" href="#"><i class="fa fa-envelope"></i></a></li> -->
+                        <!-- <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li> -->
+                        <!-- <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li> -->
+                        <li><a class="facebook" href="{{app.contactus.facebook}}"><i class="fa fa-facebook"></i></a></li>
                         <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a class="tumblr" href="#"><i class="fa fa-tumblr-square"></i></a></li>
+                        <!-- <li><a class="tumblr" href="#"><i class="fa fa-tumblr-square"></i></a></li> -->
                     </ul>
                 </div>
             </div>
