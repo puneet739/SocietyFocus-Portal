@@ -3,6 +3,7 @@ angular.module("myapp", [])
 
         $scope.app = {
             name: 'Society Focus',
+            description: 'Society Focus',
             theme1: {
                 name: 'Society Focus',
                 desciprtion: 'Resident Welfare application wherein Members of the society and residents are interconnected',
@@ -74,11 +75,26 @@ angular.module("myapp", [])
             screenshot:{
                 title:'ScreenShots of Our application',
                 tags:[{
-                    title:'Application HomePage',
-                    img:'images/snapshot/homepage.png',
+                    title:'Mobile HomePage',
+                    img:'images/snapshot/mobile-homepage.png',
                 },{
-                    title:'HomePage2',
-                    img:'images/snapshot/homepage.png',
+                    title:'Login',
+                    img:'images/snapshot/mobile-login.png',
+                },{
+                    title:'Complaints',
+                    img:'images/snapshot/mobile-allcomplatins.png',
+                },{
+                    title:'All Residents',
+                    img:'images/snapshot/mobile-allresidents.png',
+                },{
+                    title:'Mobille  Service Booking',
+                    img:'images/snapshot/mobile-servicebooking.png',
+                },{
+                    title:'Mobile All Societies',
+                    img:'images/snapshot/mobile-societyselection.png',
+                },{
+                    title:'Mobile User Settings',
+                    img:'images/snapshot/mobile-useroptions.png',
                 },]
             },
             aboutus: 'Society Focus is an application that makes connection within society members and society members with RWA. \n Society Focus portal is quite simple for managing the day to day running issues of society members and RWA at a very reasonable cost. The application(android/web) is fast and our experience in setting up the database for our society is very smooth and easy.',
