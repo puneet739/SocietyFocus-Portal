@@ -152,6 +152,57 @@
 		</ul>
 	</li>
 
+	<li ng-class="{'active open':$state.includes('app.ui')}" access="society_admin" access-permission-type="AtLeastOne">
+		<a href="javascript:void(0)">
+			<div class="item-content">
+				<div class="item-media">
+					<i class="ti-settings"></i>
+				</div>
+				<div class="item-inner">
+					<span class="title"> Vehicles </span><i class="icon-arrow"></i>
+				</div>
+			</div>
+		</a>
+		<ul class="sub-menu">
+			<li ui-sref-active="active">
+				<a ui-sref="app.vehicle.add">
+					<span class="title" > Add Vehicle </span>
+				</a>
+			</li>
+
+			<li ui-sref-active="active">
+				<a ui-sref="app.vehicle.update">
+					<span class="title" > Update Vehicle </span>
+				</a>
+			</li>
+
+			<li ui-sref-active="active">
+				<a ui-sref="app.vehicle.comingsoon">
+					<span class="title" > Get User Vehicles </span>
+				</a>
+			</li>
+
+			<li ui-sref-active="active">
+				<a ui-sref="app.vehicle.comingsoon">
+					<span class="title" > Get My Vehicles </span>
+				</a>
+			</li>
+
+			<li ui-sref-active="active">
+				<a ui-sref="app.vehicle.comingsoon">
+					<span class="title" > Get My Vehicles </span>
+				</a>
+			</li>
+
+			<li ui-sref-active="active">
+				<a ui-sref="app.vehicle.comingsoon">
+					<span class="title" > Get My Entries </span>
+				</a>
+			</li>
+			
+		</ul>
+	</li>
+
 	<li ng-class="{'active open':$state.includes('app.ui')}">
 		<a href="javascript:void(0)">
 			<div class="item-content">
