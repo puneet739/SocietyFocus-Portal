@@ -116,6 +116,14 @@ angular.module("myapp", [])
             awards: 10,
             pricing_title: 'Have a look at our pricing strategy and try to understand with whatever matches your requirement.',
             pricing: [{
+                title: 'Trial',
+                price: 'Free',
+                duration: '20 User',
+                line1: 'Free Setup',
+                line2: 'Bunch Of Surprises',
+                line3: 'Live Tracking',
+                line4: '24/7 Support',
+            },{
                 title: 'Basic',
                 price: '5',
                 duration: 'User',
