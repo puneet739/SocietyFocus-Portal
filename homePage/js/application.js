@@ -3,6 +3,10 @@ angular.module("myapp", [])
 
         $scope.app = {
             name: 'Society Focus',
+            description: 'Society Focus',
+            aboutus_social: 'Solve all your  Society Related Issues with a single touch:Hall Booking,Security,Complain,User Management.Call for free demo. SocietyFocus.com :: 9711616135',
+            aboutus_general: 'Society Focus is an application that makes connection within society members and society members with RWA. \n Society Focus portal is quite simple for managing the day to day running issues of society members and RWA at a very reasonable cost. The application(android/web) is fast and our experience in setting up the database for our society is very smooth and easy.',
+            logo:'http://societyfocus.com/images/logo_black.png',
             theme1: {
                 name: 'Society Focus',
                 desciprtion: 'Resident Welfare application wherein Members of the society and residents are interconnected',
@@ -74,14 +78,29 @@ angular.module("myapp", [])
             screenshot:{
                 title:'ScreenShots of Our application',
                 tags:[{
-                    title:'Application HomePage',
-                    img:'images/snapshot/homepage.png',
+                    title:'Mobile HomePage',
+                    img:'images/snapshot/mobile-homepage.png',
                 },{
-                    title:'HomePage2',
-                    img:'images/snapshot/homepage.png',
+                    title:'Login',
+                    img:'images/snapshot/mobile-login.png',
+                },{
+                    title:'Complaints',
+                    img:'images/snapshot/mobile-allcomplatins.png',
+                },{
+                    title:'All Residents',
+                    img:'images/snapshot/mobile-allresidents.png',
+                },{
+                    title:'Mobille  Service Booking',
+                    img:'images/snapshot/mobile-servicebooking.png',
+                },{
+                    title:'Mobile All Societies',
+                    img:'images/snapshot/mobile-societyselection.png',
+                },{
+                    title:'Mobile User Settings',
+                    img:'images/snapshot/mobile-useroptions.png',
                 },]
             },
-            aboutus: 'Society Focus is an application that makes connection within society members and society members with RWA. \n Society Focus portal is quite simple for managing the day to day running issues of society members and RWA at a very reasonable cost. The application(android/web) is fast and our experience in setting up the database for our society is very smooth and easy.',
+            
             portfolio: {
                 title: '',
                 clients: [{
@@ -97,6 +116,14 @@ angular.module("myapp", [])
             awards: 10,
             pricing_title: 'Have a look at our pricing strategy and try to understand with whatever matches your requirement.',
             pricing: [{
+                title: 'Trial',
+                price: 'Free',
+                duration: '20 User',
+                line1: 'Free Setup',
+                line2: 'Bunch Of Surprises',
+                line3: 'Live Tracking',
+                line4: '24/7 Support',
+            },{
                 title: 'Basic',
                 price: '5',
                 duration: 'User',

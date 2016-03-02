@@ -1,7 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myapp">
+<html lang="en" ng-app="myapp" ng-controller="applicationController">
 
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="description" content="{{app.description}}" />
+    <meta property="og:title" content="{{app.name}}" />
+    <meta property="og:description" itemprop="description" content="{{app.aboutus_social}}" />
+    <meta property="og:image" itemprop="image" content="{{app.logo}}"/>
+    <meta property="og:site_name" content="{{app.name}}" />
+    <meta property="article:publisher" content="{{app.contactus.facebook}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="{{app.name}}" />
+    <meta name="fragment" content="!" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -26,7 +36,7 @@
 </head>
 <!--/head-->
 
-<body ng-controller="applicationController">
+<body >
     <!--.preloader-->
     <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
     <!--/.preloader-->
@@ -72,10 +82,10 @@
                         <li class="scroll"><a href="#services">Service</a></li>
                         <li class="scroll"><a href="#about-us">About Us</a></li>
                         <li class="scroll"><a href="#portfolio">Portfolio</a></li>
-                        <li class="scroll"><a href="#team">Team</a></li>
+                        <!-- <li class="scroll"><a href="#team">Team</a></li> -->
                         <li class="scroll"><a href="#pricing">Pricing</a></li>
                         <li class="scroll"><a href="#contact">Contact</a></li>
-                        <li ><a href="http://societyfocus.com/portal">Login</a></li>
+                        <li><a href="http://societyfocus.com/portal">Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -117,7 +127,7 @@
                 <div class="col-sm-6">
                     <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                         <h2>About us</h2>
-                        <p class="">{{app.aboutus}}.</p>
+                        <p class="">{{app.aboutus_general}}.</p>
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -192,7 +202,6 @@
         </div>
         <!-- /#portfolio-single-wrap -->
     </section>
-
     <!-- Our ScreenShots-->
     <section id="screenshot">
         <div class="container">
@@ -205,7 +214,7 @@
         </div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-3" ng-repeat="tag in app.screenshot.tags">
+                <div class="col-sm-2" ng-repeat="tag in app.screenshot.tags">
                     <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
                         <div class="folio-image">
                             <img class="img-responsive" ng-src="{{tag.img}}" alt="{{tag.img}}">
@@ -235,8 +244,8 @@
         <!-- /#portfolio-single-wrap -->
     </section>
     <!--Our ScreenShots-->
-
     <!--/#portfolio-->
+    <!--
     <section id="team">
         <div class="container">
             <div class="row">
@@ -271,7 +280,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
     <!--/#team-->
     <section id="features" class="parallax">
         <div class="container">
@@ -310,7 +319,7 @@
             </div>
             <div class="pricing-table">
                 <div class="row">
-                    <div class="col-sm-6" ng-repeat="price in app.pricing">
+                    <div class="col-sm-4" ng-repeat="price in app.pricing">
                         <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms" ng-class="{featured: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
                             <h3>{{price.title}}</h3>
                             <div class="price">
@@ -395,12 +404,12 @@
                 </div>
                 <div class="social-icons">
                     <ul>
-                        <li><a class="envelope" href="#"><i class="fa fa-envelope"></i></a></li>
-                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <!-- <li><a class="envelope" href="#"><i class="fa fa-envelope"></i></a></li> -->
+                        <!-- <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li> -->
+                        <!-- <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li> -->
+                        <li><a class="facebook" href="{{app.contactus.facebook}}"><i class="fa fa-facebook"></i></a></li>
                         <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a class="tumblr" href="#"><i class="fa fa-tumblr-square"></i></a></li>
+                        <!-- <li><a class="tumblr" href="#"><i class="fa fa-tumblr-square"></i></a></li> -->
                     </ul>
                 </div>
             </div>
@@ -416,15 +425,21 @@
         </div>
     </footer>
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-74141978-1', 'auto');
-  ga('send', 'pageview');
+    ga('create', 'UA-74141978-1', 'auto');
+    ga('send', 'pageview');
     </script>
-
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
