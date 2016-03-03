@@ -9,7 +9,7 @@ app.run(['$rootScope', '$state', '$stateParams', '$window', 'authentication', '$
         FastClick.attach(document.body);
         $window.fbAsyncInit = function() {
             FB.init({ 
-              appId: '774361825993005',
+              appId: '1749929318576139',
               status: true, 
               cookie: true, 
               xfbml: true,
