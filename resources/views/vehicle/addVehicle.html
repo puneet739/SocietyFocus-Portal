@@ -1,0 +1,69 @@
+<!-- start: PAGE TITLE -->
+<section id="page-title" class="no-print">
+    <div class="row">
+        <div class="col-sm-8">
+            <h1 class="mainTitle">Add Vehicles</h1>
+        </div>
+        <div ncy-breadcrumb></div>
+    </div>
+</section>
+<!-- Register Complaint Form-->
+<div class="container-fluid container-fullw bg-white" >
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-lg-6 col-md-12">
+                <div class="panel panel-white">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">Add Vehicle Registration Form</h5>
+                    </div>
+                    <div class="panel-body" ng-controller="vehicleController" ng-init="getUsers();" >
+                        <form class="form-login"  ng-submit="registerVehicle()" ng-hide="codeGen">
+                            <div class="form-group">
+                                Parking Slot
+                                <input type="text" ng-model="vehicle.slot" class="form-control" placeholder="Parking Slot">
+                            </div>
+                            <div class="form-group">
+                                Vehicle Number
+                                <input type="text" ng-model="vehicle.number" class="form-control" placeholder="Vehicle Number">
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    Default
+                                </label>
+                                <ui-select ng-model="vehicle.usersList" theme="bootstrap">
+                                    <ui-select-match placeholder="Select in the list...">
+                                        {{$select.selected.displayname}}
+                                    </ui-select-match>
+                                    <ui-select-choices repeat="item in usersList | filter: $select.search">
+                                        <div ng-bind-html="item.displayname | highlight: $select.search" class="optionsDiv">
+                                        </div>
+                                    </ui-select-choices>
+                                </ui-select>
+                            </div>
+                            <button type="submit" class="form-group btn btn-o btn-primary">
+                                Submit
+                            </button>
+                            <div class="form-group alert alert-success fade-in-up" ng-if="complaintSuccess">
+                                <button data-ct-dismiss="alert" class="close">
+                                    &times;
+                                </button>
+                                <a class="alert-link" href="#"> Your complaint is registered successfully</a>
+                            </div>
+
+                        </form>
+                        <form class="form-QRcode" ng-show="codeGen">
+                            <div ng-init="v=4;e='M';s=300;" id="qrDiv" class="form-group">
+                             <qrcode version="{{v}}" error-correction-level="{{e}}" size="{{s}}" data="{{uniqueID}}"></qrcode>
+                            </div>
+                            <div class="form-group">
+                                <button ng-click="printDiv();" class="no-print form-group btn btn-o btn-primary">Print Div</button>
+                            </div>
+                            
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
