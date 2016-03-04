@@ -77,7 +77,20 @@ app.controller("LoginController", function($scope, $http,$q,$localStorage, authe
             })
             return deferred.promise;
     }
+    $scope.loginFB = function(){
+        FB.login(function(response) {
+                if (response.status == 'connected') {
+                    console.log(response.authResponse.userID);
+                    FB.api('/me?fields=name,email', function(userInfo) {
+                        console.log(userInfo);
+                      },{ scope: 'email' });
+                }
+            });
+        // FB.api('/me', function(res) {
+        //     console.log(res);
+        //   });
 
+    }
     $scope.logout = function() {
         console.log("Now we are trying to logout the current user");
         authentication.logout();
