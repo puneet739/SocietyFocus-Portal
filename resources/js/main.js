@@ -7,7 +7,15 @@ app.run(['$rootScope', '$state', '$stateParams', '$window', 'authentication', '$
         }
         // Attach Fastclick for eliminating the 300ms delay between a physical tap and the firing of a click event on mobile browsers
         FastClick.attach(document.body);
-
+        $window.fbAsyncInit = function() {
+            FB.init({ 
+              appId: '1749929318576139',
+              status: true, 
+              cookie: true, 
+              xfbml: true,
+              version: 'v2.4'
+            });
+        };
         // Set some reference to access them from any scope
         $rootScope.$state = $state;
         $rootScope.$stateParams = $stateParams;

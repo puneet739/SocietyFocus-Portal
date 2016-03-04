@@ -158,8 +158,24 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
             label: 'My Asset'
         }
     })
-
-
+    //Vehicles Features
+    .state('app.vehicle', {
+        url: '/vehicle',
+        template: '<div ui-view class="fade-in-up"></div>',
+        title: 'Vehicle Registration',
+        resolve: loadSequence('vehicleController'),
+        ncyBreadcrumb: {
+            label: 'Vehicle'
+        }
+    }).state('app.vehicle.add', {
+        url: '/add',
+        templateUrl: 'resources/views/vehicle/addVehicle.html',
+        title: 'Vehicle Registration',
+        resolve: loadSequence('vehicleController','ui.select','angularQRcode','QRgen'),
+        ncyBreadcrumb: {
+            label: 'Add Vehicle'
+        }
+    })
 
     //Complaints Features
     .state('app.complaint', {

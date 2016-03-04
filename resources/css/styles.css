@@ -11302,3 +11302,8 @@ td.small-width {
   width: 60px;
   height: 60px;
 }
+@media print {
+   .no-print{
+        display:none;
+    }
+}
