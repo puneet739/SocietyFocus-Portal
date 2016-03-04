@@ -1,0 +1,21 @@
+<!-- start: PAGE TITLE -->
+<section id="page-title" class="no-print">
+    <div class="row">
+        <div class="col-sm-8">
+            <h1 class="mainTitle">Vehicle Details</h1>
+        </div>
+        <div ncy-breadcrumb></div>
+    </div>
+</section>
+
+<div ng-controller="vehicleController" ng-init="getVehicleByUniquieID()">
+    {{vehicle}}
+    <form class="form-QRcode">
+        <div ng-init="v=4;e='M';s=300;" id="qrDiv" class="form-group">
+            <qrcode version="{{v}}" error-correction-level="{{e}}" size="{{s}}" data="{{vehicle.vehicle_uniquieid}}"></qrcode>
+        </div>
+        <div class="form-group">
+            <button ng-click="printDiv();" class="no-print form-group btn btn-o btn-primary">Print Code</button>
+        </div>
+    </form>
+</div>

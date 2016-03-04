@@ -1,0 +1,40 @@
+<!-- start: PAGE TITLE -->
+<section id="page-title" class="no-print">
+    <div class="row">
+        <div class="col-sm-8">
+            <h1 class="mainTitle">User Vehicle</h1>
+        </div>
+        <div ncy-breadcrumb></div>
+    </div>
+</section>
+
+<div class="container-fluid container-fullw bg-white" ng-controller="vehicleController" ng-init="viewMyVehicle()">
+    <div class="col-md-12">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                	<th>ID </th>
+                    <th>Vehicle Number </th>
+                    <th>Parking Slot </th>
+                    <th>Status </th>
+                    <th>Type </th>
+                    <th>UserName</th>
+                    <th>ContactNumber</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="vehicle in vehicles" style="cursor: pointer;" ng-click="redirectToVehicle(vehicle.vehicle_uniquieid)"> 
+                	<td>{{vehicle.vehicleid}} </td>
+                    <td>{{vehicle.vehiclenumber}} </td>
+                    <td>{{vehicle.parkingslot}} </td>
+                    <td>{{vehicle.status}} </td>
+                    <td>{{vehicle.type}} </td>
+                    <td>{{vehicle.user.firstname}} </td>
+                    <td>{{vehicle.user.contact_no}} </td>
+                    <td>{{vehicle.user.email}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -175,6 +175,22 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         ncyBreadcrumb: {
             label: 'Add Vehicle'
         }
+    }).state('app.vehicle.getmy', {
+        url: '/my',
+        templateUrl: 'resources/views/vehicle/myVehicle.html',
+        title: 'View My Vehicles',
+        resolve: loadSequence('vehicleController','ui.select','angularQRcode','QRgen'),
+        ncyBreadcrumb: {
+            label: 'View My Vehicles'
+        }
+    }).state('app.vehicle.byuid', {
+        url: '/get/{id}',
+        templateUrl: 'resources/views/vehicle/vehiclebyid.html',
+        title: 'Vehicle By ID',
+        resolve: loadSequence('vehicleController','ui.select','angularQRcode','QRgen'),
+        ncyBreadcrumb: {
+            label: 'Vehicle By ID'
+        }
     })
 
     //Complaints Features
