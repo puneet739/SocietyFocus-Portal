@@ -171,9 +171,16 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         url: '/add',
         templateUrl: 'resources/views/vehicle/addVehicle.html',
         title: 'Vehicle Registration',
-        resolve: loadSequence('vehicleController','ui.select','angularQRcode','QRgen'),
+        resolve: loadSequence('ui.select','angularQRcode','QRgen'),
         ncyBreadcrumb: {
             label: 'Add Vehicle'
+        }
+    }).state('app.vehicle.update', {
+        url: '/update',
+        templateUrl: 'resources/views/vehicle/updateVehicle.html',
+        title: 'Vehicle Registration',
+        ncyBreadcrumb: {
+            label: 'Update Vehicle'
         }
     })
 

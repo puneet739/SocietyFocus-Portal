@@ -36,5 +36,14 @@ app.controller("vehicleController", function($scope, $http,$q,$localStorage, aut
     $scope.printDiv = function(){
         window.print();
     }
-
+    $scope.getAllVehicle = function(){
+        
+        var req = {
+            method: 'GET',
+            url: $rootScope.constant.SERVICE_URL + '/vehicle/getall'
+        }
+         $http(req).then(function successCallback(response) {
+            console.log(response);
+        });
+    }
 });
