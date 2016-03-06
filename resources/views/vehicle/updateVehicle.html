@@ -1,0 +1,60 @@
+<!-- start: PAGE TITLE -->
+<section id="page-title">
+    <div class="row">
+        <div class="col-sm-8">
+            <h1 class="mainTitle">View All Vehicles</h1>
+            <span class="mainDescription">View All Vehicle</span>
+        </div>
+        <div ncy-breadcrumb></div>
+    </div>
+</section>
+<div class="container-fluid container-fullw bg-white" ng-controller="vehicleController" >
+    <div class="col-md-12" ng-init="getAllVehicle()" ng-show='showAll'>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                	<th>User Name </th>
+                    <th>Contact number </th>
+                    <th>Vehicle ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="allVehicle in allVehicles" style="cursor: pointer;" ng-click="callVehicleID({{allVehicle}})" >
+                	<td>{{allVehicle.user.firstname}} </td>
+                    <td>{{allVehicle.user.contact_no}} </td>
+                    <td>{{allVehicle.vehicleid}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+<form class="form-login" ng-hide="showAll">
+    <div class="form-group">
+        VehicleID
+        <input type="text" ng-model="editVehicle.vehicleid" class="input-sm form-control" readonly>
+    </div>
+    <div class="form-group">
+        Vehicle Number
+        <input type="text" ng-model="editVehicle.vehiclenumber" class="input-sm form-control" readonly>
+    </div>
+    <div class="form-group">
+        parkingslot
+        <input type="text" ng-model="editVehicle.parkingslot" class="input-sm form-control" placeholder="Parking Slot" >
+    </div>
+    <div class="form-group">
+        First Name
+        <input type="text" ng-model="editVehicle.user.firstname" class="input-sm form-control" placeholder="First Name" readonly>
+    </div>
+    <div class="form-group">
+        <button type="submit" ng-click="updateVehicle()" class="form-group btn btn-o btn-primary">
+            Submit
+        </button>
+    </div>
+    <div class="alert alert-info fade-in-up" ng-if="successMsg">
+        <button data-ct-dismiss="alert" class="close">
+            &times;
+        </button>
+        <a class="alert-link" href="#"> Vehicle Details successfully modified.
+    </div>
+</form>
+</div>

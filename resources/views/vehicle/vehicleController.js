@@ -3,6 +3,7 @@ app.controller("vehicleController", function($scope, $http,$q,$location,$localSt
     $scope.vehicle.status = '1';
     $scope.vehicle.type = '0';
     $scope.codeGen = false;
+    $scope.showAll = true;
     $scope.getUsers = function() {
         var req = {
             method: 'GET',
@@ -67,4 +68,31 @@ app.controller("vehicleController", function($scope, $http,$q,$location,$localSt
         });
     }
 
+    $scope.getAllVehicle = function(){
+        
+        var req = {
+            method: 'GET',
+            url: $rootScope.constant.SERVICE_URL + '/vehicle/getall'
+        }
+         $http(req).then(function successCallback(response) {
+            $scope.allVehicles = response.data.body;
+            console.log(response);
+        });
+    }
+    $scope.callVehicleID = function(allVehicle){
+        
+        $scope.editVehicle = allVehicle;
+        $scope.showAll = false;
+    }
+    $scope.updateVehicle = function(){
+         var req = {
+            method: 'POST',
+            url: $rootScope.constant.SERVICE_URL + '/vehicle/modify',
+            data: $scope.editVehicle
+        }
+         $http(req).then(function successCallback(response) {
+            $scope.successMsg = true;
+            console.log(response);
+        });
+    }
 });
