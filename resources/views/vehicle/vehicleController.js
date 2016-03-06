@@ -1,4 +1,4 @@
-app.controller("vehicleController", function($scope, $http,$q,$localStorage, authentication, $rootScope,eventbus) {
+app.controller("vehicleController", function($scope, $http,$q,$location,$localStorage, $stateParams, authentication, $rootScope,eventbus) {
     $scope.vehicle={};
     $scope.vehicle.status = '1';
     $scope.vehicle.type = '0';
@@ -35,6 +35,36 @@ app.controller("vehicleController", function($scope, $http,$q,$localStorage, aut
     }
     $scope.printDiv = function(){
         window.print();
+    }
+
+    $scope.viewMyVehicle = function(){
+        console.log('Getting my Vehicles. ')
+        var req = {
+            method: 'GET',
+            url: $rootScope.constant.SERVICE_URL + '/vehicle/get/me',
+        }
+        $http(req).then(function successCallback(response) {
+            $scope.vehicles = response.data.body;
+            //$scope.uniqueID = response.data.body.vehicle_uniquieid;
+            console.log(response);
+        });
+    }
+
+    $scope.redirectToVehicle= function(id){
+         $location.path('app/vehicle/get/'+id);
+    }
+
+    $scope.getVehicleByUniquieID = function(){
+        console.log('Getting my Vehicles. '+$stateParams.id);
+        var req = {
+            method: 'GET',
+            url: $rootScope.constant.SERVICE_URL + '/vehicle/getvehicle/'+$stateParams.id,
+        }
+        $http(req).then(function successCallback(response) {
+            $scope.vehicle = response.data.body;
+            //$scope.uniqueID = response.data.body.vehicle_uniquieid;
+            console.log(response);
+        });
     }
 
 });
