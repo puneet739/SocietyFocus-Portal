@@ -158,6 +158,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
             label: 'My Asset'
         }
     })
+    
     //Vehicles Features
     .state('app.vehicle', {
         url: '/vehicle',
@@ -197,6 +198,14 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         resolve: loadSequence('vehicleController','ui.select','angularQRcode','QRgen'),
         ncyBreadcrumb: {
             label: 'Vehicle By ID'
+        }
+    }).state('app.vehicle.uservehicle', {
+        url: '/uservehicle/{userid}',
+        templateUrl: 'resources/views/vehicle/userVehicle.html',
+        title: 'User Vehicle',
+        resolve: loadSequence('vehicleController','ui.select','angularQRcode','QRgen'),
+        ncyBreadcrumb: {
+            label: 'User Vehicle'
         }
     })
 

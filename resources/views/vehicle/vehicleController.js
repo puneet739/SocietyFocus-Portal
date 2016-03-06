@@ -95,4 +95,18 @@ app.controller("vehicleController", function($scope, $http,$q,$location,$localSt
             console.log(response);
         });
     }
+
+    $scope.viewUserVehicle = function(){
+        viewUserVehicle($stateParams.userid);
+    }
+    viewUserVehicle = function(userid){
+        var req = {
+            method: 'GET',
+            url: $rootScope.constant.SERVICE_URL + '/vehicle/getvehilcebyuser/'+userid
+        }
+         $http(req).then(function successCallback(response) {
+            $scope.allVehicles = response.data.body;
+            console.log(response);
+        });
+    }
 });
