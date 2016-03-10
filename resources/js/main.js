@@ -158,9 +158,7 @@ app.config(['AnalyticsProvider',
 
     }
 ]);
-app.config(['$locationProvider', function($locationProvider){
-    $locationProvider.html5Mode(true).hashPrefix('!');
-}]);
+
 // app.factory('authenticationSVC', ['$http', '$q', '$window', '$rootScope', '$location', '$cookieStore',
 //     function($http, $q, $window, $rootScope, $location, $cookieStore) {
 //         function login(username, password) {
