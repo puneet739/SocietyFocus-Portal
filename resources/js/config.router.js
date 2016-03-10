@@ -3,8 +3,8 @@
 /**
  * Config for the router
  */
-app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$compileProvider', '$filterProvider', '$provide', '$ocLazyLoadProvider', 'JS_REQUIRES',
-function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvider, $filterProvider, $provide, $ocLazyLoadProvider, jsRequires) {
+app.config(['$stateProvider','$locationProvider', '$urlRouterProvider', '$controllerProvider', '$compileProvider', '$filterProvider', '$provide', '$ocLazyLoadProvider', 'JS_REQUIRES',
+function ($stateProvider, $locationProvider,$urlRouterProvider, $controllerProvider, $compileProvider, $filterProvider, $provide, $ocLazyLoadProvider, jsRequires) {
 
     app.controller = $controllerProvider.register;
     app.directive = $compileProvider.directive;
@@ -22,6 +22,7 @@ function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvi
         modules: jsRequires.modules
     });
 
+    $locationProvider.html5Mode(false).hashPrefix('!');
     // APPLICATION ROUTES
     // -----------------------------------
     // For any unmatched url, redirect to /app/dashboard
