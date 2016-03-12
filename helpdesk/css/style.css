@@ -1,0 +1,114 @@
+.logoImage {
+    width: 60px;
+    height: 60px;
+}
+
+.main-nav {
+    background: #485058
+}
+
+header a,
+.banner_subheadtext a {
+    color: #fff !important;
+}
+
+header li a:hover {
+    background: #363c42 !important
+}
+
+header {
+    min-height: 60px
+}
+
+div.form-element input,
+div.form-element textarea {
+    width: 100%;
+}
+
+.form-horizontal label {
+    text-align: -webkit-center !important;
+}
+
+.formContainer {
+    padding: 17px;
+    background: #ccc;
+}
+
+.formContainer h3 {
+    border-bottom: 1px solid #eee;
+    line-height: 43px;
+}
+
+.banner {
+    background: url(../images/society.jpeg);
+    height: 250px;
+    filter: brightness(50%);
+    background-attachment: fixed;
+    -webkit-filter: brightness(50%);
+    -moz-filter: brightness(50%);
+    -o-filter: brightness(50%);
+    -ms-filter: brightness(50%);
+}
+
+.title h1 {
+    text-align: center;
+    color: #fff
+}
+
+.title {
+    position: absolute;
+    top: 56px;
+    text-align: center;
+    left: 38%;
+}
+
+.title a {
+    margin: 10px
+}
+
+.tabcontainer ul.tabs {
+    margin: 0;
+}
+
+.tabcontainer ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    border-bottom: solid 2px #3498db;
+}
+
+.tabcontainer ul li {
+    display: table-cell;
+    width: auto;
+}
+
+.questionContainer {
+    background: #ccc;
+}
+
+.questionDiv {
+    margin-top: 30px
+}
+
+.question {
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #dedede;
+    -moz-box-shadow: 0 0 5px #dedede;
+    -webkit-box-shadow: 0 0 5px #dedede;
+    box-shadow: 0 0 5px #dedede;
+    position: relative;
+    margin: 20px 0px;
+}
+
+.question-desc {
+    white-space: pre-line;
+    height: 46px;
+    line-height: 16px;
+    overflow: hidden;
+}
+
+.full-question {
+    white-space: pre-line;
+}
