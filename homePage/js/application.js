@@ -6,11 +6,11 @@ angular.module("myapp", [])
             title:'Society Focus-Complete Society Management application for Societ and RWA',
             description: 'Society Focus-Complete Society Management application for Societ and RWA. Call for free Demo: 9711616135. Society Focus is a one stop for all Society Related needs, Complete Society management application for Users and Administation for Finding the relevant information. Bring people closer and solving there issue in single touch. With past experience of Society in Delhi,Noida,Gurgaon we have achived the best results.',
             aboutus_social: 'Society Focus is a one stop for all Society Related needs, Complete Society management application for Users and Administation for Finding the relevant information. Bring people closer and solving there issue in single touch. With past experience of Society in Delhi,Noida,Gurgaon we have achived the best results.',
-            aboutus_general: 'Society Focus is an application that makes connection within society members and RWA. \n Society Focus portal is quite simple for managing the day to day running issues of society members and RWA at a very reasonable cost. The application(android/web) is fast and our experience in setting up the database for our society is very smooth and easy.',
+            aboutus_general: 'Society Focus is an application that makes connection within society members and RWA. \n Society Focus portal is quite simple for managing the day to day running issues of society members and RWA at a very reasonable cost. The application(android/web) is fast and our experience in setting up database for our societies is very smooth and easy.',
             logo:'http://societyfocus.com/images/logo_black.png',
             theme1: {
                 name: 'Society Focus',
-                desciprtion: 'Resident Wlefare application wherein Members of the society are interconnected',
+                desciprtion: 'Resident Welfare application wherein Members of the society are interconnected',
             },
             theme2: {
                 name: 'Society Focus',
@@ -45,7 +45,7 @@ angular.module("myapp", [])
                 }, {
                     image: 'fa-life-ring',
                     title: 'Daily Issues',
-                    description: 'Plumber/Electrician/Gardner booking on single touch',
+                    description: 'Plumber/Electrician/Gardener booking on single touch',
                 }, {
                     image: 'fa-forumbee',
                     title: 'Facilities',
@@ -99,7 +99,7 @@ angular.module("myapp", [])
                 },{
                     title:'Mobile User Settings',
                     img:'images/snapshot/mobile/settings.png',
-                },]
+                }]
             },
             
             portfolio: {
