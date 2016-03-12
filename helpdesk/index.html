@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="helpdesk">
+    <head>
+        <title>Society Focus</title>
+        <script src="../external/angular/angular.js"></script>
+        <script src="../external/angular-animate/angular-animate.min.js"></script>     
+
+        <script src="js/angular-route.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link href="../external/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+        .logoImage{width: 60px;
+    height: 60px;}
+    .main-nav{background: #485058 }
+    header a,.banner_subheadtext a{color: #fff !important;}
+    header li a:hover{background: #363c42 !important}
+    header{min-height: 60px}
+    div.form-element input,div.form-element textarea {width: 100%;}
+    .form-horizontal label{    text-align: -webkit-center !important;}
+    .formContainer {padding: 17px;
+    background: #ccc;}
+    .formContainer h3    {border-bottom: 1px solid #eee;
+    line-height: 43px;}
+    .banner{background: url(images/society.jpeg);height: 250px;filter: brightness(50%);    background-attachment: fixed;
+-webkit-filter: brightness(50%);
+-moz-filter: brightness(50%);
+-o-filter: brightness(50%);
+-ms-filter: brightness(50%);}
+    .title h1{text-align: center;color: #fff}
+    .title{    position: absolute;
+    top: 56px;
+    text-align: center;    left: 38%;}
+    .title a{margin: 10px}
+    .tabcontainer ul.tabs {
+    margin: 0;
+}
+.tabcontainer ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    border-bottom: solid 2px #3498db;
+}
+.tabcontainer ul li {
+    display: table-cell;
+    width: auto;
+}
+.questionContainer{
+    background: #ccc;
+
+}
+.questionDiv{margin-top: 30px}
+.question {
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #dedede;
+    -moz-box-shadow: 0 0 5px #dedede;
+    -webkit-box-shadow: 0 0 5px #dedede;
+    box-shadow: 0 0 5px #dedede;
+    position: relative;
+    margin: 20px 0px;
+}
+.question-desc{    white-space: pre-line;
+    height: 46px;
+    line-height: 16px;
+    overflow: hidden;}
+.full-question{    white-space: pre-line;}
+    </style>
+        <link rel="shortcut icon" href="images/favicon.ico">
+    </head>
+    <body >
+        <header class="container">
+            <div class="main-nav navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header col-sm-3">
+                        <a class="navbar-brand" href="/helpdesk">
+                           SOCIETY FOCUS
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse col-sm-9">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li ><a href="#home">Home</a></li>
+                            <li ><a href="#services">Service</a></li>
+                            <li ><a href="#about-us">About Us</a></li>
+                            <li><a href="http://blog.societyfocus.com">Blog</a></li>
+                            <li><a href="http://societyfocus.com/portal">Login</a></li>
+                        </ul>
+                    </div>
+                    <div class="navigation">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#/askquestion">Ask A Question</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="container">
+            <div class="banner"></div>
+            <div class="title">
+                <h1>We Run Societies</h1>
+                <div class="banner_subheadtext">
+                    <a href="http://societyhive.com/Society-Management-Software-Free.aspx">Society Management Software</a><span class="banner_separator">|</span><a href="http://societyhive.com/Society-Management-Outsourcing-Services.aspx">Housing Society Services</a>
+                </div>
+            </div>
+        </section>
+        <div ng-view></div>
+    </body>
+    <script type="text/javascript" src="js/helpdeskcontroller.js"></script>
+</html>
