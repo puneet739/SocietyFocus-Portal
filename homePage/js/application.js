@@ -6,18 +6,18 @@ angular.module("myapp", [])
             title:'Society Focus-Complete Society Management application for Societ and RWA',
             description: 'Society Focus-Complete Society Management application for Societ and RWA. Call for free Demo: 9711616135. Society Focus is a one stop for all Society Related needs, Complete Society management application for Users and Administation for Finding the relevant information. Bring people closer and solving there issue in single touch. With past experience of Society in Delhi,Noida,Gurgaon we have achived the best results.',
             aboutus_social: 'Society Focus is a one stop for all Society Related needs, Complete Society management application for Users and Administation for Finding the relevant information. Bring people closer and solving there issue in single touch. With past experience of Society in Delhi,Noida,Gurgaon we have achived the best results.',
-            aboutus_general: 'Society Focus is an application that makes connection within society members and society members with RWA. \n Society Focus portal is quite simple for managing the day to day running issues of society members and RWA at a very reasonable cost. The application(android/web) is fast and our experience in setting up the database for our society is very smooth and easy.',
+            aboutus_general: 'Society Focus is an application that makes connection within society members and RWA. \n Society Focus portal is quite simple for managing the day to day running issues of society members and RWA at a very reasonable cost. The application(android/web) is fast and our experience in setting up the database for our society is very smooth and easy.',
             logo:'http://societyfocus.com/images/logo_black.png',
             theme1: {
                 name: 'Society Focus',
-                desciprtion: 'Resident Welfare application wherein Members of the society and residents are interconnected',
+                desciprtion: 'Resident Wlefare application wherein Members of the society are interconnected',
             },
             theme2: {
                 name: 'Society Focus',
-                desciprtion: 'application that makes connection within society members and society members with RWA.',
+                desciprtion: 'Application that makes connection within society members and RWA.',
             },
             service: {
-                title: 'Delivers business through  people centered approach, No matter how big you are,public or private and in what sector or industry you do business,we can help you work smarter and get your all the issues solved at a single touch.Have a look at services we offered ',
+                title: 'Delivers business through  people centered approach, No matter how big you are,public or private and in what sector or industry you do business,we can help you work smarter and get your all the issues solved at a single touch.Have a look at services we offer ',
                 services: [{
                     image: 'fa-fort-awesome',
                     title: 'Community Hall',
@@ -45,15 +45,15 @@ angular.module("myapp", [])
                 }, {
                     image: 'fa-life-ring',
                     title: 'Daily Issues',
-                    description: 'Plumber/Electirican/Garder booking on single touch',
+                    description: 'Plumber/Electrician/Gardner booking on single touch',
                 }, {
                     image: 'fa-forumbee',
-                    title: 'Facilites',
+                    title: 'Facilities',
                     description: 'Searching near by Saloon/Hospital/etc',
                 }, {
                     image: 'fa-hourglass-start',
                     title: 'Complaints',
-                    description: 'User Complaint Register/Tracking eg:Water Seapage, Park',
+                    description: 'User Complaint Register/Tracking eg:Water Seepage, Park',
                 }, {
                     image: 'fa-calendar-check-o',
                     title: 'Calendar',
@@ -80,42 +80,45 @@ angular.module("myapp", [])
                 title:'ScreenShots of Our application',
                 tags:[{
                     title:'Mobile HomePage',
-                    img:'images/snapshot/mobile-homepage.png',
+                    img:'images/snapshot/mobile/homepage.png',
                 },{
                     title:'Login',
-                    img:'images/snapshot/mobile-login.png',
+                    img:'images/snapshot/mobile/login.png',
                 },{
                     title:'Complaints',
-                    img:'images/snapshot/mobile-allcomplatins.png',
+                    img:'images/snapshot/mobile/complaints.png',
                 },{
                     title:'All Residents',
-                    img:'images/snapshot/mobile-allresidents.png',
+                    img:'images/snapshot/mobile/users.png',
                 },{
                     title:'Mobille  Service Booking',
-                    img:'images/snapshot/mobile-servicebooking.png',
+                    img:'images/snapshot/mobile/accetbooking.png',
                 },{
                     title:'Mobile All Societies',
-                    img:'images/snapshot/mobile-societyselection.png',
+                    img:'images/snapshot/mobile/societyselection.png',
                 },{
                     title:'Mobile User Settings',
-                    img:'images/snapshot/mobile-useroptions.png',
+                    img:'images/snapshot/mobile/settings.png',
                 },]
             },
             
             portfolio: {
                 title: '',
                 clients: [{
-                    name: 'SocietName1',
-                    img_url: 'images/portfolio/1.jpg',
+                    name: 'Orange County in Indirapuram , Ghaziabad',
+                    img_url: 'http://res.cloudinary.com/dgrrxe4i7/image/upload/c_scale,w_532/v1457463438/OrangeCounty_qnnco5.png',
                 }, {
-                    name: 'SocietName2',
-                    img_url: 'images/portfolio/2.jpg',
+                    name: 'Vasundhara Co-Operative Housing Society Sector-21C, Faridabad',
+                    img_url: 'http://res.cloudinary.com/dgrrxe4i7/image/upload/v1457462657/vasundhara-crest_2015-03-14_02-49-06.918_P1_n6ywea.jpg',
+                },{
+                    name: 'SRS Residency Sector 88, Fairdabad',
+                    img_url: 'http://res.cloudinary.com/dgrrxe4i7/image/upload/v1457117750/resale-property_qznkex.jpg',
                 }],
             },
             client: 20,
             feedback: 200,
             awards: 10,
-            pricing_title: 'Have a look at our pricing strategy and try to understand with whatever matches your requirement.',
+            pricing_title: 'Have a look at our pricing strategy and join us with whatever matches your requirement.',
             pricing: [{
                 title: 'Trial',
                 price: 'Free',
@@ -133,12 +136,12 @@ angular.module("myapp", [])
                 line3: 'Live Tracking',
                 line4: '24/7 Support',
             }, {
-                title: 'Premimum',
+                title: 'Premium',
                 price: '5000',
                 duration: '3 Month',
                 line1: 'Free Setup',
                 line2: 'All Services',
-                line3: 'New Enhanchments',
+                line3: 'New Enhancements',
                 line4: '24/7 Support',
             }],
             team: {
@@ -175,13 +178,13 @@ angular.module("myapp", [])
             },
             contactus: {
                 title: 'Thank-you for your interest in us. Please provide us with the following information to serve you better',
-                description: 'Society Focus is ready to help you with whatever and whenever you require',
+                description: 'Society Focus is ready to help you with whatever and whenever required',
                 latitude: '28.478161',
                 longitude: '77.304633',
                 address: '#124, Sector 37, Faridabad, Haryana, 121003',
                 phone: '9711616135',
                 email: 'ceo@societyfocus.com',
-                website: 'www.societyfocus.com',
+                website: 'http://www.societyfocus.com',
                 facebook: 'https://www.facebook.com/societyfocus',
             }
         }

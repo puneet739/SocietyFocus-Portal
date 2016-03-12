@@ -134,7 +134,7 @@
                 <div class="col-sm-6">
                     <div class="our-skills wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                         <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-                            <p class="lead">User Experiances</p>
+                            <p class="lead">User Experiences</p>
                             <div class="progress">
                                 <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar" aria-valuetransitiongoal="95">95%</div>
                             </div>
@@ -177,7 +177,7 @@
                 <div class="col-sm-3" ng-repeat="client in app.portfolio.clients">
                     <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
                         <div class="folio-image">
-                            <img class="img-responsive" src="{{client.img_url}}" alt="">
+                            <img class="img-responsive" style="height: 200px;" src="{{client.img_url}}" alt="{{client.name}}">
                         </div>
                         <div class="overlay">
                             <div class="overlay-content">
@@ -208,7 +208,7 @@
         <div class="container">
             <div class="row">
                 <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                    <h2>ScreenShot</h2>
+                    <h2>ScreenShots</h2>
                     <p>{{app.screenshot.title}}</p>
                 </div>
             </div>
