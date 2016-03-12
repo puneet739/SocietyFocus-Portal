@@ -1,0 +1,57 @@
+<div class="container"  ng-controller="questionController">
+	
+	<div class="container questionContainer" style="margin: 26px auto;">
+		<article class="question single-question ">
+			<h4 class="pull-left">
+	            <a href="javascript:void(0);">{{fullQuestion.title}}</a>
+	        </h4>
+	        <h4 class="pull-right">{{fullQuestion.city}}</h4>
+	    	<div class="full-question">
+	                            <p>
+	                                {{fullQuestion.query}}
+	                            </p>
+	                    </div>  
+
+	        <span class="question-comment" ng-show="{{fullQuestion.commentCount==0}}">
+	                               <a href="javascript:void(0);"><i class="icon-comment"></i>No comment</a>
+	                        </span>
+	                        <span class="question-comment"  ng-show={{fullQuestion.commentCount!=0}}>
+	                               <a href="javascript:void(0);"><i class="icon-comment"></i>{{fullQuestion.commentCount}} comment</a>
+	                        </span>              
+	    </article>
+	   
+	</div>
+	 <div class="container formContainer">
+			<h3>Add Comment</h3>
+	    	<form class="form-horizontal" >
+			  <div class="form-group">
+			    <label for="inputUser" class="col-sm-2 control-label">User Name :</label>
+			    <div class="col-sm-10">
+			      <input type="text" class="form-control" id="inputUser" placeholder="User Name" ng-model="comment.username">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputEmail" class="col-sm-2 control-label">Email :</label>
+			    <div class="col-sm-10">
+			      <input type="email" class="form-control" id="inputEmail" placeholder="Email Address" ng-model="comment.userEmail">
+			    </div>
+			  </div>
+			<div class="form-group">
+			    <label for="inputComment" class="col-sm-2 control-label">Comment :</label>
+			    <div class="col-sm-10">
+			      <textarea class="form-control" rows="3" ng-model="comment.comment"></textarea>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <button type="submit" class="btn btn-default" ng-click="addComment()">Add Comment</button>
+			    </div>
+			  </div>
+			  <div class="form-group" ng-if="commentSuccess === true">
+			    <div class="col-sm-offset-2 col-sm-10">
+			      <span style="color:green">Comment Added Successfully</span>
+			    </div>
+			  </div>
+			</form>
+	    </div>
+</div>
