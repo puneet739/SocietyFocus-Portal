@@ -112,3 +112,17 @@ div.form-element textarea {
 .full-question {
     white-space: pre-line;
 }
+.commentContainer{
+    background: #F6FFF2;
+    margin: 26px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.comment-btn{
+    padding: 10px;
+    border: 1px solid;
+    background: #5689B5;
+}
+.comment-btn a{ 
+    color: #080808;
+}

@@ -33,7 +33,11 @@ app.controller("helpdeskController", function($scope,$http,$rootScope) {
         });
     }
  });
-app.controller("questionController", function($scope,$http,$rootScope,$routeParams) {
+app.controller("questionController", function($scope,$http,$rootScope,$routeParams,$anchorScroll,$location) {
+    $scope.scrollTo = function(id) {
+      $location.hash(id);
+      $anchorScroll();
+   }
     var req = {
             method: 'GET',
             url: $rootScope.constant.SERVICE_URL + '/helpdesk/getbyid/'+$routeParams.id
