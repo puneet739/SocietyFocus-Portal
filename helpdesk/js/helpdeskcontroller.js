@@ -17,7 +17,6 @@ app.config(function ($routeProvider){
 app.run(function($rootScope) {
     $rootScope.constant={
              // SERVICE_URL:"http://www.zircon.com/zservice"
-            // SERVICE_URL:"http://zircon.com/localservice"
             SERVICE_URL:"http://societyfocus.com/service"
         }
 })
@@ -30,6 +29,8 @@ app.controller("helpdeskController", function($scope,$http,$rootScope) {
         $http(req).then(function successCallback(response) {
            console.log(response.data.body);
            $scope.questions = response.data.body;
+           var totalCount = 101 ;
+           $scope.totalCount = totalCount % 10!=0 ? Math.ceil(totalCount/10) : totalCount/10;
         });
     }
  });
