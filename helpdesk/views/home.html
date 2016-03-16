@@ -7,7 +7,7 @@
             <div class="questiontabs" >
                 <article class="question question-type-normal" ng-repeat="question in questions">
                     <h2>
-                        <a href="#/question/{{question.id}}">{{question.title}}</a>
+                        <a href="{{constant.APP_PREFIX}}/question/{{question.id}}">{{question.title}}</a>
                     </h2>
                     <div class="question-inner">
                         <div class="clearfix"></div>
@@ -15,14 +15,14 @@
                                 <p class="question-desc">                                               
                                    {{question.query}}
                               </p>
-                                   <a href="#/question/{{question.id}}">Show more...</a><br><br>
+                                   <a href="{{constant.APP_PREFIX}}/question/{{question.id}}">Show more...</a><br><br>
                                 
                         <span class="question-date"><i class="icon-time"></i>13 hours ago </span>
                         <span class="question-comment" ng-show="{{question.commentCount==0}}">
-                                   <a href="#/question/{{question.id}}"><i class="icon-comment"></i>No comment</a>
+                                   <a href="{{constant.APP_PREFIX}}/question/{{question.id}}"><i class="icon-comment"></i>No comment</a>
                             </span>
                             <span class="question-comment"  ng-show={{question.commentCount!=0}}>
-                                   <a href="#/question/{{question.id}}"><i class="icon-comment"></i>{{question.commentCount}} comment</a>
+                                   <a href="{{constant.APP_PREFIX}}/question/{{question.id}}"><i class="icon-comment"></i>{{question.commentCount}} comment</a>
                             </span> 
                         <div class="clearfix"></div>
                     </div>

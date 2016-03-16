@@ -1,4 +1,9 @@
 var app = angular.module("helpdesk", ['ngRoute']);
+
+app.config(function($locationProvider){
+    $locationProvider.html5Mode(false).hashPrefix('!');
+});
+
 app.config(function ($routeProvider){
     $routeProvider
         .when('/', {
@@ -16,7 +21,8 @@ app.config(function ($routeProvider){
 });
 app.run(function($rootScope) {
     $rootScope.constant={
-             // SERVICE_URL:"http://www.zircon.com/zservice"
+             // SERVICE_URL:"http://www.zircon.com/zservice",
+             APP_PREFIX:"#!",
             SERVICE_URL:"http://societyfocus.com/service"
         }
 })
