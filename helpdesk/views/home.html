@@ -26,5 +26,20 @@
                             </span> 
                         <div class="clearfix"></div>
                     </div>
+                </article>
+                <div class="container pageDiv">
+                    <ul class="pagination margin-bottom-10">
+                        <li>
+                            <a href="javascript:void(0);"> Previous</a>
+                        </li>
+                        <li ng-repeat="n in [].constructor(totalCount) track by $index">
+                            <a href="javascript:void(0);">{{ $index + 1}}</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Next </a>
+                        </li>
+                    </ul>
+                </div>
+                
             </div>
         </div>

@@ -7,16 +7,16 @@
     background: #485058
 }
 
-header a,
+header a,footer a
 .banner_subheadtext a {
     color: #fff !important;
 }
-
-header li a:hover {
+footer a {color: #fff !important;}
+header li a:hover,footer li a:hover {
     background: #363c42 !important
 }
 
-header {
+header,footer {
     min-height: 60px
 }
 
@@ -125,4 +125,7 @@ div.form-element textarea {
 }
 .comment-btn a{ 
     color: #080808;
+}
+.pageDiv{
+    text-align: -webkit-center;
 }
