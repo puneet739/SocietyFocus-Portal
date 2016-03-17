@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>http://societyfocus.com</loc>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>http://www.societyfocus.com/helpdesk/#!/</loc>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>http://www.societyfocus.com/helpdesk/#!/question/56e9f9e1e4b0d557c0b29bc3</loc>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>http://www.societyfocus.com/helpdesk/#!/question/56e9119de4b0d557c0b29bba</loc>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>http://www.societyfocus.com/helpdesk/#!/question/56e6e74ae4b0fdfbeffd8a26</loc>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>http://www.societyfocus.com/helpdesk/#!/question/56e48136e4b0ad54acb5efb2</loc>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>http://www.societyfocus.com/helpdesk/#!/question/56e3c390e4b0ad54acb5efad</loc>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>http://www.societyfocus.com/portal/#!/</loc>
+    </url>
+</urlset>
