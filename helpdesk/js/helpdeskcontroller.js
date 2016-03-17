@@ -34,8 +34,8 @@ app.controller("helpdeskController", function($scope,$http,$rootScope) {
         }
         $http(req).then(function successCallback(response) {
            console.log(response.data.body);
-           $scope.questions = response.data.body;
-           var totalCount = 101 ;
+           $scope.questions = response.data.body.queries;
+           var totalCount = response.data.body.totalQueries ;
            $scope.totalCount = totalCount % 10!=0 ? Math.ceil(totalCount/10) : totalCount/10;
         });
     }
