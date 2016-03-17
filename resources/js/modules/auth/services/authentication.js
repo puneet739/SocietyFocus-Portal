@@ -44,6 +44,7 @@
                         logout();
                         return;
                     }
+                    $rootScope.user=currentUser;
                     $rootScope.logedinuser = currentUser;
                     $rootScope.loginError = false;
                     eventbus.broadcast(jcs.modules.auth.events.userLoggedIn, currentUser);
