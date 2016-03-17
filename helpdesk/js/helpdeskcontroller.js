@@ -22,7 +22,7 @@ app.config(function ($routeProvider){
 app.run(function($rootScope) {
     $rootScope.constant={
              // SERVICE_URL:"http://www.zircon.com/zservice",
-             APP_PREFIX:"#!",
+            APP_PREFIX:"http://societyfocus.com/helpdesk/#!",
             SERVICE_URL:"http://societyfocus.com/service"
         }
 })

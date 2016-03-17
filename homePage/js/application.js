@@ -17,7 +17,7 @@ angular.module("myapp", [])
                 desciprtion: 'Application that makes connection within society members and RWA.',
             },
             service: {
-                title: 'Delivers business through  people centered approach, No matter how big you are,public or private and in what sector or industry you do business,we can help you work smarter and get your all the issues solved at a single touch.Have a look at services we offer ',
+                title: 'Delivers business through  people centered approach, no matter how big you are, public or private and in what sector or industry you do business, we can help you work smarter and get your all the issues solved at a single touch. Have a look at services we offer.',
                 services: [{
                     image: 'fa-fort-awesome',
                     title: 'Community Hall',
@@ -49,11 +49,11 @@ angular.module("myapp", [])
                 }, {
                     image: 'fa-forumbee',
                     title: 'Facilities',
-                    description: 'Searching near by Saloon/Hospital/etc',
+                    description: 'Searching near by Saloon/Hospital etc.',
                 }, {
                     image: 'fa-hourglass-start',
                     title: 'Complaints',
-                    description: 'User Complaint Register/Tracking eg:Water Seepage, Park',
+                    description: 'User Complaint Register/Tracking eg :Water Seepage, Park',
                 }, {
                     image: 'fa-calendar-check-o',
                     title: 'Calendar',
