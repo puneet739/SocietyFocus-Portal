@@ -53,6 +53,12 @@ function($rootScope, $scope, $state, $translate, $localStorage, $window, $docume
 		// {inherit:false} + default options
 	});
 
+	//Tasks to perform when user is logged in. 
+    $rootScope.$on(jcs.modules.auth.events.userLoggedIn, function (event, loggedInUser) {
+        console.log('User Logged in now');
+        $rootScope.logedinuser = loggedInUser;
+    });
+
 	$rootScope.pageTitle = function() {
 		return $rootScope.app.name + ' - ' + ($rootScope.currTitle || $rootScope.app.description);
 	};

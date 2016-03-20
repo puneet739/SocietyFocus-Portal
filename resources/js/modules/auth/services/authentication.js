@@ -61,7 +61,7 @@
                     }
                     var createdUser = createUser(ourUser.name,ourUser.userID, ourUser.userRoles);
                     //defer.resolve(createdUser);
-                    $rootScope.logedinuser.name = createdUser.name;
+                    //$rootScope.logedinuser.name = createdUser.name;
                     $cookieStore.put('authenticated',true);
                     $cookieStore.put('X-Auth-Token',ourUser.token);
                     $localStorage.loggedInUser=createdUser;
