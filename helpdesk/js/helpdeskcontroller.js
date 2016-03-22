@@ -1,10 +1,11 @@
 var app = angular.module("helpdesk", ['ngRoute']);
 
-app.config(function($locationProvider){
-    $locationProvider.html5Mode(false).hashPrefix('!');
-});
 
-app.config(function ($routeProvider){
+app.config(function ($routeProvider,$locationProvider){
+    $locationProvider.html5Mode({
+        enabled: true,
+    });
+
     $routeProvider
         .when('/', {
             controller:     '',
@@ -21,8 +22,8 @@ app.config(function ($routeProvider){
 });
 app.run(function($rootScope) {
     $rootScope.constant={
-             // SERVICE_URL:"http://www.zircon.com/zservice",
-            APP_PREFIX:"http://societyfocus.com/helpdesk/#!",
+            // SERVICE_URL:"http://zircon.com/zservice",
+            APP_PREFIX:"./",
             SERVICE_URL:"http://societyfocus.com/service"
         }
 })

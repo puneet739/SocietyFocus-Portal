@@ -2,15 +2,15 @@
 <html lang="en" ng-app="helpdesk">
 
 <head>
-    <meta name="fragment" content="!">
+    <base href="/helpdesk/">
     <title>Society Focus</title>
     <script src="http://societyfocus.com/portal/external/angular/angular.js"></script>
     <script src="http://societyfocus.com/portal/external/angular-animate/angular-animate.min.js"></script>
-    <script src="js/angular-route.js"></script>
+    <script src="http://societyfocus.com/helpdesk/js/angular-route.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
     <link href="http://societyfocus.com/portal/external/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel='stylesheet' type='text/css' href="css/style.css">
+    <link rel='stylesheet' type='text/css' href="http://societyfocus.com/helpdesk/css/style.css">
 </head>
 
 <body>
@@ -48,6 +48,7 @@
             </div>
         </div>
     </section>
+    Here we are calling our ng view
     <div ng-view></div>
     <footer>
         <div class="main-nav navbar-fixed row">
@@ -65,6 +66,5 @@
         </div>
     </footer>
 </body>
-<script type="text/javascript" src="js/helpdeskcontroller.js"></script>
-
+ <script type="text/javascript" src="js/helpdeskcontroller.js"></script>
 </html>
