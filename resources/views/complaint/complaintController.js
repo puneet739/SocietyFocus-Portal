@@ -11,7 +11,7 @@ app.controller("complaintController", function($scope, $http, $filter, $q, $loca
         "value": 2
     }, {
         "displayname": "In Progress",
-        "value": 0
+        "value": 3
     }, {
         "displayname": "Rejected",
         "value": 4
