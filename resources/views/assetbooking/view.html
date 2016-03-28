@@ -31,12 +31,13 @@
 						<tbody ng-repeat="p in $data">
 							<tr id="tr{{p.userid}}" ng-class-odd="'odd'" ng-class-even="'even'">
 								<td class="rowTd" data-title="'ID'"          sortable="'id'">{{p.id}}</td>
-								<td class="rowTd" data-title="'Asset ID'"          sortable="'id'">{{p.assetid}}</td>
+								<td class="rowTd" data-title="'Asset Description'"          sortable="'id'">{{p.asset.description}}</td>
 								<td class="rowTd" data-title="'Description'"   sortable="'description'">{{p.description}}</td>
 								<td class="rowTd" data-title="'Contact No'"    sortable="'contactno'">{{p.userId.contact_no}}</td>
 								<td class="rowTd" data-title="'Email'" sortable="'email'">{{p.userId.email}}</td>
-								<td class="rowTd" data-title="'Charges'" sortable="'charges'">{{p.charges}}</td>
+								<td class="rowTd" data-title="'Charges'" sortable="'charges'">{{p.asset.charges}}</td>
 								<td class="rowTd" data-title="'Status'"       sortable="'status'">{{p.status}}</td>
+								<td class="rowTd" data-title="'Booked Date'"       sortable="'status'">{{p.startTime  | format:'DD-MMMM-YYYY hh:mm A'}}</td>
 							</tr>
 						</tbody>
 					</table>
@@ -45,3 +46,4 @@
 		</div>
 	</div>
 </div>
+

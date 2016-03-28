@@ -96,6 +96,14 @@ app.config(['$translateProvider',
 
     }
 ]);
+
+app.filter('format',function(){
+  return function(input, format) {
+    var date=input.replace("T"," ");
+    return moment(new Date(date)).format(format);
+  };
+});
+
 // Angular-Loading-Bar
 // configuration
 app.config(['cfpLoadingBarProvider',

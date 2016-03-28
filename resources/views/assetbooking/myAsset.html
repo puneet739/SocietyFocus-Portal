@@ -15,16 +15,14 @@
                 <tr>
                 	<th>ID </th>
                     <th>Desciption </th>
-                    <th>Prepaid</th>
                     <th>Creationdate</th>
                     <th>Start Time</th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="allasset in allassets" style="cursor: pointer;" > 
-                	<td>{{allasset.assetid}} </td>
+                	<td>{{allasset.id}} </td>
                     <td>{{allasset.description}} </td>
-                    <td>{{allasset.prepaid}} </td>
                     <td>{{allasset.creationdate}} </td>
                     <td>{{allasset.startTime}} </td>
                 </tr>
