@@ -1,0 +1,18 @@
+<!-- start: PAGE TITLE -->
+<section id="page-title">
+    <div class="row">
+        <div class="col-sm-8">
+            <h1 class="mainTitle">My Wallet</h1>
+            <span class="mainDescription">View your wallet details</span>
+        </div>
+        <div ncy-breadcrumb></div>
+    </div>
+</section>
+
+
+<!-- end: CELL AND ROW TEMPLATE -->
+<!-- start: INLINE EDIT EXAMPLE -->
+<div class="container-fluid container-fullw" ng-controller="paymentController" ng-init="getMyWallet()">
+	Current WAllet status::: Rs:: {{wallet.amount}}
+</div>
+

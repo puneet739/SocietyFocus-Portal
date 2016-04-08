@@ -1,0 +1,19 @@
+<!-- start: PAGE TITLE -->
+<section id="page-title">
+    <div class="row">
+        <div class="col-sm-8">
+            <h1 class="mainTitle">My Last 5 Transactions</h1>
+            <span class="mainDescription">My Last 5 Transactions</span>
+        </div>
+        <div ncy-breadcrumb></div>
+    </div>
+</section>
+
+
+<!-- end: CELL AND ROW TEMPLATE -->
+<!-- start: INLINE EDIT EXAMPLE -->
+<div class="container-fluid container-fullw" ng-controller="paymentController" ng-init="getmylasttransactions()">
+	MY last transactions are 
+	{{transactions}}
+</div>
+

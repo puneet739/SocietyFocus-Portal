@@ -70,7 +70,8 @@ app.constant('JS_REQUIRES', {
         'bulkController' : 'resources/views/bulk/bulkController.js',
         'updatecontroller' : 'resources/views/user/updateController.js',
         'complaintController' : 'resources/views/complaint/complaintController.js',
-        'vehicleController' : 'resources/views/vehicle/vehicleController.js'
+        'vehicleController' : 'resources/views/vehicle/vehicleController.js',
+        'paymentController':'resources/views/payment/paymentController.js'
     },
     //*** angularJS Modules
     modules: [{

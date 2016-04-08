@@ -238,4 +238,46 @@
 			</li>
 		</ul>
 	</li>
+
+
+	<li ng-class="{'active open':$state.includes('app.ui')}">
+		<a href="javascript:void(0)">
+			<div class="item-content">
+				<div class="item-media">
+					<i class="ti-wallet"></i>
+				</div>
+				<div class="item-inner">
+					<span class="title"> Payments </span><i class="icon-arrow"></i>
+				</div>
+			</div>
+		</a>
+		<ul class="sub-menu">
+			<li ui-sref-active="active">
+				<a ui-sref="app.payment.mywallet">
+					<span class="title" > View My Wallet </span>
+				</a>
+			</li>
+			<li ui-sref-active="active">
+				<a ui-sref="app.payment.mytransactions">
+					<span class="title" > My Last 5 Transactions </span>
+				</a>
+			</li>
+			<li ui-sref-active="active" access="society_admin" access-permission-type="AtLeastOne">
+				<a ui-sref="app.payment.adminadd">
+					<span class="title" > Admin add User Money </span>
+				</a>
+			</li>
+			<li ui-sref-active="active">
+				<a ui-sref="app.comingsoon">
+					<span class="title" > Make Payment </span>
+				</a>
+			</li>
+			<li ui-sref-active="active" access="society_admin" access-permission-type="AtLeastOne">
+				<a ui-sref="app.comingsoon">
+					<span class="title"> Viw Payment Received </span>
+				</a>
+			</li>
+		</ul>
+	</li>
+
 </ul>

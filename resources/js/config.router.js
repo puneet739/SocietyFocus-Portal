@@ -256,6 +256,38 @@ function ($stateProvider, $locationProvider,$urlRouterProvider, $controllerProvi
         }
     })
 
+    //Payment Features
+    .state('app.payment', {
+        url: '/payment',
+        template: '<div ui-view class="fade-in-up"></div>',
+        title: 'Payment',
+        resolve: loadSequence('paymentController'),
+        ncyBreadcrumb: {
+            label: 'Payment'
+        }
+    }).state('app.payment.mywallet', {
+        url: '/mywallet',
+        templateUrl: 'resources/views/payment/mywallet.html',
+        title: 'My Wallet',
+        ncyBreadcrumb: {
+            label: 'My Wallet'
+        }
+    }).state('app.payment.adminadd', {
+        url: '/addminadd',
+        templateUrl: 'resources/views/payment/adminadd.html',
+        title: 'Admin Money',
+        ncyBreadcrumb: {
+            label: 'Admin Money'
+        }
+    }).state('app.payment.mytransactions', {
+        url: '/mytransactions',
+        templateUrl: 'resources/views/payment/lasttransactions.html',
+        title: 'Last Transactions',
+        ncyBreadcrumb: {
+            label: 'Last Transactions'
+        }
+    })
+
     //Bulk Features
     .state('app.bulk', {
         url: '/bulk',
