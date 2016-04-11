@@ -1,0 +1,40 @@
+<!-- start: PAGE TITLE -->
+<section id="page-title">
+    <div class="row">
+        <div class="col-sm-8">
+            <h1 class="mainTitle">Make Your Payment</h1>
+            <span class="mainDescription">Make your payment</span>
+        </div>
+        <div ncy-breadcrumb></div>
+    </div>
+</section>
+
+<div class="container-fluid container-fullw bg-white" ng-controller="paymentController" ng-init="getMyWallet()">
+    <fieldset>
+        <legend>
+            Make Payment Options
+        </legend>
+        <div class="row col-md-6">
+        	<div class="col-md-12">
+                <div class="form-group">
+                     Current amount you have to pay is {{wallet.amount| positive}}
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="form-group">
+                     <button type="button" class="btn btn-wide btn-primary" ng-click="useraddmoney()">
+                        Pay Now
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                     <button type="button" class="btn btn-wide btn-primary" ng-click="useraddmoney()">
+                        Pickup from Home
+                    </button>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>

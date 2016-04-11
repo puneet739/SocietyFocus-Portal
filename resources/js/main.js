@@ -104,6 +104,15 @@ app.filter('format',function(){
   };
 });
 
+app.filter('positive', function() {
+    return function(input) {
+        if (!input) {
+            return 0;
+        }
+        return Math.abs(input);
+    };
+});
+
 // Angular-Loading-Bar
 // configuration
 app.config(['cfpLoadingBarProvider',

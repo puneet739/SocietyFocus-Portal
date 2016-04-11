@@ -286,6 +286,27 @@ function ($stateProvider, $locationProvider,$urlRouterProvider, $controllerProvi
         ncyBreadcrumb: {
             label: 'Last Transactions'
         }
+    }).state('app.payment.paynow', {
+        url: '/paynow',
+        templateUrl: 'resources/views/payment/makepayment.html',
+        title: 'Pay Now',
+        ncyBreadcrumb: {
+            label: 'Pay Now'
+        }
+    }).state('app.payment.failure', {
+        url: '/failure/{id}',
+        templateUrl: 'resources/views/payment/failedPayment.html',
+        title: 'Payment Failed',
+        ncyBreadcrumb: {
+            label: 'Payment Failed'
+        }
+    }).state('app.payment.success', {
+        url: '/success/{id}',
+        templateUrl: 'resources/views/payment/successPayment.html',
+        title: 'Payment Successfull',
+        ncyBreadcrumb: {
+            label: 'Payment Successfull'
+        }
     })
 
     //Bulk Features

@@ -14,6 +14,28 @@
 <!-- start: INLINE EDIT EXAMPLE -->
 <div class="container-fluid container-fullw" ng-controller="paymentController" ng-init="getmylasttransactions()">
 	MY last transactions are 
-	{{transactions}}
+
+	 <table class="table table-hover">
+            <thead>
+                <tr>
+                	<th>ID </th>
+                    <th>Created Date </th>
+                    <th>Amount </th>
+                    <th>Description </th>
+                    <th>Payment Method </th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="transaction in transactions" style="cursor: pointer;"> 
+                	<td>{{transaction.id}} </td>
+                    <td>{{transaction.creationDate | format:'DD-MMMM-YYYY hh:mm A'}} </td>
+                    <td>{{transaction.amount}} </td>
+                    <td>{{transaction.description}} </td>
+                    <td>{{transaction.payment_method}} </td>
+                    <td>{{transaction.status}} </td>
+                </tr>
+            </tbody>
+        </table>
 </div>
 
