@@ -36,8 +36,18 @@ app.controller("paymentController", function($scope,$stateParams, $http, $filter
     $scope.validateSuccess=function(){
         var transactionID = $stateParams.id ;
         console.log("The transction id is::"+transactionID);
-        isSuccess=true;
-
+        var req = {
+            method: 'GET',
+            url: $rootScope.constant.SERVICE_URL + '/payment/confirmpayment?transactionid='+transactionID,
+        }
+        $http(req).then(function successCallback(response) {
+           console.log('Payment completed successfully');
+           $scope.isSuccess=true;
+        },function errorCallback(error) {
+            debugger;
+            $scope.errorMessage=true;
+            console.log('Error because of connection');
+        });
     }
 
 	$scope.useraddmoney = function(){
