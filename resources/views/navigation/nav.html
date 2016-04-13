@@ -231,9 +231,49 @@
 					<span class="title" > View My Complaints </span>
 				</a>
 			</li>
-			<li ui-sref-active="active" access="society_admin" access-permission-type="AtLeastOne">
+			<li ui-sref-active="active" access="admin,society_admin" access-permission-type="AtLeastOne">
 				<a ui-sref="app.complaint.search">
 					<span class="title"> Viw Complaint By ID </span>
+				</a>
+			</li>
+		</ul>
+	</li>
+
+	<li ng-class="{'active open':$state.includes('app.ui')}" access="admin,society_admin" access-permission-type="AtLeastOne">
+		<a href="javascript:void(0)">
+			<div class="item-content">
+				<div class="item-media">
+					<i class="ti-wallet"></i>
+				</div>
+				<div class="item-inner">
+					<span class="title"> Subscriptions </span><i class="icon-arrow"></i>
+				</div>
+			</div>
+		</a>
+		<ul class="sub-menu">
+			<li ui-sref-active="active">
+				<a ui-sref="app.subscription.add">
+					<span class="title" > Add New Subscription </span>
+				</a>
+			</li>
+			<li ui-sref-active="active">
+				<a ui-sref="app.commingsoon.mywallet">
+					<span class="title" > View All Subscriptions </span>
+				</a>
+			</li>
+			<li ui-sref-active="active">
+				<a ui-sref="app.commingsoon.mywallet">
+					<span class="title" > View My Subscriptions </span>
+				</a>
+			</li>
+			<li ui-sref-active="active">
+				<a ui-sref="app.commingsoon.mywallet">
+					<span class="title" > Search User Subscriptions </span>
+				</a>
+			</li>
+			<li ui-sref-active="active">
+				<a ui-sref="app.commingsoon.mywallet">
+					<span class="title" > View All Subscriptions </span>
 				</a>
 			</li>
 		</ul>

@@ -309,6 +309,24 @@ function ($stateProvider, $locationProvider,$urlRouterProvider, $controllerProvi
         }
     })
 
+    //Subscription Pages
+    .state('app.subscription', {
+        url: '/subscription',
+        template: '<div ui-view class="fade-in-up"></div>',
+        title: 'Subscription',
+        resolve: loadSequence('subscriptionController'),
+        ncyBreadcrumb: {
+            label: 'Subscription'
+        }
+    }).state('app.subscription.add', {
+        url: '/add',
+        templateUrl: 'resources/views/subscription/addSubscription.html',
+        title: 'Add Subscription',
+        ncyBreadcrumb: {
+            label: 'Add Subscription'
+        }
+    })
+
     //Bulk Features
     .state('app.bulk', {
         url: '/bulk',
