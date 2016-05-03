@@ -35,6 +35,21 @@ app.controller("userController", function($scope,toaster, $http, $filter, $q, $l
         $scope.editId = pid;
     };
 
+    $scope.resetpassword = function(user) {
+        console.log('Now trying to reset password for user:'+user);
+        var req = {
+            method: 'GET',
+            url: $rootScope.constant.SERVICE_URL + '/user/resetpassword/email/'+user.email+'?newPassword='+user.password,
+        }
+
+        $http(req).then(function successCallback(response) {
+             console.log('user modified successfully');
+            var allUsers = response.data.body;
+            var title = 'User modified successfully';
+            toaster.pop('success', title, title);
+        });
+    };
+
     $scope.modifyUser = function(user) {
         var userString = JSON.stringify(user, null, "\t");
         var req = {

@@ -93,6 +93,14 @@ function ($stateProvider, $locationProvider,$urlRouterProvider, $controllerProvi
         ncyBreadcrumb: {
             label: 'User Settings'
         }
+    }).state('app.user.resetpassword', {
+        url:'/resetpass',
+        templateUrl:"resources/views/user/resetpassword.html",
+        resolve: loadSequence('updatecontroller'),
+        title: 'Reset Password',
+        ncyBreadcrumb: {
+            label: 'Reset Password'
+        }
     })
 
 
