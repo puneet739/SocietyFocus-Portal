@@ -1,0 +1,20 @@
+<!-- start: PAGE TITLE -->
+<section id="page-title">
+	<div class="row">
+		<div class="col-sm-8">
+			<h1 class="mainTitle">View Notice Board</h1>
+			<span class="mainDescription">Notice board of your Society</span>
+		</div>
+		<div ncy-breadcrumb></div>
+	</div>
+</section>
+
+
+<!-- end: CELL AND ROW TEMPLATE -->
+<!-- start: INLINE EDIT EXAMPLE -->
+<div class="container-fluid container-fullw">
+	<div class="row" ng-controller="noticeController" ng-init="getnoticeboard()">
+		{{notices}}
+	</div>
+</div>
+

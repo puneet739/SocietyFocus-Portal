@@ -1,0 +1,49 @@
+<!-- start: PAGE TITLE -->
+<section id="page-title">
+	<div class="row">
+		<div class="col-sm-8">
+			<h1 class="mainTitle">Notice Board</h1>
+			<span class="mainDescription">Add Notice</span>
+		</div>
+		<div ncy-breadcrumb></div>
+	</div>
+</section>
+
+
+<!-- end: CELL AND ROW TEMPLATE -->
+<!-- start: INLINE EDIT EXAMPLE -->
+<div class="container-fluid container-fullw">
+	<div class="row" ng-controller="noticeController">
+		<div class="col-lg-6 col-md-12">
+                <div class="panel panel-white">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">Add Notice</h5>
+                    </div>
+                    <div class="panel-body" >
+                        <form class="form-login" ng-submit="addnotice()">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">
+                                    Title
+                                </label>
+                                <input type="text" ng-model="notice.title" class="form-control" id="exampleInputEmail1" placeholder="Title">
+                            </div>
+                            <div class="form-group">
+                                Description
+                                <input type="text" ng-model="notice.description" class="form-control" placeholder="Enter First Name">
+                            </div>
+                            <div class="form-group">
+                                <div class="form-control list-group-item list-group-item-success" ng-if="register_success">
+                                    User registered successfully
+                                </div>
+                            </div>
+                            <button type="submit" class="form-group btn btn-o btn-primary">
+                                Submit
+                            </button>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+	</div>
+</div>
+

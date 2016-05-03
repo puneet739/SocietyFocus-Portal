@@ -328,6 +328,31 @@ function ($stateProvider, $locationProvider,$urlRouterProvider, $controllerProvi
     })
 
     //Bulk Features
+    .state('app.notice', {
+        url: '/notice',
+        template: '<div ui-view class="fade-in-up"></div>',
+        title: 'Notice',
+        resolve: loadSequence('noticeController'),
+        ncyBreadcrumb: {
+            label: 'Notice'
+        }
+    }).state('app.notice.add', {
+        url: '/add',
+        templateUrl: 'resources/views/notice/addnotice.html',
+        title: 'Add Notice',
+        ncyBreadcrumb: {
+            label: 'Add Notice'
+        }
+    }).state('app.notice.view', {
+        url: '/view',
+        templateUrl: 'resources/views/notice/viewnotice.html',
+        title: 'View NoticeBoard',
+        ncyBreadcrumb: {
+            label: 'View NoticeBoard'
+        }
+    })
+
+    //Bulk Features
     .state('app.bulk', {
         url: '/bulk',
         template: '<div ui-view class="fade-in-up"></div>',

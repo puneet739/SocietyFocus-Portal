@@ -320,4 +320,30 @@
 		</ul>
 	</li>
 
+	<!--This feature is under development-->
+	<li ng-class="{'active open':$state.includes('app.ui')}">
+		<a href="javascript:void(0)">
+			<div class="item-content">
+				<div class="item-media">
+					<i class="ti-wallet"></i>
+				</div>
+				<div class="item-inner">
+					<span class="title"> Notice Board (Beta Phase)</span><i class="icon-arrow"></i>
+				</div>
+			</div>
+		</a>
+		<ul class="sub-menu">
+			<li ui-sref-active="active">
+				<a ui-sref="app.notice.view">
+					<span class="title" > View Notice Board </span>
+				</a>
+			</li>
+			<li ui-sref-active="active">
+				<a ui-sref="app.notice.add">
+					<span class="title" > Add notice </span>
+				</a>
+			</li>
+		</ul>
+	</li>
+
 </ul>

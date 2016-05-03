@@ -72,6 +72,7 @@ app.constant('JS_REQUIRES', {
         'complaintController' : 'resources/views/complaint/complaintController.js',
         'vehicleController' : 'resources/views/vehicle/vehicleController.js',
         'paymentController':'resources/views/payment/paymentController.js',
+        'noticeController':'resources/views/notice/noticeController.js',
         'subscriptionController':'resources/views/subscription/subscriptionController.js'
     },
     //*** angularJS Modules
