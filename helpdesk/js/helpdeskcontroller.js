@@ -25,6 +25,9 @@ app.run(function($rootScope) {
             // SERVICE_URL:"http://zircon.com/zservice",
             APP_PREFIX:"http://societyfocus.com/helpdesk",
             SERVICE_URL:"http://societyfocus.com/service"
+            name: 'Society Focus Helpdesk, Forum for all society related issues, maintaince, Legal Advice, Resource handling, Parking issues.',
+            basetitle:'Society Focus Helpdesk Forum, Home for all society maintaince related issues',
+            description: 'Society Focus Helpdesk, Forum for all society related issues, maintaince, Legal Advice, Resource handling, Parking issues.',
         }
 })
 app.controller("helpdeskController", function($scope,$http,$rootScope) {
@@ -52,6 +55,7 @@ app.controller("questionController", function($scope,$http,$rootScope,$routePara
         }
         $http(req).then(function successCallback(response) {
            $scope.fullQuestion = response.data.body;
+           $rootScope.title=$scope.fullQuestion.title+' - ' +$scope.fullQuestion.username;
         });
     $scope.addComment = function(){
         console.log($scope.comment);

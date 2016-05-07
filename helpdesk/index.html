@@ -4,13 +4,25 @@
 <head>
     <base href="/helpdesk/">
     <meta name="fragment" content="!">  
-    <title>Society Focus</title>
+    <!-- <title>Society Focus</title> -->
+    <title>{{constant.basetitle}}-{{title}}</title>
     <script src="http://societyfocus.com/portal/external/angular/angular.js"></script>
     <script src="http://societyfocus.com/portal/external/angular-animate/angular-animate.min.js"></script>
     <script src="http://societyfocus.com/helpdesk/js/angular-route.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
     <link href="http://societyfocus.com/portal/external/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.ico">
+    <meta name="description" content="{{constant.description}}" />
+        <meta property="og:title" content="{{title}}" />
+        <meta property="og:description" itemprop="description" content="{{constant.description}}" />
+        <meta property="og:image" itemprop="image" content="http://societyfocus.com/images/logo_black.png" />
+        <meta property="og:site_name" content="http://societyfocus.com" />
+        <meta property="article:publisher" content="https://www.facebook.com/societyfocus" />
+        <meta property="og:type" content="{{constant.description}}" />
+        <meta property="og:site_name" content="http://societyfocus.com" />
+        <meta property="og:url"    content="http://societyfocus.com/helpdesk" /> 
+        <meta name="google-play-app" content="app-id=com.zircon.app">
+        <meta property="fb:app_id" content="1749929318576139" /> 
     <link rel='stylesheet' type='text/css' href="http://societyfocus.com/helpdesk/css/style.css">
 </head>
 
@@ -67,4 +79,5 @@
     </footer>
 </body>
  <script type="text/javascript" src="js/helpdeskcontroller.js"></script>
+ <script type="text/javascript" src="js/mainCtrl.js"></script>
 </html>
