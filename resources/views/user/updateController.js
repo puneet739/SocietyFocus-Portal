@@ -14,7 +14,7 @@ app.controller("updateController", function($scope,$rootScope,$http) {
 	        var userString = JSON.stringify($rootScope.logedinuser, null, "\t");
 	        var req = {
 	            method: 'POST',
-	            url: $rootScope.constant.SERVICE_URL + '/user/modifyuser',
+	            url: $rootScope.constant.SERVICE_URL + '/user/modifymyuser',
 	            data:  $scope.currentUser,
 	        }
 	        $http(req).then(function successCallback(response) {
