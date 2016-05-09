@@ -20,6 +20,15 @@ app.config(function ($routeProvider,$locationProvider){
     })
     
 });
+
+app.filter('timeago',function(){
+  return function(input) {
+    var date=input.replace("T"," ");
+    var timeAgo = moment(new Date(date)).fromNow()
+    return timeAgo;
+  };
+});
+
 app.run(function($rootScope) {
     $rootScope.constant={
             // SERVICE_URL:"http://zircon.com/zservice",

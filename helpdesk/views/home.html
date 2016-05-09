@@ -17,7 +17,7 @@
                               </p>
                                    <a href="{{constant.APP_PREFIX}}/question/{{question.id}}">Show more...</a><br><br>
                                 
-                        <span class="question-date"><i class="icon-time"></i>13 hours ago </span>
+                        <span class="question-date"><i class="icon-time"></i>{{question.createdDate|timeago}} </span>
                         <span class="question-comment" ng-show="{{question.commentCount==0}}">
                                    <a href="{{constant.APP_PREFIX}}/question/{{question.id}}"><i class="icon-comment"></i>No comment</a>
                             </span>
