@@ -40,16 +40,17 @@ app.run(function($rootScope) {
         }
 })
 app.controller("helpdeskController", function($scope,$http,$rootScope) {
+    var pageSize=50;
     $scope.getQuestions = function(){
         var req = {
             method: 'GET',
-            url: $rootScope.constant.SERVICE_URL + '/helpdesk/get?page=0&size=10',
+            url: $rootScope.constant.SERVICE_URL + '/helpdesk/get?page=0&size='+pageSize,
         }
         $http(req).then(function successCallback(response) {
            console.log(response.data.body);
            $scope.questions = response.data.body.queries;
            var totalCount = response.data.body.totalQueries ;
-           $scope.totalCount = totalCount % 10!=0 ? Math.ceil(totalCount/10) : totalCount/10;
+           $scope.totalCount = totalCount % pageSize!=0 ? Math.ceil(totalCount/pageSize) : totalCount/pageSize;
         });
     }
  });
