@@ -101,4 +101,16 @@ app.controller("paymentController", function($scope,$stateParams, $http, $filter
             console.log('Error because of connection');
         });
     }
+
+     $scope.sendSMS = function(userid){
+         var req = {
+            method: 'GET',
+            url: $rootScope.constant.SERVICE_URL + '/user/sendsms?userid='+userid,
+        }
+        $http(req).then(function successCallback(response) {
+            alert('SMS sent to user');
+        },function errorCallback(error) {
+            console.log('Error because of connection');
+        });
+    }
 });

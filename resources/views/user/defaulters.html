@@ -21,6 +21,7 @@
                     <th>ContactNo </th>
                     <th>Email </th>
                     <th>CurrentWalletAmount </th>
+                    <th>SendSMS</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,6 +32,11 @@
                     <td>{{defaulter.user.contact_no}} </td>
                     <td>{{defaulter.user.email}} </td>
                     <td>{{defaulter.wallet.amount}} </td>
+                    <td>
+                        <button type="button" ng-click="sendSMS(defaulter.wallet.userid,defaulter.user.firstname)" class="btn btn-wide btn-o btn-primary">
+                            SMS
+                        </button> 
+                    </td>
                 </tr>
             </tbody>
         </table>
