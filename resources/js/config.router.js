@@ -315,6 +315,13 @@ function ($stateProvider, $locationProvider,$urlRouterProvider, $controllerProvi
         ncyBreadcrumb: {
             label: 'Payment Successfull'
         }
+    }).state('app.payment.defaulters', {
+        url: '/defaulters',
+        templateUrl: 'resources/views/user/defaulters.html',
+        title: 'Defaulters',
+        ncyBreadcrumb: {
+            label: 'Defaulters'
+        }
     })
 
     //Subscription Pages

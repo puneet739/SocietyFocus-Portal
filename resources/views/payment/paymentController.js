@@ -88,4 +88,17 @@ app.controller("paymentController", function($scope,$stateParams, $http, $filter
             console.log('Error because of connection');
         });
 	}
+
+
+    $scope.viewalldefaulters = function(){
+        var req = {
+            method: 'GET',
+            url: $rootScope.constant.SERVICE_URL + '/user/defaulters',
+        }
+        $http(req).then(function successCallback(response) {
+            $scope.defaulters = response.data.body;
+        },function errorCallback(error) {
+            console.log('Error because of connection');
+        });
+    }
 });

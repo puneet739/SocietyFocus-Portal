@@ -1,0 +1,38 @@
+<!-- start: PAGE TITLE -->
+<section id="page-title">
+	<div class="row">
+		<div class="col-sm-8">
+			<h1 class="mainTitle">View Defaulters</h1>
+			<span class="mainDescription">View All defaulters of society</span>
+		</div>
+		<div ncy-breadcrumb></div>
+	</div>
+</section>
+
+
+<div class="container-fluid container-fullw bg-white" ng-controller="paymentController" ng-init="viewalldefaulters()">
+    <div class="col-md-12">
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr>
+                	<th>UserId </th>
+                    <th>UserName </th>
+                    <th>LastName </th>
+                    <th>ContactNo </th>
+                    <th>Email </th>
+                    <th>CurrentWalletAmount </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="defaulter in defaulters" style="cursor: pointer;" >
+                	<td>{{defaulter.wallet.userid}} </td>
+                    <td>{{defaulter.user.firstname}} </td>
+                    <td>{{defaulter.user.lastname}} </td>
+                    <td>{{defaulter.user.contact_no}} </td>
+                    <td>{{defaulter.user.email}} </td>
+                    <td>{{defaulter.wallet.amount}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
