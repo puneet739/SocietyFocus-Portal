@@ -7,7 +7,7 @@
     <meta name="description" content="{{app.description}}" />
     <meta property="og:title" content="{{app.title}}" />
     <meta property="og:description" itemprop="description" content="{{app.aboutus_social}}" />
-    <meta property="og:image" itemprop="image" content="{{app.logo}}"/>
+    <meta property="og:image" itemprop="image" content="{{app.logo}}" />
     <meta property="og:site_name" content="{{app.name}}" />
     <meta property="article:publisher" content="{{app.contactus.facebook}}" />
     <meta property="og:type" content="article" />
@@ -36,7 +36,7 @@
 </head>
 <!--/head-->
 
-<body >
+<body>
     <!--.preloader-->
     <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
     <!--/.preloader-->
@@ -90,6 +90,17 @@
                         <li><a href="http://societyfocus.com/portal">Login</a></li>
                     </ul>
                 </div>
+                <div id="fb-root"></div>
+                <script>
+                (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.6&appId=774361825993005";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+                </script>
             </div>
         </div>
         <!--/#main-nav-->
@@ -97,6 +108,9 @@
     <!--/#home-->
     <section id="services">
         <div class="container">
+            <div class="text-center row">
+             <div class="text-center fb-page" data-href="https://www.facebook.com/societyfocus" data-width="600" data-hide-cover="false" data-small-header="true" data-show-facepile="true"></div>
+         </div>
             <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <div class="row">
                     <div class="text-center col-sm-8 col-sm-offset-2">
