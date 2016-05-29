@@ -1,5 +1,16 @@
+<script>
+                (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.6&appId=774361825993005";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+                </script>
+                
+<div class="text-center fb-page" data-href="https://www.facebook.com/societyfocus" data-width="600" data-hide-cover="false" data-small-header="true" data-show-facepile="true"></div>
 <div class="container"  ng-controller="questionController">
-	
 	<div class="container questionContainer" style="margin: 26px auto;">
 		<article class="question single-question ">
 			<h4 class="pull-left">
@@ -8,6 +19,7 @@
 	        <h4 class="pull-right">{{fullQuestion.city}}</h4>
 	    	<div class="full-question">
 	                            <p>
+	                            	
 	                                {{fullQuestion.query}}
 	                            </p>
 	                    </div>  
