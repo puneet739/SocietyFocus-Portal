@@ -42,9 +42,9 @@ app.directive('ads', function() {
 
 app.run(function($rootScope) {
     $rootScope.constant={
-            SERVICE_URL:"http://zircon.com/zservice",
+            // SERVICE_URL:"http://zircon.com/zservice",
             APP_PREFIX:"http://societyfocus.com/helpdesk",
-            // SERVICE_URL:"http://societyfocus.com/service",
+            SERVICE_URL:"http://societyfocus.com/service",
             name: 'Society Focus Helpdesk, Forum for all society related issues, maintaince, Legal Advice, Resource handling, Parking issues.',
             description: 'Society Focus Helpdesk, Forum for all society related issues, maintaince, Legal Advice, Resource handling, Parking issues.',
         }
