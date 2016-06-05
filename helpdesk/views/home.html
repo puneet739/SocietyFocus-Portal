@@ -4,18 +4,12 @@
                     <li class="tab" style="padding: 10px; background-color: #3498db; color: #fff;">Recent Questions</li>
                 </ul>
             </div>
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- PPAutomaticSize -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7208785423388103"
-     data-ad-slot="3743651329"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+            <div ng-repeat="question in questions">
             <div class="questiontabs" >
-                <article class="question question-type-normal" ng-repeat="question in questions">
+                <div class="question question-type-normal" ng-if="showAds($index)">
+                    <div data-ads></div>
+                 </div>
+                <article class="question question-type-normal">
                     <h2>
                         <a href="{{constant.APP_PREFIX}}/question/{{question.id}}">{{question.title}}</a>
                     </h2>
@@ -37,7 +31,10 @@
                         <div class="clearfix"></div>
                     </div>
                 </article>
-                <div class="container pageDiv">
+            </div>
+
+        </div>
+        <div class="container pageDiv">
                     <ul class="pagination margin-bottom-10">
                         <li>
                             <a href="javascript:void(0);"> Previous</a>
@@ -50,6 +47,4 @@
                         </li>
                     </ul>
                 </div>
-                
-            </div>
-        </div>
+    </div>
