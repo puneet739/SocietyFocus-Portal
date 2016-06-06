@@ -1,5 +1,24 @@
-app.controller("LoginController", function($scope, $http,$q,$localStorage, authentication, $rootScope,eventbus) {
+app.controller("LoginController", function($scope, $http,$q,$localStorage, authentication, $rootScope,eventbus,$aside) {
 	$scope.login_error=false;
+
+    $scope.openAside = function (position) {
+        $aside.open({
+            templateUrl: 'asideContent.html',
+            placement: position,
+            size: 'sm',
+            backdrop: true,
+            controller: function ($scope, $uibModalInstance) {
+                $scope.ok = function (e) {
+                    $uibModalInstance.close();
+                    e.stopPropagation();
+                };
+                $scope.cancel = function (e) {
+                    $uibModalInstance.dismiss();
+                    e.stopPropagation();
+                };
+            }
+        });
+    };
 
     $scope.society=[
         {
