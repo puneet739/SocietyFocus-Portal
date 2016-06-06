@@ -393,7 +393,7 @@ function ($stateProvider, $locationProvider,$urlRouterProvider, $controllerProvi
     }).state('login.signin', {
         url: '/signin',
         templateUrl: "resources/views/login/signin.html",
-        resolve: loadSequence('loginController','ui.select')
+        resolve: loadSequence('loginController','ui.select','ngAside')
     }).state('login.forgot', {
         url: '/forgot',
         templateUrl: "assets/views/login_forgot.html"
