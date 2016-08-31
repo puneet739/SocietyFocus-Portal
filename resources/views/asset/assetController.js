@@ -20,7 +20,11 @@ app.controller("assetController", function($scope, $http, toaster, $filter,$stat
     }, {
         "displayname": "Driver",
         "value": 6
-    }];
+    },{
+        "displayname": "Misc",
+        "value": 7
+    }
+    ];
 
     $scope.registerAsset = function() {
         console.log('Now registering asset' + $scope.asset);
