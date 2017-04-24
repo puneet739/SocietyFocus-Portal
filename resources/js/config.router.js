@@ -103,6 +103,23 @@ function ($stateProvider, $locationProvider,$urlRouterProvider, $controllerProvi
         }
     })
 
+    //Notification routes here 
+    .state('app.notification', {
+        url: '/notification',
+        template: '<div ui-view class="fade-in-up"></div>',
+        title: 'Notification',
+        resolve: loadSequence('ngTable','notificationController'),
+        ncyBreadcrumb: {
+            label: 'Notification'
+        }
+    }).state('app.notification.push', {
+        url: '/pushNotification',
+        templateUrl: 'resources/views/notification/pushNotification.html',
+        title: 'pushNotification',
+        ncyBreadcrumb: {
+            label: 'pushNotification'
+        }
+    })
 
     //Asset Routes here
     .state('app.asset', {

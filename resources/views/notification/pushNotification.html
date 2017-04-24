@@ -1,0 +1,89 @@
+<!-- start: PAGE TITLE -->
+<section id="page-title">
+	<div class="row">
+		<div class="col-sm-8">
+			<h1 class="mainTitle">Push Notification</h1>
+			<span class="mainDescription">Push Notification requests which open in the your society</span>
+		</div>
+		<div ncy-breadcrumb></div>
+	</div>
+</section>
+<div class="container-fluid container-fluid container-fullw bg-white col-md-12" ng-controller="pushNotificationController">
+	<div class="row">
+		<div class="col-md-6">
+			<fieldset>
+				<legend>
+					Your Message
+				</legend>
+				<div class="form-group">
+					<label>
+						Body <span class="symbol required"></span>
+					</label>
+					<div class="form-group">
+						<input type="text" placeholder="Body of Message" name="body" ng-model="notification.body" id="body" class="form-control">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label>
+						Title <span class="symbol required"></span>
+					</label>
+					<div class="form-group">
+						<input type="text" placeholder="Display title" name="title" ng-model="notification.title" id="title" class="form-control">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label>
+						Icon <span class="symbol"></span>
+					</label>
+					<div class="form-group">
+						<input type="text" placeholder="Icon URL" name="icon" id="icon" ng-model="notification.icon" class="form-control">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label>
+						Image Source <span class="symbol"></span>
+					</label>
+					<div class="form-group">
+						<input type="text" placeholder="Image URL" ng-model="notification.image" name="image" id="image" class="form-control">
+					</div>
+				</div>
+				AA: {{notification}}
+			</fieldset>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-12">
+				<h5 class="over-title margin-bottom-15"><span class="text-bold"></span></h5>
+				<p>
+					Kindly suggest you want to send notification to all users or particular User
+				</p>
+				<uib-tabset class="tabbable col-md-6" >
+					<uib-tab heading="Specific Users">
+						<select class="cs-select cs-skin-slide">
+							<option value=""></option>
+							<option value="sightseeing">Sight Seeing</option>
+							<option value="business">Business</option>
+							<option value="honeymoon">Honeymoon</option>
+							<option value="food">Gourmet</option>
+							<option value="shopping">Shopping</option>
+						</select>
+
+						<p>
+						<button type="button" class="btn btn-wide btn-primary">
+							Submit
+						</button> 
+						</p>
+					</uib-tab>
+					<uib-tab heading="All Users">
+						<p>Here we will send notification to All Users of this society.</p>
+						<button type="button" class="btn btn-wide btn-primary">
+							Submit
+						</button> 
+					</uib-tab>
+				</uib-tabset>
+			</div>
+	</div>
+</div>

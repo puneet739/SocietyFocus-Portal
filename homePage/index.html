@@ -19,6 +19,7 @@
     <title ng-bind="app.title">Society Focus</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- <link href="css/font-awesome.min.css" rel="stylesheet"> -->
     <link href="css/lightbox.css" rel="stylesheet">
@@ -27,6 +28,7 @@
     <link href="css/responsive.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script type="text/javascript" src="js/application.js"></script>
+    
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -37,8 +39,78 @@
 <!--/head-->
 
 <body>
+
+<!-- Main  popup -->
+
+    <div class="modal fade myModal" id="overlay" >
+  <div class="modal-dialog">
+    <div class="modal-content home-modal">
+      <div class="modal-header">
+          <h3 id="d-header">We Will Get Back To <br>You And Your Society</h3>
+          <p id="helper">Fill in the details to get started</p>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >
+          <img src="images/cross.png">
+        </button>
+      </div>
+      <div class="modal-body body-padding">
+
+        <form>
+         <div class="form-group mar">
+             <input type="text" class="form-control inputbox" ng-model="contactus.name" id="name" placeholder="Name">
+         </div>
+
+         <div class="form-group mar">
+             <input type="text" class="form-control inputbox" required="true" ng-model="contactus.email" id="email" placeholder="Email">
+         </div>
+
+         <div class="form-group mar">
+             <input type="text" class="form-control inputbox" ng-model="contactus.contactno" id="phoneno" placeholder="Phone">
+         </div>
+
+         <div class="text-center">
+           <button id="submitbtn" class="btn btn-primary" ng-click="submitFeedback(contactus)" data-dismiss="modal">SUBMIT</button>
+         </div>
+
+      </form>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+<!-- Thank You popup -->
+
+    <div class="modal fade myModal1" id="overlay" >
+  <div class="modal-dialog">
+    <div class="modal-content ty-home-modal">
+      <div class="modal-header">
+
+          <h3 id="ty-d-header" class="text-center">Great !! Your work is done now our team will get back to you within 24 Hours</h3>
+          <p id="helper"></p>
+
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >
+          <img src="images/cross.png">
+        </button>
+
+      </div>
+      <div class="modal-body  ty-body">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <img src="images/tele.svg" class="ty-img">
+          </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
     <!--.preloader-->
     <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
+
+    <!--FIRST POPUP-->
+    
     <!--/.preloader-->
     <header id="home">
         <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
@@ -479,6 +551,7 @@
     <script type="text/javascript" src="js/jquery.countTo.js"></script>
     <script type="text/javascript" src="js/lightbox.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/custom.js" charset="utf-8"></script>
 </body>
 
 </html>

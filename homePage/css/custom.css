@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400');
+
+
+
+.myModal{
+  transform: scale(0);
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;/*opening speed*/
+  -o-transition: all 0.5s ease;/*opening speed*/
+  transition: all 0.5s ease;/*opening speed*/
+
+}
+
+.myModal.in {
+  opacity: 1;
+  transform: scale(1);/*size of the div to scal after .in class attached on opening modal*/
+  
+}
+
+#popup-img{
+  width: 100%;
+  height: auto;
+
+}
+.modal-header{
+  border-bottom: none;
+  padding: 0;
+
+}
+
+#helper{
+  margin-left: 70px;
+  font-family: 'Fredoka One' ,'Open Sans';
+  font-size: 15px;
+  color: #fff;
+  letter-spacing: 1.1px;
+}
+
+#d-header{
+  margin-left:70px;
+  margin-bottom:0;
+  line-height: 1.2;
+  padding: 15px 0;
+  font-size: 37px;
+  color: #fff;
+  font-family: 'Fredoka One' ,'Open Sans';
+}
+
+.close{
+  position: fixed;
+  opacity: 1;
+  top: -10px;
+  right:0;
+  margin-right: -10px;
+}
+
+.close img{
+  width: 30px;
+}
+
+
+.mar{
+  margin-bottom: 25px !important;
+}
+
+
+
+.home-modal{
+  background: -webkit-linear-gradient(right bottom,#00A99D, #0071BC);
+  border-radius: 10px;
+}
+
+.inputbox{
+ 
+  height: 45px;
+  border:none !important;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1.3px;
+  font-size: 15px;
+
+}
+
+input[type='text']{
+  color: #0A65C1 !important;
+  background-color: #fff !important;
+  border-radius:5px;
+  font-size:16px;
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+
+.body-padding{
+  padding: 10px 70px;
+  margin-top:50px; 
+}
+
+#submitbtn{
+  background-color:#0A65C1;
+  padding: 6px 50px;
+  font-size:19px;
+  font-weight: bold;
+  border-radius: 20px;
+  letter-spacing: 1.5px;
+  margin-top: 25px;
+  margin-bottom: 35px;
+  font-family: 'Fredoka One' ,'Open Sans';
+  letter-spacing: 2.5px;
+  border:none;
+  outline: 0;
+  transition: all ease-in-out 0.3s;
+  perspective: 1000;
+}
+
+#submitbtn:hover{
+  background-color:#0a4786; 
+  transform:scale(1.1);
+}
+
+
+/*Thank you popup styling*/
+
+.ty-body{
+  padding-bottom:0;
+}
+
+.ty-body img{
+  height: 400px;
+}
+
+#ty-d-header{
+  margin-bottom:0;
+  line-height: 1.2;
+  padding: 15px 45px;
+  font-size: 35px;
+  color: #fff;
+  font-family: 'Fredoka One' ,'Open Sans';
+}
+
+#ty-msg{
+
+  margin-bottom:0;
+  line-height: 1.5;
+  padding: 15px 0;
+  font-size: 20px;
+  color: #fff;
+  font-family: 'Fredoka One' ,'Open Sans';
+}
+
+.ty-home-modal{
+  background: -webkit-linear-gradient(left top,#673ab7,  #2196f3);
+  border-radius: 10px;
+}
+
+/*Responsive Stuffs*/
+
+@media (max-width: 768px) {
+
+      .home-modal{
+        height: 100vh;
+      }
+
+      #d-header{
+        font-size: 25px;
+        margin-left:25px;
+      }
+
+      #helper{
+        margin-left: 28px;
+      }
+
+      .body-padding{
+        padding: 5px 15px;
+        margin-top: 20px;
+      }
+
+      #ty-d-header{
+        font-size: 25px;
+      }
+      .ty-body img{
+        height: 300px;
+      }
+
+}

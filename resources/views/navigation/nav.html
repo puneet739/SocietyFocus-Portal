@@ -152,6 +152,38 @@
 		</ul>
 	</li>
 
+	<li ng-class="{'active open':$state.includes('app.ui')}" access="beta" access-permission-type="AtLeastOne">
+		<a href="javascript:void(0)">
+			<div class="item-content">
+				<div class="item-media">
+					<i class="ti-sharethis"></i>
+				</div>
+				<div class="item-inner">
+					<span class="title"> Notification Feature </span><i class="icon-arrow"></i>
+				</div>
+			</div>
+		</a>
+		<ul class="sub-menu">
+			<li ui-sref-active="active">
+				<a ui-sref="app.notification.push">
+					<span class="title" > Push Notification </span>
+				</a>
+			</li>
+
+			<li ui-sref-active="active">
+				<a ui-sref="app.notification.email">
+					<span class="title" > Email Notification </span>
+				</a>
+			</li>
+
+			<li ui-sref-active="active">
+				<a ui-sref="app.notification.email">
+					<span class="title" > SMS Notification </span>
+				</a>
+			</li>
+		</ul>
+	</li>
+
 	<li ng-class="{'active open':$state.includes('app.ui')}" access="society_admin" access-permission-type="AtLeastOne">
 		<a href="javascript:void(0)">
 			<div class="item-content">
