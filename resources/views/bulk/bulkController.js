@@ -1,6 +1,9 @@
-app.controller("bulkController", function($scope, $http, $filter, $q, $location, $rootScope, toaster,FileUploader) {
+app.controller("bulkController", function($scope, $http, $filter, $q, $location, $rootScope, $cookieStore, toaster,FileUploader) {
     var uploader = $scope.uploader = new FileUploader({
-        url: $rootScope.constant.SERVICE_URL + '/upload/bulk/register'
+        url: $rootScope.constant.SERVICE_URL + '/upload/bulk/register',
+        headers : {
+            'X-Auth-Token': $cookieStore.get('X-Auth-Token')
+        }
     });
 
     // FILTERS
