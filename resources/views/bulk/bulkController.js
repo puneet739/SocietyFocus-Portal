@@ -1,6 +1,6 @@
 app.controller("bulkController", function($scope, $http, $filter, $q, $location, $rootScope, toaster,FileUploader) {
     var uploader = $scope.uploader = new FileUploader({
-        url: 'upload.php'
+        url: $rootScope.constant.SERVICE_URL + '/upload/bulk/register'
     });
 
     // FILTERS

@@ -48,7 +48,7 @@
 												</div></td>
 												<td class="text-center"><span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span><span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span><span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span></td>
 												<td nowrap>
-												<button type="button" class="btn btn-success btn-xs" ng-click="uploadFile()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+												<button type="button" class="btn btn-success btn-xs" ng-click="item.upload()" ng-disabled="item.isReady || item.isUploading || item.isSuccess">
 													<span class="glyphicon glyphicon-upload"></span> Upload
 												</button>
 												<button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
