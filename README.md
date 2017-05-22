@@ -29,6 +29,18 @@ We are accepting donation for running and providing services.
 https://www.paypal.me/PuneetBehl
 
 ```
+Steps for Running on local: 
+1) Download Nginx from http://nginx.org/en/download.html
+2) Change port which is available for you at conf/nginx.conf
+3) go to nging/html folder. 
+4) Clone your HTML code there. 
+5) update Following in nginx.conf 
+    server {
+        listen       8089;
+        rewrite  /service/(.*) http://societyfocus.com/service/$1;
+6) Change server url in resources/js/main.js to serviceURL : http://localhost:8089/service/
+
+```
 Project managed by Team Society Focus. 
 Puneet Behl  -- Puneet739@gmail.com -- CEO@societyfocus.com
 ```
