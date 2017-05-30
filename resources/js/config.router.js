@@ -49,9 +49,9 @@ function ($stateProvider, $locationProvider,$urlRouterProvider, $controllerProvi
 
     //Admin Dashboard
     .state('app.admin_dashboard', {
-        url: "/dashboard",
+        url: "/admindashboard",
         templateUrl: "resources/views/dashboard/admindashboard.html",
-        title: 'Dashboard',
+        title: 'Admin Dashboard',
         resolve: loadSequence('dashboardController'),
         ncyBreadcrumb: {
             label: 'Dashboard'
