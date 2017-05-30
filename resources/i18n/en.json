@@ -60,6 +60,7 @@
       "element": {
       	"MAIN": "UI Elements",
         "ELEMENTS": "Elements",
+        "ADMIN_DASHBOARD":"Admin Dashboard",
         "USER_ADMINISTATION":"User Administation",
         "ASSET_ADMINISTATION":"Asset Administation",
         "BUTTONS": "Buttons",

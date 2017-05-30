@@ -47,6 +47,17 @@ function ($stateProvider, $locationProvider,$urlRouterProvider, $controllerProvi
         }
     })
 
+    //Admin Dashboard
+    .state('app.admin_dashboard', {
+        url: "/dashboard",
+        templateUrl: "resources/views/dashboard/admindashboard.html",
+        title: 'Dashboard',
+        resolve: loadSequence('dashboardController'),
+        ncyBreadcrumb: {
+            label: 'Dashboard'
+        }
+    })
+
     //User Routes here
     .state('app.user', {
         url: '/user',

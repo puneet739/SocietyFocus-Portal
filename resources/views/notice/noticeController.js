@@ -27,9 +27,9 @@ app.controller("noticeController", function($scope, $http, $filter, $q, $locatio
 
         $http(req).then(function successCallback(response) {
             console.log('Notice board recived');
-
+            $scope.notice=null;
+            $scope.register_success=true;
         }, function errorCallback(error) {
-            debugger;
             console.log('Error because of connection');
         });
     }

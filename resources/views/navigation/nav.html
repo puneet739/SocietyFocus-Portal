@@ -17,6 +17,19 @@
 		</a>
 	</li>
 
+	<li ui-sref-active="active" access="society_admin" access-permission-type="AtLeastOne">
+		<a ui-sref="app.admin_dashboard">
+			<div class="item-content">
+				<div class="item-media">
+					<i class="ti-home"></i>
+				</div>
+				<div class="item-inner">
+					<span class="title" translate="sidebar.nav.element.ADMIN_DASHBOARD"> Admin Dashboard </span>
+				</div>
+			</div>
+		</a>
+	</li>
+	
 	<li ng-class="{'active open':$state.includes('app.ui')}">
 		<a href="javascript:void(0)">
 			<div class="item-content">
