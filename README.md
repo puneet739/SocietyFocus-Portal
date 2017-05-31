@@ -37,7 +37,11 @@ Steps for Running on local:
 5) update Following in nginx.conf 
     server {
         listen       8089;
-        rewrite  /service/(.*) http://societyfocus.com/service/$1;
+        location /service{
+            resolver 8.8.8.8;
+            proxy_pass http://societyfocus.com/service;
+        }
+
 6) Change server url in resources/js/main.js to serviceURL : http://localhost:8089/service/
 
 ```
