@@ -96,10 +96,10 @@ app.controller("vehicleController", function($scope, $http,$q,$location,$localSt
         });
     }
 
-    $scope.viewUserVehicle = function(){
+    /*$scope.viewUserVehicle = function(){
         viewUserVehicle($stateParams.userid);
-    }
-    viewUserVehicle = function(userid){
+    }*/
+    $scope.viewUserVehicle = function(userid){
         var req = {
             method: 'GET',
             url: $rootScope.constant.SERVICE_URL + '/vehicle/getvehilcebyuser/'+userid
