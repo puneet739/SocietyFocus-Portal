@@ -91,9 +91,9 @@ function($rootScope, $scope, $state, $translate, $localStorage, $window, $docume
 		listIsOpen : false,
 		// list of available languages
 		available : {
-			'en' : 'English',
-			'it_IT' : 'Italiano',
-			'de_DE' : 'Deutsch'
+			'en' : 'English'
+			//'it_IT' : 'Italiano',
+			//'de_DE' : 'Deutsch'
 		},
 		// display always the current ui language
 		init : function() {
