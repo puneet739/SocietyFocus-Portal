@@ -1,12 +1,13 @@
 angular.module("myapp", [])
     .controller("applicationController", function($scope,$http) {
-
+        //var serverURL='http://localhost:8080/zircon/services/';
+        var serverURL='http://societyfocus.com/service/';
         $scope.app = {
             name: 'Society Focus',
             title:'Society Focus-Complete Society Management application for Societ and RWA',
             description: 'Society Focus-Complete Society Management application for Society and RWA. Call for free Demo: 9711616135. Society Focus is a one stop for all Society Related needs, Complete Society management application for Users and Administration for Finding the relevant information. Bring people closer and solving there issue in single touch. With past experience of Society in Delhi,Noida,Gurgaon we have achieved the best results.',
             aboutus_social: 'Society Focus is a one stop for all Society Related needs, Complete Society management application for Users and Administation for Finding the relevant information. Bring people closer and solving there issue in single touch. With past experience of Society in Delhi,Noida,Gurgaon we have achived the best results.',
-            aboutus_general: 'Society Focus is an application that makes connection within society members and RWA. \n Society Focus portal is quite simple for managing the day to day running issues of society members and RWA at a very reasonable cost. The application(android/web) is fast and our experience in setting up database for our societies is very smooth and easy.',
+            aboutus_general: 'Societyfocus is an assistance platform for Resident Welfare Association. \n A Simple, Efficient and Cost Effective Solution for managing the day to day running affairs of the Society and Resident Welfare Assocition.Our people-centric app provides a one-stop solution to all RWA-related problems. Managing Societies is just Simple, Smooth and Easy.',
             logo:'http://res.cloudinary.com/dgrrxe4i7/image/upload/c_scale,w_516/v1456989702/societyfocuslogoblack.png',
             theme1: {
                 name: 'Society Focus',
@@ -194,7 +195,7 @@ angular.module("myapp", [])
             feedback.description=feedback.subject+':::'+feedback.message;
             var req = {
                 method: 'POST',
-                url: 'http://societyfocus.com/service/v1/feedback/save',
+                url: serverURL+'v1/feedback/save',
                 data: feedback,
             }
             $http(req).then(function successCallback(response) {
