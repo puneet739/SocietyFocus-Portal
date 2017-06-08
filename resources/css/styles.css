@@ -11307,3 +11307,79 @@ td.small-width {
         display:none;
     }
 }
+
+
+/* Styling For Inner Dashboard */
+
+
+#mainChart{
+  height:400px;
+  width:100%;
+  background: #e6fcff;
+  border: 1px solid #c4f8ff;
+  color:black;
+  margin-bottom: 20px;
+}
+#mainChart1{
+  height:320px ;
+  width:100%;
+  background: #FFF;;
+  border: 1px solid rgba(235, 235, 235, 0.99);
+  box-shadow: 0px 5px 11px 1px rgba(170, 170, 170, 0.42);
+  text-align: center;
+  padding-top:60px;
+   transition: 0.3s all;
+}
+#mainChart1:hover{
+  cursor:pointer;
+  box-shadow: 0px 0px 0px 0px rgba(170, 170, 170, 0.0);
+
+}
+#mainChart1 img{
+  height: 150px;
+  margin-bottom:20px;
+}
+
+.Dcard{
+  width: 90%;
+  padding: 15px 0 5px 0;
+  text-align: center;
+  border: 1px solid rgba(235, 235, 235, 0.99);
+  box-shadow: 0px 5px 11px 1px rgba(170, 170, 170, 0.42);
+  transition: 0.3s all;
+}
+
+.Dcard:hover{
+box-shadow: 0px 0px 0px 0px rgba(170, 170, 170, 0.0);
+cursor: pointer;
+}
+.Dcard img{
+  height:80px;
+  margin-bottom:18px;
+}
+.margin-bottom-30{
+  margin-bottom: 30px;
+}
+.card-desc{
+  font-family:'Lato';
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.hr{
+      border-top: 1px solid rgba(46, 133, 237, 0.3);
+}
+.custorm-chart-margin-bottom{
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .Dcard{
+      width: 100%;
+      margin-bottom:20px;
+    }
+
+    .sm-pad{
+      padding: 0 70px;
+    }
+}
