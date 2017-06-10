@@ -1,18 +1,77 @@
 <!-- start: DASHBOARD TITLE -->
-<section id="page-title" class="padding-top-15 padding-bottom-15">
+<!--<section id="page-title" class="padding-top-15 padding-bottom-15">
     <div class="row">
         <div class="col-sm-7">
             <h1 class="mainTitle" translate="dashboard.WELCOME" translate-values="{ appName: app.name }"></h1>
             <span class="mainDescription">Welcome to Admin dashboard </span>
         </div>
     </div>
-</section>
+</section>-->
 
-<div class="container-fluid container-fullw bg-white col-md-12" ng-controller="dashboardController" ng-init="init()">
+<div class="container-fluid container-fullw bg-white col-md-12" ng-controller="dashboardController">
 	<div class="row">
-		<h5 class="over-title margin-bottom-15">Welcome admin to  <span class="text-bold">{{currentSociety.name}}</span></h5>
-		<div class="col-md-10">
-			Placeholder for admin dashboard
-		</div>
+		<!--<h5 class="over-title margin-bottom-15">Welcome admin to  <span class="text-bold">{{currentSociety.name}} </span></h5>-->
+		<div class="row">
+            <div class="col-md-6" ng-init="getIncomeExpenseData()">
+               <canvas class="chart chart-line custorm-chart-margin-bottom" chart-data="IE_data" chart-labels="IE_labels" 
+	chart-series="IE_series" chart-click="onClick" chart-colors="IE_colors" chart-options="options"></canvas> 
+            </div>
+            <div class="col-md-6" ng-init="getComplaintData()">
+              <canvas id="bar" class="chart chart-bar custorm-chart-margin-bottom"
+  chart-data="C_data" chart-labels="C_labels" chart-series="C_series" chart-colors="C_colors" chart-options="options"></canvas>
+            </div>
+        </div>
+        
+         <div class="row">
+            <div class="col-md-9 col-sm-12 sm-pad">
+                 <div class="row margin-bottom-30">
+                        <div class="col-md-4">
+                        <div class="Dcard">
+                            <img ng-src="resources/images/registered.png" alt="">
+                            <h4 class="card-desc">RAW COLLECTION</h4>
+                        </div>
+                        </div>
+                        <div class="col-md-4">
+                        <div class="Dcard">
+                            <img ng-src="resources/images/account.png" alt="">
+                            <h4 class="card-desc">ACCOUNTS</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="Dcard">
+                            <img ng-src="resources/images/asset.png" alt="">
+                            <h4 class="card-desc">ASSETS</h4>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="row">
+             <div class="col-md-4">
+               <div class="Dcard">
+                   <img ng-src="resources/images/user.png" alt="">
+                   <h4 class="card-desc">ADD USER</h4>
+               </div>
+            </div>
+               <div class="col-md-4">
+               <div class="Dcard">
+                   <img ng-src="resources/images/customer.png" alt="">
+                   <h4 class="card-desc">ADD CUSTOMER</h4>
+               </div>
+           </div>
+           <div class="col-md-4">
+               <div class="Dcard">
+                   <img ng-src="resources/images/payment.png" alt="">
+                   <h4 class="card-desc">SERVICES</h4>
+               </div>
+           </div>
+        </div>
+            </div>
+            <div class="col-md-3 col-sm-12 sm-pad">
+                 <div id="mainChart1">
+                     <img ng-src="resources/images/presentation.png" alt="">
+                     <h4 class="card-desc">STATISTICS</h4>
+                 </div>
+            </div>
+        </div>
 	</div>
 </div>
