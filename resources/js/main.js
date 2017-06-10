@@ -97,6 +97,18 @@ app.config(['$translateProvider',
     }
 ]);
 
+app.directive('adsense', function () {
+        return {
+            restrict: 'A',
+            replace: true,       
+            templateUrl: "resources/views/directives/googleAdsense.html",
+            controller: function () {
+                 console.log("Google Adsense is being added!");
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            }
+        };
+    });
+
 app.filter('format',function(){
   return function(input, format) {
     var date=input.replace("T"," ");
