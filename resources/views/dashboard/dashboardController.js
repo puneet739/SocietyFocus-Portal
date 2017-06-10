@@ -49,12 +49,6 @@ $scope.getIncomeExpenseData = function(){
                   type: 'linear',
                   display: true,
                   position: 'left'
-                },
-                {
-                  id: 'y-axis-2',
-                  type: 'linear',
-                  display: true,
-                  position: 'right'
                 }
               ]
             },
@@ -92,7 +86,7 @@ $scope.getComplaintData = function(){
           
           closedComplaints.push($scope.mydata[i].closedComplaints)
           raisedComplaints.push($scope.mydata[i].raisedComplaints)
-          date.push($scope.mydata[0].date)
+          date.push($scope.mydata[i].date)
 
         }
  
