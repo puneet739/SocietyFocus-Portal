@@ -227,7 +227,7 @@ $scope.getUserComp = function(){
         console.log(response);
         var complaints = [];
 
-        for(i=0;i<response.data.body.length;i++)
+        for(i=0;i<3;i++)
         {
           complaints.push({
             complaint: response.data.body[i].title
@@ -249,7 +249,7 @@ $scope.getAssetBookList = function(){
   $http(req).then(function(response){
 
     var Assets = [];
-    for(i=0;i<response.data.body.length;i++){
+    for(i=0;i<3;i++){
       Assets.push({
         item: response.data.body[i].asset.description
       })
