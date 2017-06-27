@@ -49,13 +49,8 @@ $scope.getIncomeExpenseData = function(){
                   type: 'linear',
                   display: true,
                   position: 'left'
-                },
-                {
-                  id: 'y-axis-2',
-                  type: 'linear',
-                  display: true,
-                  position: 'right'
                 }
+                
               ]
             },
             legend: {
@@ -107,7 +102,165 @@ $scope.getComplaintData = function(){
         });
 }
 
+// Dashboarad Controllers Function Starts here
 
+// Function to RAW Get Member List
+
+$scope.getRAWmemberList = function(){
+  console.log("Trying TO fetch Member List");
+
+var req = {
+            method: 'GET',
+            url: $rootScope.constant.SERVICE_URL + '/society/panel',
+        }
+$http(req).then(function(response){
+  
+
+
+    var member = [];
+   
+  for(i=0;i<response.data.body.length;i++){
+
+     member.push({
+       index:response.data.body[i].id,
+       name:response.data.body[i].user.firstname,
+       lastname:response.data.body[i].user.lastname
+     })
+
+   }
+   
+   $scope.members = member;
+  })
+}
+
+  // Function To Fetch All Residency member
+
+  $scope.getAllresidencyMember = function(){
+    var req = {
+            method: 'GET',
+            url: $rootScope.constant.SERVICE_URL + '/user/getalluser',
+        }
+      
+    $http(req).then(function(response){
+
+      var ResidencyMember = [];
+
+      for(i=0;i<3;i++){
+
+       ResidencyMember.push({
+          id:response.data.body[i].userid,
+          firstname:response.data.body[i].firstname,
+          lastname:response.data.body[i].lastname
+       })
+
+      }
+
+      $scope.ResidencyMember = ResidencyMember;
+      $scope.totalResidencyMember = response.data.body.length;
+  
+    })
+  }
+
+  $scope.getAllNotice = function(){
+    console.log("Fetching All Notice !")
+     var req = {
+            method: 'GET',
+            url: $rootScope.constant.SERVICE_URL + '/society/noticeboard/getall'
+        }
+        $http(req).then(function(response){
+            console.log(response);
+
+            //Code To fetch and insert image
+
+            var notice = [];
+            for(i=0;i<response.data.body.length;i++)
+            {
+              if(response.data.body[i].image_url1){
+                notice.push({
+                title:response.data.body[i].title,
+                desc:response.data.body[i].description,
+                image:response.data.body[i].image_url1
+              })
+              }else{
+                notice.push({
+                title:response.data.body[i].title,
+                desc:response.data.body[i].description,
+                image:"resources/images/tempimage.jpg"
+              })
+              }
+
+              
+            }
+        
+            $scope.notice = notice;
+            $scope.myInterval = 300000;
+        })
+  }
+
+  //Function to fetch Wallet Amount
+  $scope.getWalletAmount = function(){
+  var req = {
+            method: 'GET',
+            url: $rootScope.constant.SERVICE_URL + '/user/getuserwallet'
+        }
+
+        $http(req).then(function(response){
+          console.log("GET WALLET AMOUNT")
+          $scope.walletAmount = response.data.body.amount;
+        })
+  }//function ends here
+
+
+//ROW 3
+
+
+// Function to get user complaints
+$scope.getUserComp = function(){
+  console.log("Trying to fetch user complaints !")
+  var req = {
+    method:'GET',
+    url: $rootScope.constant.SERVICE_URL + '/v1/complaint/getusercomplaint'
+  }
+
+  $http(req).then(function(response){
+        console.log("USER BY COMPLAINT")
+        console.log(response);
+        var complaints = [];
+
+        for(i=0;i<response.data.body.length;i++)
+        {
+          complaints.push({
+            complaint: response.data.body[i].title
+          })
+        }
+
+        $scope.complaints = complaints;
+  })
+}
+
+// Function to get Asset booking list.
+$scope.getAssetBookList = function(){
+  console.log("tring to fetch Asset booking list")
+  var req = {
+    method:'POST',
+    url: $rootScope.constant.SERVICE_URL + '/society/asset/getassetbyuser'
+  }
+
+  $http(req).then(function(response){
+
+    var Assets = [];
+    for(i=0;i<response.data.body.length;i++){
+      Assets.push({
+        item: response.data.body[i].asset.description
+      })
+    }
+
+    $scope.Assets = Assets;
+
+
+
+  })
+}
 
 
 });

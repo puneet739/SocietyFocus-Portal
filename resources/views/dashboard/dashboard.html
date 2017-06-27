@@ -1,18 +1,146 @@
 <!-- start: DASHBOARD TITLE -->
-<section id="page-title" class="padding-top-15 padding-bottom-15">
+<!--<section id="page-title" class="padding-top-15 padding-bottom-15">
     <div class="row">
         <div class="col-sm-7">
             <h1 class="mainTitle" translate="dashboard.WELCOME" translate-values="{ appName: app.name }"></h1>
             <span class="mainDescription">overview </span>
         </div>
     </div>
-</section>
+</section>-->
 
-<div class="container-fluid container-fullw bg-white col-md-12" ng-controller="dashboardController" ng-init="init()">
+<div class="container-fluid container-fullw bg-white col-md-12" ng-controller="dashboardController">
+
+    <!-- ROW ONE -->
+
 	<div class="row">
-		<h5 class="over-title margin-bottom-15">Welcome to  <span class="text-bold">{{currentSociety.name}}</span></h5>
-		<div class="col-md-10">
-			<img class="img-rounded img-responsive" ng-src="{{currentSociety.societypic}}"/>
-		</div>
+		<div class="col-md-5" ng-init="getRAWmemberList()">
+            <div class="r1-Sec-wrapper m-b-20">
+                <h5 class="r1-table-title"> Raw member List</h5>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>First Name.</th>
+                            <th>Last Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="RawMember in members" >
+                            <td class="rowTd"> {{ RawMember.index }} </td>
+                            <td class="rowTd">{{ RawMember.name }}</td>
+                            <td class="rowTd">{{ RawMember.lastname }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="Vm-btn">View More</button>
+            </div>
+
+        </div>
+        <div class="col-md-5" ng-init="getAllresidencyMember()">
+            <div class="r1-Sec-wrapper m-b-20">
+                <h5 class="r1-table-title"> Residents Member List</h5>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>First Name.</th>
+                            <th>Last Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="ResidenceMember in ResidencyMember" >
+                            <td class="rowTd"> {{ ResidenceMember.id }} </td>
+                            <td class="rowTd">{{ ResidenceMember.firstname }}</td>
+                            <td class="rowTd">{{ ResidenceMember.lastname }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="totalmember">
+                        <h4> Total Members : {{ totalResidencyMember }}</h4>
+                </div>
+                <button class="Vm-btn">View More</button>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="stores m-b-20">
+                <img ng-src="resources/images/cart.png" alt="NearBy Store">
+                <h4 class="card-desc">Nearby Store</h4>
+            </div>
+        </div>
 	</div>
+
+<!-- ROW TWO -->
+<div class="row">
+    <div class="col-md-10 m-b-20" ng-init="getAllNotice()">
+       <!-- Carosal For Notice -->
+
+       <div id="slides_control">
+        <div>
+        <carousel interval="myInterval">
+            <slide ng-repeat="slide in notice" active="slide.active">
+            <img ng-src="{{ slide.image }}" class="img-responsive car-img" height="300px">
+            <div class="carousel-caption">
+                <h4 class="car-tit">{{ slide.title }}</h4>
+                <h4 class="car-des">{{ slide.desc }}</h4>
+            </div>
+            </slide>
+        </carousel>
+        </div>
+    </div>
+
+       <!--Carosal For Notice Ends-->
+    </div>
+    <div class="col-md-2" ng-init="getWalletAmount()">
+         <div class="stores m-b-20">
+                <img ng-src="resources/images/wallet.png" alt="NearBy Store">
+                <h4 class="card-desc">Wallet Amount : &#8377; {{ walletAmount }} </h4>
+            </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-5" ng-init="getUserComp()">
+         <div class="r1-Sec-wrapper m-b-20">
+                <h5 class="r1-table-title"> Member Complaints</h5>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Complaints</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="comp in complaints" >
+                            <td class="rowTd" >{{ comp.complaint }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="Vm-btn">View All Complaints</button>
+            </div>
+    </div>
+    <div class="col-md-5" ng-init="getAssetBookList()">
+        <div class="r1-Sec-wrapper m-b-20">
+                <h5 class="r1-table-title"> Society Asset</h5>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Assset</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="asset in Assets" >
+                            <td class="rowTd" >{{ asset.item }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="Vm-btn">View All Assets</button>
+            </div>
+    </div>
+    <div class="col-md-2">
+       <div class="stores m-b-20">
+                <img ng-src="resources/images/suv.png" alt="Search Car">
+                <h4 class="card-desc">Search A Car</h4>
+        </div>
+    </div>
+</div>
+
 </div>
