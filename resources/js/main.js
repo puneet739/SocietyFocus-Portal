@@ -97,6 +97,18 @@ app.config(['$translateProvider',
     }
 ]);
 
+app.directive('adsense', function () {
+        return {
+            restrict: 'A',
+            replace: true,       
+            templateUrl: "resources/views/directives/googleAdsense.html",
+            controller: function () {
+                 console.log("Google Adsense is being added!");
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            }
+        };
+    });
+
 app.filter('format',function(){
   return function(input, format) {
     var date=input.replace("T"," ");
@@ -127,6 +139,7 @@ app.factory('httpErrorResponseInterceptor', ['$q', '$location', '$window', '$roo
     function($q, $location, $window, $rootScope, $cookieStore) {
         return {
             response: function(responseData) {
+                $('#loadingDiv').hide(); 
                 return responseData;
             },
             responseError: function error(response) {
@@ -139,6 +152,7 @@ app.factory('httpErrorResponseInterceptor', ['$q', '$location', '$window', '$roo
                         break;
 
                 }
+                $('#loadingDiv').hide(); 
                 return $q.reject(response);
             }
         };
@@ -152,6 +166,7 @@ app.factory('httpRequestInterceptor', ['$rootScope', '$cookieStore', //may cause
                 if ($cookieStore.get('authenticated')) {
                     config.headers['X-Auth-Token'] = $cookieStore.get('X-Auth-Token');
                 }
+                $('#loadingDiv').show(); 
                 return config;
             }
         };
