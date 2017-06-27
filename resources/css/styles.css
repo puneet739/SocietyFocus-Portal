@@ -11380,6 +11380,75 @@ cursor: pointer;
       padding: 0 70px;
     }
 
+}
+
+/* Carosal styling */
+
+#slides_control > div{
+  overflow: hidden;
+}
+.car-img{
+  height:300px !important;
+  display:inline !important;
+  width: 100%;
+}
+.car-tit{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.car-des{
+    margin-bottom: 70px;
+    font-size: 25px;
+}
+
+/* Table Styling */
+
+.r1-Sec-wrapper{
+  width: 100%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  height: 292px;
+  box-shadow: 0 0 7px 0px rgba(102, 204, 190, 0.39);
+  transition: 0.3s all;
+}
+
+.r1-Sec-wrapper:hover{
+   box-shadow: 0 0 7px 2px rgba(102, 204, 190, 0.55);
+}
+
+.r1-table-title{
+    font-family: "Lato";
+    font-weight: 400;
+    margin-bottom: 18px;
+    font-size:16px;
+     color: #10bca5;
+}
+
+.Vm-btn{
+    padding: 5px 15px;
+    background: #1fbba6;
+    color: #fff;
+    font-family: "lato";
+    box-shadow: 0 0 black;
+    border: none;
+    border-radius: 8px;
+}
+.rowTd{
+  font-family: "Lato" !important;
+}
+.totalmember h4{
+    color: #1fbba6;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: lato;
+    margin-bottom: 15px;
+}
+.m-b-20{
+  margin-bottom:20px;
+}
+
 /*added this by puneet for Ajax Spinner */
 #loadingDiv {  
     position:absolute;
