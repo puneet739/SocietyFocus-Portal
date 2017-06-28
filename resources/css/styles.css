@@ -11412,6 +11412,7 @@ cursor: pointer;
   height: 292px;
   box-shadow: 0 0 7px 0px rgba(102, 204, 190, 0.39);
   transition: 0.3s all;
+  position: relative;
 }
 
 .r1-Sec-wrapper:hover{
@@ -11434,6 +11435,8 @@ cursor: pointer;
     box-shadow: 0 0 black;
     border: none;
     border-radius: 8px;
+    position: absolute;
+    bottom: 15px;
 }
 .rowTd{
   font-family: "Lato" !important;
@@ -11447,6 +11450,34 @@ cursor: pointer;
 }
 .m-b-20{
   margin-bottom:20px;
+}
+
+.stores img{
+  height: 90px;
+  margin-bottom: 15px;
+}
+
+.Sec-wrapper{
+  width: 100%;
+  padding: 20px;
+  background: #efefef;
+  border-radius: 10px;
+}
+
+.stores{
+     text-align: center;
+    background: #ffffff;
+    padding: 71px 0;
+    border-radius: 10px;
+    box-shadow: 0 0px 13px rgba(138, 138, 138, 0.26);
+    height: 292px;
+    border: 1px solid #f9f9f9;
+    transition: 0.3s all;
+}
+.stores:hover{
+    box-shadow: 0 0px 0px rgba(138, 138, 138, 0.26);
+    cursor: pointer;
+    border: 1px solid #e7e7e7;
 }
 
 /*added this by puneet for Ajax Spinner */
