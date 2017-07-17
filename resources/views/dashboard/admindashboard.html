@@ -40,25 +40,31 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="Dcard">
-                            <img ng-src="resources/images/asset.png" alt="">
-                            <h4 class="card-desc">ASSETS</h4>
-                        </div>
+                        <a ui-sref="app.asset.view">
+                          <div class="Dcard">
+                              <img ng-src="resources/images/asset.png" alt="">
+                              <h4 class="card-desc">ASSETS</h4>
+                          </div>
+                        </a>
                     </div>
                 </div>
 
             <div class="row">
              <div class="col-md-4">
+              <a ui-sref="app.user.register">
                <div class="Dcard">
                    <img ng-src="resources/images/user.png" alt="">
                    <h4 class="card-desc">ADD USER</h4>
                </div>
+               </a>
             </div>
                <div class="col-md-4">
-               <div class="Dcard">
-                   <img ng-src="resources/images/customer.png" alt="">
-                   <h4 class="card-desc">ADD CARS</h4>
-               </div>
+               <a ui-sref="app.vehicle.add">
+                 <div class="Dcard">
+                     <img ng-src="resources/images/customer.png" alt="">
+                     <h4 class="card-desc">ADD CARS</h4>
+                 </div>
+               </a>
            </div>
            <div class="col-md-4">
                <div class="Dcard">
