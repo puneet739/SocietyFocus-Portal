@@ -27,7 +27,8 @@
 
                         <button type="button" class="btn btn-wide btn-primary btn-scroll-top ti-arrow-right" ng-click="openAside('right')">
                             Click For Demo Credenitals
-                        </button><br/><br/>
+                        </button>
+                        <br/><br/>
                         <!-- <nav class="links cl-effect-1">
                             <a href>Username: test1@demo.com</a>
                             <a href>password: test123</a>
@@ -38,6 +39,7 @@
                     <p>
                         Please enter your name and password to log in.
                     </p>
+
                     <div class="form-group">
                         <span class="input-icon">
                             <input type="text" class="form-control" ng-model="credentials.username" name="username" placeholder="Username">
@@ -78,9 +80,10 @@
                         <a href="http://societyfocus.com/jsf-portal/views/misc/resetPassword.xhtml" class="btn btn-primary pull-left">
                             Forgot Password <i class=""></i>
                         </a>
-                        <!-- <a href="javascript:void(0);" ng-click="loginFB()" class="btn btn-primary pull-right">
+                        <a href="javascript:void(0);" ng-click="loginFB()" class="btn btn-primary pull-right">
                             Login With FaceBook <i class="fa fa-arrow-circle-right"></i>
-                        </a> -->
+                        </a>
+                        <button ng-click="FBLogout()">FB Logout</button>
                     </div>
                 </fieldset>
             </form>

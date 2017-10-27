@@ -33,8 +33,10 @@
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	</head>
 	<body ng-controller="AppCtrl">
+	
 		<div ui-view id="app" ng-class="{'app-mobile' : app.isMobile, 'app-navbar-fixed' : app.layout.isNavbarFixed, 'app-sidebar-fixed' : app.layout.isSidebarFixed, 'app-sidebar-closed':app.layout.isSidebarClosed, 'app-footer-fixed':app.layout.isFooterFixed}"></div>
-		<script src="//connect.facebook.net/en_US/sdk.js"></script>
+		<!-- facebook JDK -->
+		<!-- <script src="//connect.facebook.net/en_US/all.js"></script> -->
 		<!-- jQuery -->
 		<script src="external/jquery/dist/jquery.min.js"></script>
 		<!-- Fastclick -->

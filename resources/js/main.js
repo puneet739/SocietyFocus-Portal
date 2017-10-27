@@ -2,20 +2,32 @@ app.run(['$rootScope', '$state', '$stateParams', '$window', 'authentication', '$
     function($rootScope, $state, $stateParams, $window, authentication, $cookieStore, Analytics) {
 
         $rootScope.constant={
-            // SERVICE_URL:"http://localhost:8080/zircon/services"
-            SERVICE_URL:"http://localhost/service"
+            //SERVICE_URL:"http://localhost:8080/zircon/services"
+            SERVICE_URL:"http://localhost:80/service"
         }
         // Attach Fastclick for eliminating the 300ms delay between a physical tap and the firing of a click event on mobile browsers
         FastClick.attach(document.body);
         $window.fbAsyncInit = function() {
             FB.init({ 
-              appId: '1749929318576139',
+              appId: '1749929318576139',   // Puneet AppID:1749929318576139 testApp:369896790132734
               status: true, 
               cookie: true, 
               xfbml: true,
-              version: 'v2.4'
+              version: 'v2.5'
             });
+             
         };
+
+         (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+
+        
+
         // Set some reference to access them from any scope
         $rootScope.$state = $state;
         $rootScope.$stateParams = $stateParams;
