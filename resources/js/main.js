@@ -3,19 +3,23 @@ app.run(['$rootScope', '$state', '$stateParams', '$window', 'authentication', '$
 
         $rootScope.constant={
             //SERVICE_URL:"http://localhost:8080/zircon/services"
-            SERVICE_URL:"http://localhost:80/service"
+
+            //Development URL
+            // SERVICE_URL:"http://localhost:80/service"
+
+            //Production URL 
+            SERVICE_URL:"http://societyfocus.com/service"
         }
         // Attach Fastclick for eliminating the 300ms delay between a physical tap and the firing of a click event on mobile browsers
         FastClick.attach(document.body);
         $window.fbAsyncInit = function() {
             FB.init({ 
-              appId: '1749929318576139',   // Puneet AppID:1749929318576139 testApp:369896790132734
+              appId: '1749929318576139', 
               status: true, 
               cookie: true, 
               xfbml: true,
               version: 'v2.5'
             });
-             
         };
 
          (function(d, s, id){

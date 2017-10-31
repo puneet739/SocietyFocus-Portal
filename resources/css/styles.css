@@ -11500,3 +11500,19 @@ cursor: pointer;
     margin-top: -32px;  /* -1 * image height / 2 */
     height: 50px;
 }
+
+.social-div{
+ display: flex;
+}
+
+.fb-btn{
+  background-color: #3b5998;
+  color: #fff !important;
+  margin: 0 auto;
+  padding: 2px 5px;
+  margin-top: 10px;
+}
+
+.fa-facebook-square{
+  font-size: 18px;
+}
