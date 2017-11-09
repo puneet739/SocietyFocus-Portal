@@ -20,6 +20,7 @@ app.controller("LoginController", function($scope, $http,$q,$localStorage, authe
         });
     };
 
+
     $scope.society=[
         {
             "displayname":"Society1",
@@ -74,7 +75,8 @@ app.controller("LoginController", function($scope, $http,$q,$localStorage, authe
             $http(req).then(function successCallback(response) {
                 var currentUser = null;
                 var userObject = response.data.body.userDetails.user;
-                var firstname=userObject.firstname;
+
+                var firstname= userObject.firstname;
                 var userRole=[];
                 for (i=0; i<userObject.userRoleses.length; i++){
                     userRole[i]=userObject.userRoleses[i].userRole;
@@ -96,20 +98,69 @@ app.controller("LoginController", function($scope, $http,$q,$localStorage, authe
             })
             return deferred.promise;
     }
+
+    // Facebook Auth Function
+
     $scope.loginFB = function(){
+
+        var at;
         FB.login(function(response) {
-                if (response.status == 'connected') {
-                    console.log(response.authResponse.userID);
-                    FB.api('/me?fields=name,email', function(userInfo) {
-                        console.log(userInfo);
-                      },{ scope: 'email' });
-                }
-            });
-        // FB.api('/me', function(res) {
-        //     console.log(res);
-        //   });
+             if (response.authResponse) {
+             
+              console.log('Welcome!  Fetching your information.... ');
+                FB.api('/me?fields=id,name,email', function(response) {
+                      console.log(response);
+                      var accessT =  FB.getAuthResponse().accessToken;
+
+                      fbloginfun(accessT);
+
+                    });
+             } 
+
+             else {
+              console.log('User cancelled login or did not fully authorize.');
+             }
+         });
 
     }
+
+     function fbloginfun(token) {
+
+        var deferred = $q.defer();
+        var userInfo;
+        var req = {
+            method:'GET',
+            url:$rootScope.constant.SERVICE_URL + '/social/fblogin?accesstoken='+token
+        }
+
+        $http(req).then(function(response) {
+                var currentUser = null;
+                var userObject = response.data.body.userDetails.user;
+
+                var firstname= userObject.firstname;
+                var userRole=[];
+                for (i=0; i<userObject.userRoleses.length; i++){
+                    userRole[i]=userObject.userRoleses[i].userRole;
+                }
+                var accessToken = response.data.body.token;
+                $rootScope.logedinuser={
+                    "name": firstname,
+                    "userRoles": userRole,
+                    "token":accessToken,
+                    "userID" : userObject.userid
+                }
+                $localStorage.society=response.data.body.society;
+                console.log('user have logged in successfully');
+                authentication.login();
+                deferred.resolve(userInfo);
+            },function errorCallback(error){
+                $scope.login_error=true;
+                authentication.logout();
+            })
+            return deferred.promise;
+
+    }
+
     $scope.logout = function() {
         console.log("Now we are trying to logout the current user");
         authentication.logout();
