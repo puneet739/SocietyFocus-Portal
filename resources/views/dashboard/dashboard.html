@@ -15,7 +15,7 @@
 	<div class="row">
 		<div class="col-md-5" ng-init="getRAWmemberList()">
             <div class="r1-Sec-wrapper m-b-20">
-                <h5 class="r1-table-title"> Raw member List</h5>
+                <h5 class="r1-table-title"> RWA member List</h5>
                 <table class="table">
                     <thead>
                         <tr>
@@ -58,14 +58,16 @@
                 <div class="totalmember">
                         <h4> Total Members : {{ totalResidencyMember }}</h4>
                 </div>
-                <button class="Vm-btn">View More</button>
+                <a ui-sref="app.user.view"><button class="Vm-btn">View More</button></a>
             </div>
         </div>
         <div class="col-md-2">
-            <div class="stores m-b-20">
-                <img ng-src="resources/images/cart.png" alt="NearBy Store">
-                <h4 class="card-desc">Nearby Store</h4>
-            </div>
+            <a href="http://societyfocus.com/jsf-portal">
+                <div class="stores m-b-20">
+                    <img ng-src="resources/images/cart.png" alt="NearBy Store">
+                    <h4 class="card-desc">Nearby Store</h4>
+                </div>
+            </a>
         </div>
 	</div>
 
@@ -91,10 +93,12 @@
        <!--Carosal For Notice Ends-->
     </div>
     <div class="col-md-2" ng-init="getWalletAmount()">
-         <div class="stores m-b-20">
+        <a ui-sref="app.payment.mytransactions">
+            <div class="stores m-b-20">
                 <img ng-src="resources/images/wallet.png" alt="NearBy Store">
                 <h4 class="card-desc">Wallet Amount : &#8377; {{ walletAmount }} </h4>
             </div>
+        </a>
     </div>
 </div>
 
@@ -114,7 +118,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <button class="Vm-btn">View All Complaints</button>
+                <a ui-sref="app.complaint.my"><button class="Vm-btn">View All Complaints</button></a>
             </div>
     </div>
     <div class="col-md-5" ng-init="getAssetBookList()">
@@ -132,7 +136,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <button class="Vm-btn">View All Assets</button>
+                <a ui-sref="app.asset.view"><button class="Vm-btn">View All Assets</button></a>
             </div>
     </div>
     <div class="col-md-2">

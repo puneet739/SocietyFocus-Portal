@@ -55,7 +55,7 @@ app.controller("LoginController", function($scope, $http,$q,$localStorage, authe
     }    
 
     $scope.authenticate = function() {
-        console.log($scope.credentials.username + " pass: "  + $scope.credentials.password + "_ " + authentication);
+        console.log($scope.credentials.username + " pass:" + $scope.credentials.password + "_ "+$scope.credentials.society.value+" _ " + authentication);
         login($scope.credentials.username, $scope.credentials.password,$scope.credentials.society.value);
     }
 
