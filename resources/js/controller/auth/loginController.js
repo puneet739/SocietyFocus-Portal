@@ -1,5 +1,6 @@
 app.controller("LoginController", function($scope, $http,$q,$localStorage, authentication, $rootScope,eventbus,$aside) {
 	$scope.login_error=false;
+    $scope.person = {};
 
     $scope.openAside = function (position) {
         $aside.open({
@@ -55,8 +56,8 @@ app.controller("LoginController", function($scope, $http,$q,$localStorage, authe
     }    
 
     $scope.authenticate = function() {
-        console.log($scope.credentials.username + " pass:" + $scope.credentials.password + "_ "+$scope.credentials.society.value+" _ " + authentication);
-        login($scope.credentials.username, $scope.credentials.password,$scope.credentials.society.value);
+        console.log($scope.credentials.username + " pass:" + $scope.credentials.password + "_ "+$scope.person.society.value+" _ " + authentication);
+        login($scope.credentials.username, $scope.credentials.password,$scope.person.society.value);
     }
 
     function login(user, pass,society) {

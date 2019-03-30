@@ -55,16 +55,13 @@
                         <label>
                             Society
                         </label>
-                        <ui-select ng-model="credentials.society" theme="bootstrap">
-                            <ui-select-match placeholder="Select in the list...">
-                                {{$select.selected.displayname}}
-                            </ui-select-match>
-                            <ui-select-choices repeat="item in society | filter: $select.search">
-                                <img ng-if="item.societypic" height="25" width="25" ng-src="{{item.societypic}}" />
-                                <div ng-bind-html="item.displayname | highlight: $select.search" class="optionsDiv">
-                                </div>
+                         <ui-select ng-model="person.society"  style="min-width: 300px;" title="Choose a society">
+                            <ui-select-match placeholder="Select a person in the list or search his name/age...">{{$select.selected.displayname}}</ui-select-match>
+                            <ui-select-choices repeat="hero in society">
+                              <img ng-if="hero.societypic" height="25" width="25" ng-src="{{hero.societypic}}" />
+                              <div ng-bind-html="hero.displayname"></div>
                             </ui-select-choices>
-                        </ui-select>
+                          </ui-select>
                     </div>
                     <div class="alert alert-danger fade-in-up" ng-if="login_error">
                         <button data-ct-dismiss="alert" class="close">
